@@ -1,0 +1,268 @@
+/*
+| Main
+*/
+body {
+  background-color: #ddd;
+  min-width: 700px;
+}
+/*
+| Navigation
+*/
+.nav {
+	width: 100%;
+	background-color: #333;
+	float: left;
+	padding: 10px 0;
+  margin:0 0 1em 0;
+}
+.nav li {
+  list-style: none;
+  color: white;
+  float: left;     
+  background-color: #333; 
+}
+.nav a {
+	background-color: #333; 
+	text-decoration: none; 
+	padding: 10px 5px; 
+}
+.nav li a:visited {
+  color: white;
+}
+.nav li a:hover {
+  color: #fff;
+  background-color:#0b75b2;
+}
+.nav ul li .current {
+  color: #fff;
+	background-color: #333;
+}
+.pad-me {
+	color: #aaa !important;
+	padding: 0 5px 0 5px;
+}
+.container {
+  margin : 1em;
+}
+/*
+| Image Matrix
+*/
+.image_matrix {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;  
+}
+.image_matrix img {
+  border: 1px solid #ccc;
+  width: 150px;
+  height: 150px;
+  background-color: white;
+  padding: 9px;
+  margin: 7px;
+  display: inline-block;
+  float: left;
+}
+/*
+| List Carousel
+*/
+.list_carousel {
+  padding: 15px 0;
+}
+.list_carousel ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: block;
+}
+.list_carousel li {
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+  background-color: #f0f0f0;
+  border: 5px solid #ccc;
+  width: 160px;
+  height: 160px;
+  padding: 0;
+  margin: 6px;
+  display: block;
+  float: left;
+}
+.clearfix {
+  float: none;
+  clear: both;
+}
+/*
+| List Text
+*/
+.list_text {
+width: 100%;
+vertical-align: top;
+}
+#t1 {
+width: 33%;
+padding: 10px;
+float:left;
+}
+#t2 {
+width: 33%;
+padding: 10px;
+float:left;
+}
+#t3 {
+width:auto;
+padding: 10px;
+float:left;
+}
+/*
+|3 cols
+*/
+#wrapper {
+width: 100%;
+display:table;
+border-spacing: 0;
+}
+#firefox-bug-fix {
+display:table-row;
+}
+.columns {
+display: table-cell;
+border: 1px solid #aaa;
+vertical-align: top;
+}
+.columns a { color: blue; }
+#c1 {
+background-color: #326698;
+color: #FFF;
+padding: 20px;
+width: 33%;
+min-width: 180px;
+}
+#c2 {
+background-color: #FFF;
+width: auto;
+padding: 20px;
+}
+#c3 {
+background-color: #D7D7D7;
+width: 33%;
+min-width: 180px;
+padding: 20px;
+}
+/*
+| Frames
+*/
+#flickrframe, #linkframe {
+  display:none;
+}
+/*
+| Tooltip
+ */
+.ui-tooltip, .arrow:after {
+  background: black;
+  border: 2px solid white;
+}
+.ui-tooltip {
+  padding: 10px 20px;
+  color: white;
+  border-radius: 20px;
+  font: 90% "Helvetica Neue", Sans-Serif;
+  box-shadow: 0 0 7px black;
+}
+  .arrow {
+  width: 70px;
+  height: 16px;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  margin-left: -35px;
+  bottom: -16px;
+}
+.arrow.top {
+  top: -16px;
+  bottom: auto;
+}
+.arrow.left { left: 20%; }
+.arrow:after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: -20px;
+  width: 25px;
+  height: 25px;
+  box-shadow: 6px 5px 9px -9px black;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  }
+  .arrow:after, .top:after {
+  bottom: -20px;
+  top: auto;
+}
+/*
+| Sticky notes
+*/
+.notes {
+  width:50%;
+  margin: 50px auto;
+  padding: 10px;
+  position: relative;
+  -webkit-box-shadow: 10px 10px 20px rgba(0,0,0,.15);
+  -moz-box-shadow: 10px 10px 20px rgba(0,0,0,.15);
+  box-shadow: 10px 10px 20px rgba(0,0,0,.15);
+  background-color: #fcf59b;  
+  font-family: 'Special Elite', cursive;
+}
+.notes li {
+  list-style: square;
+  color: #2972A3;
+  line-height: 1em;
+  margin-bottom: 20px;
+}
+/*
+| Misc
+ */
+.hilited { background-color: yellow; }
+.hidden {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+.displayed { position:relative; }
+.communicate {
+  list-style:none;
+  padding:2px;
+}
+.nolist {
+  list-style:none;
+}
+.shim { padding-bottom: 3px; }
+a[icon ^="out"] {
+   padding: 0 20px 0 0;
+   background: transparent url(/img/offsite-icon.png) no-repeat center left;
+}
+a[icon ^="out-text"] {
+   padding: 0 20px 0 0;
+   background: transparent url(/img/offsite-icon.png) no-repeat right;
+}
+/*.abbr {
+  padding: 10px 20px;
+  color: #ccc;
+  background-color: yellow;
+  border-radius: 10px;
+  font: 90% "Helvetica Neue", Sans-Serif;
+  box-shadow: 0 0 7px black; 
+}*/
+/*
+| Footer
+*/
+.copy {
+	color: #aaa;
+	font-style: italic;
+	text-align:center;
+	font-size:12px;
+}
