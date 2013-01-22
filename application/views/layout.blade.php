@@ -5,8 +5,8 @@
 	<meta charset="utf-8"> 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<title>@yield('title')</title>
+	{{ HTML::script('/js/jquery-1.8.2.js') }}	
 	{{ HTML::style('http://fonts.googleapis.com/css?family=Croissant+One|Special+Elite') }}
-	{{ HTML::style('/css/menu.css') }}
 	{{ HTML::style('/css/style.css') }}
 	{{ HTML::style('laravel/css/style.css') }}
 	@yield('header')
@@ -22,20 +22,20 @@
 		</header>
 		<menu class="nav menu">
 			@section('nav')
-				@if(URI::is('/'))
+				@if(URI::is('home/'))
 					<li class="pad-me">Home</li> 
 				@else 
-					<li>{{ HTML::link('/','Home') }}</li>
+					<li>{{ HTML::link('home/','Home') }}</li>
 				@endif 
-				@if(URI::is('about'))
+				@if(URI::is('home/about'))
 					<li class="pad-me">About</li> 
 				@else 
-					<li>{{ HTML::link('about', 'About') }}</li>
+					<li>{{ HTML::link('home/about', 'About') }}</li>
 				@endif 
-				@if(URI::is('contact'))
+				@if(URI::is('home/contact'))
 					<li class="pad-me">Contact</li> 
 				@else 
-					<li>{{ HTML::link('contact','Contact') }}</li>
+					<li>{{ HTML::link('home/contact','Contact') }}</li>
 				@endif 										
 			@yield_section <!-- will yield and close section -->
 		</menu>

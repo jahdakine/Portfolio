@@ -1,67 +1,33 @@
 <?php
 
-//No controller
+//No controller, logic in closure
 // Route::get('/', function()
 // {
 // 	return View::make('home.index');
 // });
-// Route::get('contact', function()
-// {
-// 	return View::make('home.contact');
-// });
-//Register route controller 
+//
+//Manually register individual routes
+// Route::get('/', 'home@index');
+// Route::get('about', 'home@about');
+// Route::get('contact', 'home@contact');
+// Route::get('test', 'home@test');
+// Route::get('/users', 'users@index');
+
+//Register route controllers 
+// Route::controller('home');
+// Route::controller('users');
+// or
+Route::controller(array('home', 'users'));
+
+//overrides
 Route::get('/', 'home@index');
 Route::get('about', 'home@about');
 Route::get('contact', 'home@contact');
 Route::get('test', 'home@test');
+Route::get('/', 'users@index');
 
-// Route::get ('/', function() {
-// 	// $title = "Newest";
-// 	// $body = "kljalf;hagjhaslfkgalkfj";
-//  	// $posts = DB::query('INSERT INTO posts (title, body) VALUES(:title, :body)', array($title, $body));
-// 	$posts = DB::query('SELECT * FROM posts');
-// 	$post = DB::only('SELECT title FROM posts WHERE id=1'); //grab the column value only
-// 	//dd($post); //vardump and die helper
-
-// 	//$posts2 = DB::table('posts')->get(); //same as SELECT * FROM posts
-// 	//$posts2 = DB::table('posts')->where('id', '=', '1')->get();
-// 	//Fluent
-// 	$posts2 = DB::table('posts')
-// 					->where('id', '<>', '1')
-// 					->or_where('title', '=', 'another title')
-// 					->order_by('title', 'desc')
-// 					->take(2)
-// 					->get();
-// 	//dd($posts2);
-// 	//ORM Eloquent
-// 	$users = User::all();
-// 	$user = User::find(1)->email;
-
-// 	//dd($user);
-// 	return View::make('home.index')->with('users', $users);
-// });
-
-// Route::get('about', function() {
-// 	// $greeting = "Hello";
-// 	// $farewell = "Goodbye";
-// 	// $data = array(
-// 	// 	'greeting' => $greeting,
-// 	// 	'farewell' => $farewell
-// 	// );
-// 	//1:
-// 	// return View::make('home.about')->with('greeting', $greeting);
-// 	//2:
-// 	//return View::make('home.about')->with(array(
-// 	//	'greeting' => $greeting,
-// 	//	'farewell' => $farewell
-// 	//));
-// 	//return View::make('home.about', $data);
-// 	//3:
-// 	$view = View::make('home.about');
-// 	$view->greeting = "Kunichiwa";
-// 	$view->farewell = "Sianara";
-// 	return $view;
-// });
+//Detect automatically
+// Route::controller(Controller::detect());
 
 /*
 |--------------------------------------------------------------------------

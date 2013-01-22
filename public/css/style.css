@@ -47,12 +47,12 @@ body {
 /*
 | Image Matrix
 */
-.image_matrix {
+.image-matrix {
   position: relative;
   margin-left: auto;
   margin-right: auto;  
 }
-.image_matrix img {
+.image-matrix img {
   border: 1px solid #ccc;
   width: 150px;
   height: 150px;
@@ -65,21 +65,21 @@ body {
 /*
 | List Carousel
 */
-.list_carousel {
-  padding: 15px 0;
+.list-carousel {
+  padding: 15px 12px 15px 18px;
 }
-.list_carousel ul {
-  margin: 0;
+.list-carousel ul {
   padding: 0;
+  margin: 0;
   list-style: none;
   display: block;
 }
-.list_carousel li {
+.list-carousel li {
   font-size: 12px;
   color: #666;
   text-align: center;
-  background-color: #f0f0f0;
-  border: 5px solid #ccc;
+  background-color: #ccc;
+  border: 5px solid #bbb;
   width: 160px;
   height: 160px;
   padding: 0;
@@ -87,66 +87,66 @@ body {
   display: block;
   float: left;
 }
-.clearfix {
+.clear-fix {
   float: none;
   clear: both;
 }
 /*
 | List Text
 */
-.list_text {
-width: 100%;
-vertical-align: top;
+.list-text {
+  width: 100%;
+  vertical-align: top;
 }
 #t1 {
-width: 33%;
-padding: 10px;
-float:left;
+  width: 33%;
+  padding: 10px;
+  float:left;
 }
 #t2 {
-width: 33%;
-padding: 10px;
-float:left;
+  width: 33%;
+  padding: 10px;
+  float:left;
 }
 #t3 {
-width:auto;
-padding: 10px;
-float:left;
+  width:auto;
+  padding: 10px;
+  float:left;
 }
 /*
 |3 cols
 */
 #wrapper {
-width: 100%;
-display:table;
-border-spacing: 0;
+  width: 100%;
+  display:table;
+  border-spacing: 0;
 }
 #firefox-bug-fix {
-display:table-row;
+  display:table-row;
 }
 .columns {
-display: table-cell;
-border: 1px solid #aaa;
-vertical-align: top;
+  display: table-cell;
+  border: 1px solid #aaa;
+  vertical-align: top;
 }
 .columns a { color: blue; }
 #c1 {
-background-color: #326698;
-color: #FFF;
-padding: 20px;
-width: 33%;
-min-width: 180px;
+  background-color: #326698;
+  color: #FFF;
+  padding: 20px;
+  width: 33%;
+  min-width: 180px;
 }
 #c2 {
-background-color: #FFF;
-width: auto;
-padding: 20px;
+  background-color: #FFF;
+  width: auto;
+  padding: 20px;
 }
 #c3 {
-background-color: #D7D7D7;
-width: 33%;
-min-width: 180px;
-padding: 20px;
+  background-color: #D7D7D7;
+  width: 33%;
+  min-width: 180px;
+  padding: 20px;
 }
 /*
 | Frames
@@ -248,6 +248,9 @@ a[icon ^="out"] {
 a[icon ^="out-text"] {
    padding: 0 20px 0 0;
    background: transparent url(/img/offsite-icon.png) no-repeat right;
+}
+.to-right {
+  float:right !important;
 }
 /*.abbr {
   padding: 10px 20px;

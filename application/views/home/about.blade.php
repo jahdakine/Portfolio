@@ -13,29 +13,29 @@
 @endsection
 
 @section('content')
-	<article>
-		<h3>History</h3>
-		<p>Started out in mechanical design after a stint in ranching, fast food, 
-		encyclopedia sales, hardware, and quality assurance testing. Worked in solids modeling 
-		and quality assurance. Developed a taste for computer programming while automating 
-		processes and writing batch files.</p>
+<article>
+	<h3>History</h3>
+	<p>Started out in mechanical design after a stint in ranching, fast food, 
+	encyclopedia sales, hardware, and quality assurance testing. Worked in solids modeling 
+	and quality assurance. Developed a taste for computer programming while automating 
+	processes and writing batch files.</p>
 
-		<p>Apprenticed with a traffic crash analysis software firm testing and writing Delphi code.
-		Completed a 4 year program in Computer Information 
-		Systems and began testing C++ code for a medical manufacturer.</p> 
+	<p>Apprenticed with a traffic crash analysis software firm testing and writing Delphi code.
+	Completed a 4 year program in Computer Information 
+	Systems and began testing C++ code for a medical manufacturer.</p> 
 
-		<p>Went on to do various SQL tasks for accounting department at a computer solutions sales group.
-		Eventually landed a web programming position in a communications department for Government 
-		intra and extranets. This entailed design, documentation, programming and testing web applications.</p>
+	<p>Went on to do various SQL tasks for accounting department at a computer solutions sales group.
+	Eventually landed a web programming position in a communications department for Government 
+	intra and extranets. This entailed design, documentation, programming and testing web applications.</p>
 
-		<h3>Future</h3>
-		<p>Sure, knowing how to serve up data and guide users through complicated processes and make dificult concepts 
-		understandable has its place, but the right side of my brain has begun to rebel a little and now has tipped the
-		scales toward needing additional creative outlets. The good news is the web is still a wonderful place to balance both 
-		creative and analytical skills so my new carreer will include more front end work. My goal will be to round into more of a full-stack
-		developer and web artisan.</p>
-	</article>
-
+	<h3>Future</h3>
+	<p>Sure, knowing how to serve up data and guide users through complicated processes and make dificult concepts 
+	understandable has its place, but the right side of my brain has begun to rebel a little and now has tipped the
+	scales toward needing additional creative outlets. The good news is the web is still a wonderful place to balance both 
+	creative and analytical skills so my new carreer will include more front end work. My goal will be to round into more of a full-stack
+	developer and web artisan.</p>
+</article>
+<section>
 	<h3>Skills/Training</h3>
 	<div id="wrapper">
 		<div id="firefox-bug-fix">
@@ -117,7 +117,7 @@
 	    </div>
 		</div>
 	</div>
-               
+</section>             
 
 @endsection
 
