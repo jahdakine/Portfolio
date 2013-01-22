@@ -24,7 +24,7 @@ Route::get('/', 'home@index');
 Route::get('about', 'home@about');
 Route::get('contact', 'home@contact');
 Route::get('test', 'home@test');
-Route::get('/', 'users@index');
+Route::get('/users', 'users@index');
 
 //Detect automatically
 // Route::controller(Controller::detect());

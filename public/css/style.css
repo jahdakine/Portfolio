@@ -48,19 +48,22 @@ body {
 | Image Matrix
 */
 .image-matrix {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;  
+  width:100%;
+  text-align:center;
+  margin: 7px auto;
 }
-.image-matrix img {
+.image-matrix div {
+    display:inline-block;
+    margin:10px 0;
+}
+.image-matrix a img {
   border: 1px solid #ccc;
   width: 150px;
   height: 150px;
   background-color: white;
   padding: 9px;
   margin: 7px;
-  display: inline-block;
-  float: left;
+  position: relative;
 }
 /*
 | List Carousel

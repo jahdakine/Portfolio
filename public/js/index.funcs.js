@@ -87,7 +87,7 @@ $(document).ready(function() {
 		link_frame.css("display","none");
 	});
 	//other menu clicks
-	link_box_show.on('click', function() { 
+	link_box_show.on('click', function() {
 		flickr_frame.empty();
 		flickr_frame.css("display","none");
 		landing.css("display","none");

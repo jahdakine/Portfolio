@@ -106,7 +106,9 @@
 <div class="clear-fix"></div>	
 
 <!-- !!! Flickr and linkframe should not be separate. All jSON feeds should go into one div -->
-<div id="flickrFrame" class="image-matrix"></div>
+
+	<div id="flickrFrame" class="image-matrix"></div>
+
 <div id="linkFrame">
 	<iframe frameborder="1" scrolling="yes" width="100%" height="800" src="" name="linkBox" id="linkBox">
    <p>iframes are not supported by your browser.</p>
@@ -138,16 +140,14 @@
 	<section class="notes">
 		<h3 align="center">To do:</h3> 
 		<ul>
-			<li><strike>Make menu changeable</strike></li>
 			<li>Add login area</li>
-			<li><strike>Git it</strike></li>
-			<li>Package (minify, optimize)</li>
 			<li>Tabify about skills</li>
 			<li>DB lists</li>
 			<li>Resize images on fly</li>
 			<li>Soliloquy blog</li>
 			<li>facility for adding icons/sites</li>
 			<li>Make dropdown for List menu</li>
+			<li>Package (minify, optimize)</li>
 		</ul>																
 	</section><!-- // notes -->
 </div><!-- // landing -->
