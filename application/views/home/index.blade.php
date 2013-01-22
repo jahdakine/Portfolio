@@ -76,7 +76,7 @@
 		</li>
 		<li class="block2">
 			{{ HTML::link("http://jahdakine.blogspot.com/", "", array("title"=>"Open my Blogger page in a new window/tab", "target"=>"_blank", "icon"=>"out")) }}
-			<a href="http://jahdakine.blogspot.com/" id="blogger" target="linkBox" class="linkBoxShow" title="Show latest 3 articles from my blog on this page">
+			<a href="http://jahdakine.blogspot.com/" id="blogger" target="textBox" class="textBoxShow" title="Show latest 3 articles from my blog on this page">
 				Blogger (photography)<span class="listImg"><br/><img src="/img/blogger-icon.png"/></span>
 			</a>
 		</li>
@@ -84,36 +84,37 @@
 	<div id="t3">	
 		<li class="block3">
 			{{ HTML::link("http://www.zazzle.com/jahdakine+gifts", "", array("title"=>"Open my Zazzle gift catalog in a new window/tab", "target"=>"_blank", "icon"=>"out")) }}
-			<a href="http://www.zazzle.com/jahdakine+gifts" id="zazzle" target="linkBox" class="linkBoxShow" title="Show latest 3 creations from my gift catalog on this page">
+			<a href="http://www.zazzle.com/jahdakine+gifts" id="zazzle" target="textBox" class="textBoxShow" title="Show latest 3 creations from my gift catalog on this page">
 				Zazzle POD (design)<span class="listImg"><br/><img src="/img/zazzle-icon.png"/></span>
 			</a>
 		</li>
 		<li class="block3">
 			{{ HTML::link("http://myworld.ebay.com/specrun/", "", array("title"=>"Open my eBay profile page in a new window/tab", "target"=>"_blank", "icon"=>"out")) }}
-			<a href="http://myworld.ebay.com/specrun/" id="ebay" target="linkBox" class="linkBoxShow" title="Show latest eBay auctions on this page">
+			<a href="http://myworld.ebay.com/specrun/" id="ebay" target="textBox" class="textBoxShow" title="Show latest eBay auctions on this page">
 				eBay<span class="listImg"><br/><img src="/img/ebay-icon.png"/></span>
 			</a>
 		</li>
 		<li class="block3">
 			{{ HTML::link("http://grooveshark.com/#!/jahdakine", "", array("title"=>"Open my GrooveShark profile page in a new window/tab", "target"=>"_blank", "icon"=>"out")) }}
-			<a href="http://grooveshark.com/#!/jahdakine" target="linkBox" class="linkBoxShow" title="Show latest listens from playlist on this page">
+			<a href="http://grooveshark.com/#!/jahdakine" target="textBox" class="textBoxShow" title="Show latest listens from playlist on this page">
 				Grooveshark<span class="listImg"><br/><img src="/img/grooveshark-icon.png"/></span>
 			</a>
 		</li>	
+		<li class="block3">
+			{{ HTML::link("http://www.meetup.com/HTML5-Denver-Users-Group/members/65732862/", "", array("title"=>"Open my Meetup profile page in a new window/tab", "target"=>"_blank", "icon"=>"out")) }}
+			<a href="#" id="meetup" title="Show latest Meetup meetings attended on this page">
+				Meetup<span class="listImg"><br/><img src="/img/meetup-icon.png"/></span>
+			</a>
+		</li>			
 	</div><!-- // t3 -->
 	</ul>
 </div><!-- // list -->
 <div class="clear-fix"></div>	
 
-<!-- !!! Flickr and linkframe should not be separate. All jSON feeds should go into one div -->
-
-	<div id="flickrFrame" class="image-matrix"></div>
-
-<div id="linkFrame">
-	<iframe frameborder="1" scrolling="yes" width="100%" height="800" src="" name="linkBox" id="linkBox">
-   <p>iframes are not supported by your browser.</p>
-	</iframe>
-</div><!-- // linkframe -->
+<!-- !!! Flickr and textFrame should not be separate. All jSON feeds should go into one div -->
+<div id="imageFrame" class="image-matrix"></div>
+<div id="textFrame">
+</div><!-- // textFrame -->
 <div id="landing">
 	<article>
 		Welcome. This is my online 
@@ -148,6 +149,7 @@
 			<li>facility for adding icons/sites</li>
 			<li>Make dropdown for List menu</li>
 			<li>Package (minify, optimize)</li>
+			<li>Code pronunciation with audio for nickname)</li>
 		</ul>																
 	</section><!-- // notes -->
 </div><!-- // landing -->

@@ -101,20 +101,17 @@ body {
   width: 100%;
   vertical-align: top;
 }
-#t1 {
+#t1, #t2 {
   width: 33%;
   padding: 10px;
   float:left;
-}
-#t2 {
-  width: 33%;
-  padding: 10px;
-  float:left;
+  list-style: none;
 }
 #t3 {
   width:auto;
   padding: 10px;
   float:left;
+  list-style: none;
 }
 /*
 |3 cols
@@ -154,8 +151,14 @@ body {
 /*
 | Frames
 */
-#flickrframe, #linkframe {
+#imageFrame, #textFrame {
   display:none;
+  list-style:none;
+  background-color: #ccc;
+  border: black 1px solid;
+  margin: 1em auto;
+  padding: 5px;
+  width: 100%;
 }
 /*
 | Tooltip
