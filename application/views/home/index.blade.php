@@ -16,14 +16,12 @@
 	<li>{{ HTML::link("users/", "Sign on") }}</li>
 	<li class="to-right">{{ HTML::link("#", "Reset", array("title"=>"Clear dynamic content area", "id"=>"reset")) }}</li>
 	<li class="to-right">
-
 		{{ HTML::link("#", "List menu") }}
 		<ul>
 		  <li>{{ HTML::link("#", "Image List", array("title"=>"Change links to image carousel style", "id"=>"menuGraphics")) }}</li>
 		  <li>{{ HTML::link("#", "Text List", array("title"=>"Change links to text list style", "id"=>"menuText")) }}</li>	
 		</ul>
 	</li>
-	
 @endsection 
 
 @section('content')
@@ -32,10 +30,10 @@
 	<div id="t1"><!-- // removed for carousel -->	
 		<li class="block1">
 			{{ HTML::link("http://www.linkedin.com/profile/view?id=14123195", "", array("title"=>"Open my LinkedIn profile page in a new window/tab", "target"=>"_blank", "icon"=>"out")) }}
-			<!-- !!! Can this be done with blade using a macro? -->
+			<!-- !!! Can this be done with blade using a macro? -->	
 			<a href="#" id="linkedin" title="Show ? from LinkedIn on this page">	
 				Linkedin<span class="listImg"><br/><img src="/img/linkedin-icon.png"/></span>
-			</a>
+			</a> 
 		</li>
 		<li class="block1">
 			{{ HTML::link("https://github.com/jahdakine", "", array("title"=>"Open my Github page in a new window/tab", "target"=>"_blank", "icon"=>"out")) }}
@@ -169,14 +167,12 @@
 		<h3 align="center">To do:</h3> 
 		<ul>
 			<li>Add login area</li>
-			<li>Tabify about skills</li>
 			<li>DB lists</li>
 			<li>restructure xhr code</li>
 			<li>Resize images on fly</li>
 			<li>Soliloquy blog</li>
 			<li>facility for adding icons/sites</li>
 			<li>Package (minify, optimize)</li>
-			<li><strike>Code pronunciation</strike> (with audio for nickname)</li>
 		</ul>																
 	</section><!-- // notes -->
 </div><!-- // landing -->

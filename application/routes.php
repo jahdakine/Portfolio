@@ -17,17 +17,58 @@
 // Route::controller('home');
 // Route::controller('users');
 // or
-Route::controller(array('home', 'users'));
+//Route::controller(array('home', 'users'));
+
+//Named route - good for REST
+// Route::get('users', array('as' => 'users', 'uses' => 'users@index')); //get all users
+// Route::get('users/(:any)', array('as' => 'user', 'uses' => 'users@show')); //show 1 user
+// Route::get('users/new', array('as' => 'new_user', 'uses' => 'users@new')); //create form for adding new user
 
 //overrides
 Route::get('/', 'home@index');
 Route::get('about', 'home@about');
 Route::get('contact', 'home@contact');
-Route::get('test', 'home@test');
-Route::get('/users', 'users@index');
+Route::get('test', 'home@about');
+
+// !!! - quick and dirty manual auth 
+Route::get('/users', function() {
+ 	// $user = User::find(1);
+ 	// $user->password = Hash::make('1');
+ 	// $user->save();
+	$creds = array(
+		'username' => 'test@test.com', //would come from form
+		'password' => '1' //would come from form
+	);
+	if (Auth::attempt($creds)) {
+		//redirect to admin
+		//if (Auth::check()) { return "session set"; }
+		//return $creds->username . ' logged in.';
+		return Redirect::to('admin');
+	}
+	return "No access";
+});
+
+Route::get('logout', function() {
+	Auth::logout();
+	//Redirect::to('login form')
+	return "logged out";
+});
+
+Route::get('login', function() {
+	return "sign in here";
+});
+
+Route::get('admin', array('before' => 'auth', function() {
+	$user = Auth::user();
+	dd($user);
+	return 'private admin area';
+}));
+
+// Route::get('users', 'users@index');
+// Route::get('users/(:any)/edit', 'users@edit');
 
 //Detect automatically
-// Route::controller(Controller::detect());
+Route::controller(Controller::detect());
 
 /*
 |--------------------------------------------------------------------------

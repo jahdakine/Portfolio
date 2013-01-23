@@ -1,4 +1,8 @@
 <?php 
 
-class User extends Eloquent {}
+class User extends Eloquent {
+
+
+	
+}
 

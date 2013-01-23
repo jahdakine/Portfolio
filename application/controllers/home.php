@@ -1,7 +1,7 @@
 <?php
 
 class Home_Controller extends Base_Controller {
-
+	//public restful = true; for restful controller - use verbs instead of action
 	public function action_index()
 	{
 		return View::make('home.index');
@@ -14,8 +14,10 @@ class Home_Controller extends Base_Controller {
 	{
 		return View::make('home.contact');
 	}
+
+	//for testing new ideas
 	public function action_test()
 	{
 		return View::make('home.test');
-	}	
+	}
 }

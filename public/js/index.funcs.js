@@ -100,7 +100,7 @@ $(document).ready(function() {
 		var html = '<h2 align="center">Latest Tweets</h2><ul style="list-style:none">';
 		e.preventDefault();
 		$.getJSON("http://search.twitter.com/search.json?q=jahdakine&callback=?", function(data) {
-			// console.log(data.results);
+			console.log(data.results);
 			$.each(data.results, function(i,item) {
 				console.log(item);
 				var date = item.created_at.split(' ').slice(0, 4).join(' ');
