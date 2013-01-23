@@ -14,14 +14,16 @@
 @section('nav')
 	@parent
 	<li>{{ HTML::link("users/", "Sign on") }}</li>
+	<li class="to-right">{{ HTML::link("#", "Reset", array("title"=>"Clear dynamic content area", "id"=>"reset")) }}</li>
 	<li class="to-right">
+
 		{{ HTML::link("#", "List menu") }}
 		<ul>
 			<li>{{ HTML::link("#", "Text List", array("title"=>"Change links to text list style", "id"=>"menuText")) }}</li>	
 		  <li>{{ HTML::link("#", "Image List", array("title"=>"Change links to image carousel style", "id"=>"menuGraphics")) }}
 		</ul>
 	</li>
-	<li class="to-right">{{ HTML::link("#", "Reset", array("title"=>"Clear content in frame", "id"=>"reset")) }} </li>
+	
 @endsection 
 
 @section('content')
@@ -53,6 +55,15 @@
 				stackoverflow<span class="listImg"><br/><img src="/img/stackoverflow-icon.png"/></span>
 			</a>
 		</li>
+		<li class="block1">
+			Yelp<span class="listImg"><br/><img src="/img/yelp-icon.png"/></span>
+		</li>
+		<li class="block1">
+			iCloud<span class="listImg"><br/><img src="/img/mobileme-icon.png"/></span>
+		</li>
+		<li class="block1">
+			Vimeo<span class="listImg"><br/><img src="/img/vimeo-icon.png"/></span>
+		</li>		
 	</div><!-- // t1 -->
 	<div id="t2">	
 		<li class="block2">
@@ -80,6 +91,15 @@
 				Blogger (photography)<span class="listImg"><br/><img src="/img/blogger-icon.png"/></span>
 			</a>
 		</li>
+		<li class="block2">
+			Evernote<span class="listImg"><br/><img src="/img/evernote-icon.png"/></span>
+		</li>
+		<li class="block2">
+			Picassa<span class="listImg"><br/><img src="/img/picasa-icon.png"/></span>
+		</li>		
+		<li class="block2">
+			Amazon<span class="listImg"><br/><img src="/img/amazon-icon.png"/></span>
+		</li>						
 	</div><!-- // t2 -->
 	<div id="t3">	
 		<li class="block3">
@@ -105,13 +125,20 @@
 			<a href="#" id="meetup" title="Show latest Meetup meetings attended on this page">
 				Meetup<span class="listImg"><br/><img src="/img/meetup-icon.png"/></span>
 			</a>
-		</li>			
+		</li>		
+		<li class="block3">
+			PayPal<span class="listImg"><br/><img src="/img/paypal-icon.png"/></span>
+		</li>
+		<li class="block3">
+			Skype<span class="listImg"><br/><img src="/img/skype-icon.png"/></span>
+		</li>	
+		<li class="block3">
+			Gmail<span class="listImg"><br/><img src="/img/gmail-icon.png"/></span>
+		</li>		
 	</div><!-- // t3 -->
 	</ul>
 </div><!-- // list -->
 <div class="clear-fix"></div>	
-
-<!-- !!! Flickr and textFrame should not be separate. All jSON feeds should go into one div -->
 <div id="imageFrame" class="image-matrix"></div>
 <div id="textFrame">
 </div><!-- // textFrame -->
@@ -147,9 +174,9 @@
 			<li>Resize images on fly</li>
 			<li>Soliloquy blog</li>
 			<li>facility for adding icons/sites</li>
-			<li>Make dropdown for List menu</li>
+			<li><strike>Make dropdown for List menu</strike></li>
 			<li>Package (minify, optimize)</li>
-			<li>Code pronunciation with audio for nickname)</li>
+			<li><strike>Code pronunciation</strike> (with audio for nickname)</li>
 		</ul>																
 	</section><!-- // notes -->
 </div><!-- // landing -->

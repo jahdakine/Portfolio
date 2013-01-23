@@ -23,7 +23,7 @@
 		<li>
 			<!-- !!! Can this be done with blade using a macro? -->
 			<a href="http://www.google.com/recaptcha/mailhide/d?k=01QoO8IU9RiXd2fkEo9RIO9g==&amp;c=AdMM-lX29vaEjUJrW54pfWifDhvAuHZcW2xAn_8BgMY=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501QoO8IU9RiXd2fkEo9RIO9g\75\75\46c\75AdMM-lX29vaEjUJrW54pfWifDhvAuHZcW2xAn_8BgMY\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=860,height=600,left=100,top=100'); return false;" title="Reveal this e-mail address for Gmail">
-				<img src="/img/gmail-icon.png" alt=""/> Gmail (quickest)
+				<img src="/img/gmail-sm-icon.png" alt=""/> Gmail (quickest)
 			</a>
 		</li>
 		<li>
@@ -33,7 +33,7 @@
 		</li>
 		<li>
 			<a href="skype:jahdakine?call" title="Open Skype">
-				<img src="/img/skype-icon.png" alt=""/> Skype call (best to email first - I don't camp out there)
+				<img src="/img/skype-sm-icon.png" alt=""/> Skype call (best to email first - I don't camp out there)
 			</a>
 		</li>
 	</ul>

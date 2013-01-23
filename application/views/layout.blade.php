@@ -17,12 +17,12 @@
 	<div class="wrapper">
 		<header class="headfont">
 			<h1>@yield("title")</h1>
-			<h2>John Chase (aka <dfn>jahdakine</dfn>)</h2>
+			<h2>John Chase (aka <u class="def"><dfn title="IPA phonetics: dʒɑ dɑ KI neɪ <br/>(sounds like: jaw duh <strong>key</strong> nay)">jahdakine</dfn></u>)</h2>
 			<h4>Web Development</h4>
 		</header>
-		<menu class="nav menu">
+		<ul class="drop" id="nav">
 			@section('nav')
-				@if(URI::is('home/'))
+				@if(URI::is('home'))
 					<li class="pad-me">Home</li> 
 				@else 
 					<li>{{ HTML::link('home/','Home') }}</li>
@@ -38,7 +38,7 @@
 					<li>{{ HTML::link('home/contact','Contact') }}</li>
 				@endif 										
 			@yield_section <!-- will yield and close section -->
-		</menu>
+		</ul>
 		<div role="main" id="maincontent">
 			<div class="container">
 				@yield('content')
