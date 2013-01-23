@@ -19,8 +19,8 @@
 
 		{{ HTML::link("#", "List menu") }}
 		<ul>
-			<li>{{ HTML::link("#", "Text List", array("title"=>"Change links to text list style", "id"=>"menuText")) }}</li>	
-		  <li>{{ HTML::link("#", "Image List", array("title"=>"Change links to image carousel style", "id"=>"menuGraphics")) }}
+		  <li>{{ HTML::link("#", "Image List", array("title"=>"Change links to image carousel style", "id"=>"menuGraphics")) }}</li>
+		  <li>{{ HTML::link("#", "Text List", array("title"=>"Change links to text list style", "id"=>"menuText")) }}</li>	
 		</ul>
 	</li>
 	
@@ -171,10 +171,10 @@
 			<li>Add login area</li>
 			<li>Tabify about skills</li>
 			<li>DB lists</li>
+			<li>restructure xhr code</li>
 			<li>Resize images on fly</li>
 			<li>Soliloquy blog</li>
 			<li>facility for adding icons/sites</li>
-			<li><strike>Make dropdown for List menu</strike></li>
 			<li>Package (minify, optimize)</li>
 			<li><strike>Code pronunciation</strike> (with audio for nickname)</li>
 		</ul>																

@@ -9,6 +9,7 @@
 	{{ HTML::style('http://fonts.googleapis.com/css?family=Croissant+One|Special+Elite') }}
 	{{ HTML::style('/css/style.css') }}
 	{{ HTML::style('laravel/css/style.css') }}
+	{{ HTML::script('/js/layout.funcs.js') }}
 	@yield('header')
 </head>
 
@@ -17,7 +18,17 @@
 	<div class="wrapper">
 		<header class="headfont">
 			<h1>@yield("title")</h1>
-			<h2>John Chase (aka <u class="def"><dfn title="IPA phonetics: dʒɑ dɑ KI neɪ <br/>(sounds like: jaw duh <strong>key</strong> nay)">jahdakine</dfn></u>)</h2>
+			<h2 id="nickName">John Chase (aka 
+				<u class="def">
+					<dfn title="IPA phonetics: dʒɑ dɑ <strong>ki</strong> neɪ <br/>(sounds like: jaw duh <strong>key</strong> nay)">jahdakine</dfn>
+					<!-- !!! replace with correct audio file - must not be mp3 (no FF) -->
+				</u>)<a href="#" id="nickButton" title="Play nickname pronunciation audio (wav)"><img src="/img/audio-icon.png" alt=""></a>
+			</h2>
+			<div class="no-overflow">
+				<div id="audioWrap" class="to-left"></div>
+				<div id="nickHide" class="hide to-left">&nbsp;<a href="#" title="Dismiss player"><img src="/img/delete-icon.png" alt=""/></a></div>
+				<div class="clear"></div>
+			</div>
 			<h4>Web Development</h4>
 		</header>
 		<ul class="drop" id="nav">

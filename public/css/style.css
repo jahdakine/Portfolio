@@ -3,7 +3,7 @@
 */
 body {
   background-color: #ddd;
-  min-width: 700px;
+  min-width: 750px;
 }
 /*
 | Navigation
@@ -68,10 +68,10 @@ ul.drop li:hover > ul { visibility: visible }
   text-align: center;
   background-color: #ccc;
   border: 5px solid #bbb;
-  width: 160px;
-  height: 160px;
+  width: 158px;
+  height: 158px;
   padding: 0;
-  margin: 6px;
+  margin: 2px;
   display: block;
   float: left;
 }
@@ -223,6 +223,7 @@ ul.drop li:hover > ul { visibility: visible }
   height:1px;
   overflow:hidden;
 }
+.hide { display:none; }
 .displayed { position:relative; }
 .communicate {
   list-style:none;
@@ -240,9 +241,9 @@ a[icon ^="out-text"] {
    padding: 0 20px 0 0;
    background: transparent url(/img/offsite-icon.png) no-repeat right;
 }
-.to-right {
-  float:right !important;
-}
+.to-right { float:right !important; }
+.to-left { float:left !important; }
+.no-overflow { overflow:hidden !important; }
 .def {
   text-decoration:none;
   border-bottom:1px dotted;
