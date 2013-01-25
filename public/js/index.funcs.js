@@ -1,8 +1,10 @@
 //!!! TODO
 //make OOP
-//one class for button clicks
+//*one class for button clicks
 //CACHE jSON
-//make helper function
+//*make helper function
+//deferreds?
+//get square size from flickr
 
 (function() {
 	//cache DOM vars
@@ -16,12 +18,8 @@
 			menu_text = $("#menuText"),
 			menu_graphics = $("#menuGraphics"),
 			reset = $("#reset"),
-			flickr = $("#flickr"),
-			meetup = $("#meetup"),
-			twitter = $("#twitter"),
-			blogger = $("#blogger"),
-			linkedin = $("#linkedin"),
 			landing = $("#landing"),
+			feed_btn = $(".feedBtn"),
 			content_frame = $("#contentFrame");
 	//setup carousel slider
 	function setCarousel(scroll) {
@@ -46,7 +44,8 @@
 	//setup links
 	list_img.css("display","none"); //hides images embedded in links
 	//nav menu clicks
-		menu_text.on('click', function(e) {
+	//text
+	menu_text.on('click', function(e) {
 		e.preventDefault();
 		list_img.hide(); //hides images embedded in links
 		carousel.trigger("destroy", "origOrder"); //remove the carousel
@@ -58,6 +57,7 @@
 		block2.wrapAll('<div id="t2"></div>');
 		block3.wrapAll('<div id="t3"></div>');
 	});
+	//graphics
 	menu_graphics.on('click', function(e) {
 		e.preventDefault();
 		list_img.css("display","inline"); //displays hidden images embedded in links
@@ -73,92 +73,55 @@
 		content_frame.css("display","none");
 		landing.css("display","inline");
 	});
-	// !!! make a helper function for the feed clicks
-	//flickr menu click
-	flickr.on('click', function(e) {
-		var html = "<h2>Latest Uploads</h2>";
+	//feed click handler
+	feed_btn.on('click', function(e) {
+		var id = this.id,
+				html = '<h2 align="center">Latest ' +id.substr(0,1).toUpperCase()+id.substr(1)+ ' Updates</h2><ul style="list-style:none">',
+				http = '',
+				obj = '',
+				date = '';
+				show = '';
+		show = "content_frame.css('display','inline-block').removeClass('image-matrix')";
+		switch (id) {
+			case ('blogger'):
+				http = 'https://www.googleapis.com/blogger/v3/blogs/2575251403540723939/posts?key=AIzaSyC4Zhv-nd_98_9Vn8Ad3U6TjY99Pd2YzOQ';
+				obj = 'data.items';
+				tmp = "'<li><time datetime=\"' + item.updated.split('T') + '\">' + item.updated.split('T') + '</time>: <a href=\"' + item.url + '\" target=\"_blank\">' + item.title + '</a></li>'";
+        break;
+      case ('twitter'):
+				http = 'http://search.twitter.com/search.json?q=jahdakine&callback=?';
+				obj = 'data.results';
+				tmp = "'<li><img src=\"' +item.profile_image_url+ '\" height=\"24\" width=\"24\" alt=\"profile icon\"/>&nbsp;<time datetime=\"' +item.created_at.split(' ').slice(0, 4).join(' ')+ '\">' +item.created_at.split(' ').slice(0, 4).join(' ')+ '</time>:&nbsp;<a href=\"http://twitter.com/jahdakine/status/' +item.id_str+ '\" target=\"_blank\">' +item.text+ '</a></li>'";
+        break;
+      case ('meetup'):
+				http = 'https://api.meetup.com/http:--www.meetup.com-HTML5-Denver-Users-Group-/events/65732862/attendance?key=4c20142a4141d657e707171794141c&sign=true&page=20';
+				obj = ''; //!!!not sure about this one
+        break;
+      case ('linkedin'):
+				http = 'http://api.linkedin.com/v1/people/~:(14123195)?format=json';
+				obj = ''; //!!!needs oauth
+        break;
+      case ('flickr'):
+				http = 'http://api.flickr.com/services/feeds/photos_public.gne?id=23019891@N00&lang=en-us&format=json&jsoncallback=?';
+				obj = 'data.items';
+				tmp = "'<a href=\"' + item.link + '\" target=\"_blank\" title=\"' + item.title + '\"><img src=\"' + item.media.m + '\" /></a>'";
+				show = "content_frame.css('display','inline-block').addClass('image-matrix')";
+        break;
+    }
 		e.preventDefault();
 		content_frame.empty();
-		$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?id=23019891@N00&lang=en-us&format=json&jsoncallback=?", function(data) {
-			$.each(data.items, function(i,item) {
-				//console.log(item);
-				html += '<a href="' + item.link + '" target="_blank" title="' + item.title + '"><img src="' + item.media.m + '" /></a>';
-			});
-			content_frame.html(html);
-		});
-		landing.css("display","none");
-		content_frame.css("display","inline-block").addClass('image-matrix');
-	});
-	//blogger click
-	blogger.on('click', function(e) {
-		var html = '<h2 align="center">Latest Blog Updates</h2><ul style="list-style:none">';
-		e.preventDefault();
-		content_frame.empty();
-		$.getJSON("https://www.googleapis.com/blogger/v3/blogs/2575251403540723939/posts?key=AIzaSyC4Zhv-nd_98_9Vn8Ad3U6TjY99Pd2YzOQ", function(data) {
-			$.each(data.items, function(i,item) {
-				console.log(i);
-				var date = item.updated.split('T');
-				html += '<li>' + date[0] + ': <a href="' + item.url + '" target="_blank">' + item.title + '</a></li>';
-				if(i === 4) { return false; } //show 5 items
+		$.getJSON(http, function(data) {
+			console.log(data);
+			$.each(eval(obj), function(i,item) {
+				console.log(item);
+				html += eval(tmp);
+				//if(i === 4) { return false; } //show 5 items
 			});
 			html += '</ul>';
 			console.log(html);
 			content_frame.html(html);
 		});
 		landing.css("display","none");
-		content_frame.css("display","inline-block").removeClass('image-matrix');
-	});
-	//meetup click
-	meetup.on('click', function(e) {
-		var html = "";
-		e.preventDefault();
-		content_frame.empty();
-		$.getJSON("https://api.meetup.com/http:--www.meetup.com-HTML5-Denver-Users-Group-/events/65732862/attendance?key=4c20142a4141d657e707171794141c&sign=true&page=20", function(data) {
-			$.each(data.items, function(i,item) {
-				console.log(item);
-				//html += '<a href="' + item.link + '" target="_blank"><img src="' + item.media.m + '" /></a>';
-			});
-			//content_frame.html(html);
-		});
-		landing.css("display","none");
-		content_frame.css("display","inline-block").removeClass('image-matrix');
-	});
-	//twitter click
-	twitter.on('click', function(e) {
-		var html = '<h2 align="center">Latest Tweets</h2><ul style="list-style:none">';
-		e.preventDefault();
-		content_frame.empty();
-		$.getJSON("http://search.twitter.com/search.json?q=jahdakine&callback=?", function(data) {
-			console.log(data.results);
-			$.each(data.results, function(i,item) {
-				console.log(item);
-				var date = item.created_at.split(' ').slice(0, 4).join(' ');
-				html += '<li><a href="http://twitter.com/jahdakine/status/' + item.id_str + '" target="_blank"><img src="' + item.profile_image_url + '" height="24" width="24" alt="profile icon"/>&nbsp;' + item.text +'</a> (<time datetime="' + item.created_at + '">' + date + '</time>)</li>';
-			});
-			html+="</ul>";
-			console.log(html);
-			content_frame.html(html);
-		});
-		landing.css("display","none");
-		content_frame.css("display","inline-block").removeClass('image-matrix');
-	});
-	//linkedin click
-	linkedin.on('click', function(e) {
-		var html = '<h2 align="center">Latest Tweets</h2><ul style="list-style:none">';
-		e.preventDefault();
-		content_frame.empty();
-		$.getJSON("http://api.linkedin.com/v1/people/~:(14123195)?format=json", function(data) {
-			console.log(data.results);
-			$.each(data.results, function(i,item) {
-				console.log(item);
-				var date = item.created_at.split(' ').slice(0, 4).join(' ');
-				//html += '<li><a href="http://twitter.com/jahdakine/status/' + item.id_str + '" target="_blank"><img src="' + item.profile_image_url + '" height="24" width="24" alt="profile icon"/>&nbsp;' + item.text +'</a> (<time datetime="' + item.created_at + '">' + date + '</time>)</li>';
-			});
-			html+="</ul>";
-			//console.log(html);
-			content_frame.html(html);
-		});
-		landing.css("display","none");
-		content_frame.css("display","inline-block").removeClass('image-matrix');
+		eval(show);
 	});
 })();
