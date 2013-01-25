@@ -171,3 +171,18 @@ if ( ! Request::cli() and Config::get('session.driver') !== '')
 {
 	Session::load();
 }
+
+/*
+|--------------------------------------------------------------------------
+| Custom macros
+|--------------------------------------------------------------------------
+|
+| Should go into a file?
+|
+*/
+
+Autoloader::namespaces(array(
+  'HTML' => path('app').'macros'
+	)
+);
+

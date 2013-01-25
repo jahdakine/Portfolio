@@ -1,4 +1,4 @@
-$(document).ready(function() {
+(function() {
 		var xhr_mu = $get.JSON("https://api.meetup.com/2/open_events?key=4c20142a4141d657e707171794141c&sign=true&state=CO&city=Denver&country=US&topic=HTML5, javascript&page=20",
 		function() {
 			alert("Success");
@@ -17,4 +17,4 @@ $(document).ready(function() {
 		});
 	});	
 
-});
+})();

@@ -5,11 +5,9 @@
 	<meta charset="utf-8"> 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<title>@yield('title')</title>
-	{{ HTML::script('/js/jquery-1.8.2.js') }}	
 	{{ HTML::style('http://fonts.googleapis.com/css?family=Croissant+One|Special+Elite') }}
 	{{ HTML::style('/css/style.css') }}
 	{{ HTML::style('laravel/css/style.css') }}
-	{{ HTML::script('/js/layout.funcs.js') }}
 	@yield('header')
 </head>
 
@@ -21,12 +19,14 @@
 			<h2 id="nickName">John Chase (aka 
 				<u class="def">
 					<dfn title="IPA phonetics: dʒɑ dɑ <strong>ki</strong> neɪ <br/>(sounds like: jaw duh <strong>key</strong> nay)">jahdakine</dfn>
-					<!-- !!! replace with correct audio file - must not be mp3 (no FF) -->
-				</u>)<a href="#" id="nickButton" title="Play nickname pronunciation audio (wav)"><img src="/img/audio-icon.png" alt=""></a>
+				</u>)
+				{{ HTML::a_img('#', '', 'Play nickname pronunciation audio (wav)', '/img/audio-icon.png', '', array('id' => 'nickButton'), array()) }}
 			</h2>
 			<div class="no-overflow">
 				<div id="audioWrap" class="to-left"></div>
-				<div id="nickHide" class="hide to-left">&nbsp;<a href="#" title="Dismiss player"><img src="/img/delete-icon.png" alt=""/></a></div>
+				<div id="nickHide" class="hide to-left">&nbsp;
+					{{ HTML::a_img('#', '', 'Dismiss player', '/img/delete-icon.png', '', array(), array()) }}
+				</div>
 				<div class="clear"></div>
 			</div>
 			<h4>Web Development</h4>
@@ -60,5 +60,8 @@
 			@yield('footer')
 		</footer>
 	</div>
+	{{ HTML::script('/js/vendor/jquery-1.8.2.js') }}	
+	{{ HTML::script('/js/layout.funcs.js') }}
+	@yield('scripts')	
 </body>
 </html>

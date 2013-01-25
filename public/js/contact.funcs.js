@@ -1,5 +1,4 @@
-$(document).ready(function() {
-	//help
+(function() {
 	$("#help").on('click', function(e) {
 		e.preventDefault();
 		$("#helper").removeClass("hidden");
@@ -13,4 +12,4 @@ $(document).ready(function() {
 		windowProperties = "toolbar=no,menubar=no,scrollbars=no,statusbar=no,height="+strHeight+",width="+strWidth+",left="+leftStr+",top="+topStr+"";
 		popWin = window.open(url,'newWin',windowProperties);
 	}
-});
+})();

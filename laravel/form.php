@@ -614,5 +614,4 @@ class Form {
 
 		throw new \Exception("Method [$method] does not exist.");
 	}
-
 }

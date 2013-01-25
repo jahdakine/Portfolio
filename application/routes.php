@@ -36,7 +36,7 @@ Route::get('/users', function() {
  	// $user->password = Hash::make('1');
  	// $user->save();
 	$creds = array(
-		'username' => 'test@test.com', //would come from form
+		'username' => 'test', //would come from form
 		'password' => '1' //would come from form
 	);
 	if (Auth::attempt($creds)) {
@@ -93,6 +93,11 @@ Event::listen('404', function()
 Event::listen('500', function()
 {
 	return Response::error('500');
+});
+
+//!!! DEV only
+Event::listen('laravel.query', function($sql) {
+	echo "SQL: {$sql} <br/>";
 });
 
 /*

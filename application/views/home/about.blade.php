@@ -6,10 +6,7 @@
 
 @section('header')
 	{{ HTML::style('/css/style.css') }}
-	{{ HTML::style('/css/jquery-ui-1.9.2.custom.css') }}	
-	
-	{{ HTML::script('/js/about.funcs.js') }}
-	{{ HTML::script('/js/jquery-ui-1.9.2.custom.js') }}
+	{{ HTML::style('/css/vendor/jquery-ui-1.9.2.custom.css') }}	
 @endsection
 
 @section('nav')
@@ -33,22 +30,22 @@
 	intra and extranets. This entailed design, documentation, programming and testing web applications.</p>
 
 	<h3>Future</h3>
-	<p>Sure, knowing how to serve up data and guide users through complicated processes and make dificult concepts 
+	<p>Sure, knowing how to serve up data correctly and guide users through complicated processes and make dificult concepts 
 	understandable has its place, but the right side of my brain has begun to rebel a little and now has tipped the
-	scales toward needing additional creative outlets. The good news is the web is still a wonderful place to balance both 
+	scales toward balance in additional creative outlets. The good news is the web is still a wonderful place to balance both 
 	creative and analytical skills! So my new carreer will include more front end work. My goal will be to round into a full-stack
 	developer and web artisan.</p>
 </article>
 <section>
 	<h3>Skills/Training</h3>
 	<div id="wrapper">
-		<div id="tabs-1">
+		<div id="skills">
 			<ul>
-				<li><a href="#tabs-1_1">Solid Experience</a></li>
-				<li><a href="#tabs-1_2">Training</a></li>
-				<li><a href="#tabs-1_3">Some familiarity</a></li>
+				<li><a href="#skills-1">Solid Experience</a></li>
+				<li><a href="#skills-2">Training</a></li>
+				<li><a href="#skills-3">Some familiarity</a></li>
 			</ul>
-			<div id="tabs-1_1">
+			<div id="skills-1">
 			<ul>
 				<li>ColdFusion (3-10)</li>
 				<li>Database Design</li>
@@ -58,8 +55,8 @@
 				<li>RegEx</li>
 				<li>Web Application Security</li>
 			</ul>
-			</div><!-- // tabs-1_1 -->
-			<div id="tabs-1_2">
+			</div><!-- // skills-1 -->
+			<div id="skills-2">
 				<ul>
 					<li>PHP (4 &amp; 5)</li>
 					<li>MAMP</li>
@@ -71,8 +68,8 @@
 					<li>Sublime Text 2/VIM</li>
 					<li>Git/Subversion</li>
 				</ul> 
-			</div><!-- // tabs-1_2 -->
-			<div id="tabs-1_3">
+			</div><!-- // skills-2 -->
+			<div id="skills-3">
 			  <ul>
 					<li>BASH</li>
 					<li>Backbone</li>
@@ -83,19 +80,19 @@
 					<li>SASS</li>	
 					<li>SQL - Oracle</li>	
 				</ul>
-			</div><!-- // tabs-1_3 -->
-		</div><!-- // tabs-1 -->
+			</div><!-- // skills-3 -->
+		</div><!-- // skills -->
 
 	<h3>Training</h3>
 	<div id="wrapper">
-		<div id="tabs-2">
+		<div id="courses">
 			<ul>
-				<li><a href="#tabs-2_1">Completed Courses/Tutorials</a></li>
-				<li><a href="#tabs-2_2">Current Courses/Tutorials</a></li>
-				<li><a href="#tabs-2_3">Projects</a></li>
+				<li><a href="#courses-1">Completed Courses/Tutorials</a></li>
+				<li><a href="#courses-2">Current Courses/Tutorials</a></li>
+				<li><a href="#courses-3">Projects/Interests</a></li>
 			</ul>
-			<div id="tabs-2_1">
-				<h3>{{ HTML::link("https://tutsplus.com/", "Tuts+ Premium", array("title"=>"Open Tuts+ Premium in a new window/tab", "target"=>"_blank")) }}</h3>
+			<div id="courses-1">
+				<h3>{{ HTML::link("https://tutsplus.com/", "Tuts+ Premium", array("title"=>"Open Tuts+ Premium in a new window/tab", "target"=>"_blank", "icon"=>"out-text")) }}</h3>
 				<ul>
 					<li>Advanced JavaScript Fundamentals</li>
 					<li>Your Obedient Assistant: Yeoman</li>
@@ -111,9 +108,9 @@
 					<li>WordPress Plugin Development Essentials</li>
 					<li>PHP Fundamentals</li>
 				</ul>
-			</div><!-- // tabs-2_1 -->
-			<div id="tabs-2_2">
-				<h3>{{ HTML::link("https://tutsplus.com/", "Tuts+ Premium", array("title"=>"Open Tuts+ Premium in a new window/tab", "target"=>"_blank")) }}</h3>	
+			</div><!-- // courses-1 -->
+			<div id="courses-2">
+				<h3>{{ HTML::link("https://tutsplus.com/", "Tuts+ Premium", array("title"=>"Open Tuts+ Premium in a new window/tab", "target"=>"_blank", "icon"=>"out-text")) }}</h3>	
 				<ul>
 					<li>Laravel Essentials</li>
 					<li>Hands-On: Build a Practical Web Application with Laravel</li>
@@ -125,16 +122,16 @@
 					<li>Object-Oriented JavaScript</li>
 					<li>Learning MongoDB</li>
 				</ul> 
-			</div><!-- // tabs-2_2 -->
-			<div id="tabs-2_3">
+			</div><!-- // courses-2 -->
+			<div id="courses-3">
 			  <ul>
 					<li>Online CV (this site)</li>
 					<li>2D Gaming</li>
 					<li>Form Beautification</li>
 					<li>Conference Generatr</li>	
 				</ul>
-			</div><!-- // tabs-2_3 -->
-		</div><!-- // tabs-2 -->
+			</div><!-- // courses-3 -->
+		</div><!-- // courses -->
 	</div><!-- // wrapper -->
 </section>             
 
@@ -142,4 +139,9 @@
 
 @section('footer')
 	
+@endsection
+
+@section('scripts')
+	{{ HTML::script('/js/about.funcs.js') }}
+	{{ HTML::script('/js/vendor/jquery-ui-1.9.2.custom.js') }}
 @endsection

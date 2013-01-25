@@ -243,6 +243,10 @@ a[icon ^="out-text"] {
 }
 .to-right { float:right !important; }
 .to-left { float:left !important; }
+.to-center {
+  margin-left: auto;
+  margin-right: auto;
+}
 .no-overflow { overflow:hidden !important; }
 .def {
   text-decoration:none;
