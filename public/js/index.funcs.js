@@ -17,6 +17,7 @@
 			block3 = $(".block3"),
 			menu_text = $("#menuText"),
 			menu_graphics = $("#menuGraphics"),
+			controls = $("#ctrls");
 			reset = $("#reset"),
 			landing = $("#landing"),
 			feed_btn = $(".feedBtn"),
@@ -56,6 +57,7 @@
 		block1.wrapAll('<div id="t1"></div>');
 		block2.wrapAll('<div id="t2"></div>');
 		block3.wrapAll('<div id="t3"></div>');
+		controls.addClass("hidden");
 	});
 	//graphics
 	menu_graphics.on('click', function(e) {
@@ -65,6 +67,7 @@
 		list.addClass("list-carousel");
 		carousel_li.unwrap();
 		setCarousel(1);
+		controls.removeClass("hidden").addClass("controls").center({vertical: false});
 	});
 	//reset click
 	reset.on('click', function(e) {

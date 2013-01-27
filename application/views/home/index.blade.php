@@ -18,6 +18,12 @@
 		  <li>{{ HTML::link("#", "Text List", array("title"=>"Change links to text list style", "id"=>"menuText")) }}</li>	
 		</ul>
 	</li>
+</ul>
+<ul class="reset">
+	<!-- 
+	<div id="container" style="background: url(path/to/image.png) no-repeat 50% 50%"></div>
+ 	-->
+	<li id="ctrls" class="hidden"><img src="/img/controls-icon.png" alt="carousel controls"><!--<a href="#"></a>--></li>
 @endsection 
 
 @section('content')
@@ -135,12 +141,15 @@
 	<section class="notes">
 		<h3 align="center">To do:</h3> 
 		<ul>
-			<li><strike>move scripts to bottom with yield in layout</strike></li>
+			<li>Add smooth transitions</li>
+			<li>find a different way to offsite link (too many img calls)</li>
 			<li>Add login area</li>
-			<li>DB lists</li>
+			<li>DB social sites list</li>
 			<li>restructure xhr code</li>
 			<li>Soliloquy blog</li>
 			<li>facility for adding icons/sites</li>
+			<li>Add carousel controls, use sprite</li>
+			<li>Animate logo with Canvas JS</li>
 			<li>Package (minify, optimize)</li>
 			<li>Cure world hunger</li>
 		</ul>																
@@ -156,5 +165,6 @@
 @section('scripts')
 	{{ HTML::script('/js/vendor/jquery-ui-1.9.2.custom.js') }}	
 	{{ HTML::script('/js/vendor/jquery.carouFredSel.js') }}
+	{{ HTML::script('/js/vendor/jquery.center.js') }}	
 	{{ HTML::script('/js/index.funcs.js') }}
 @endsection

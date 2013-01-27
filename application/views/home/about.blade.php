@@ -18,7 +18,7 @@
 	<h3>History</h3>
 	<p>Started out in mechanical design after a stint in ranching, fast food, 
 	encyclopedia sales, hardware, and quality assurance testing. Worked in solids modeling 
-	and quality assurance. Developed a taste for computer programming while automating 
+	and quality control for tape drive manufacturer. Developed a taste for computer programming while automating 
 	processes and writing batch files.</p>
 
 	<p>Apprenticed with a traffic crash analysis software firm testing and writing Delphi code.
@@ -94,6 +94,7 @@
 			<div id="courses-1">
 				<h3>{{ HTML::link("https://tutsplus.com/", "Tuts+ Premium", array("title"=>"Open Tuts+ Premium in a new window/tab", "target"=>"_blank", "icon"=>"out-text")) }}</h3>
 				<ul>
+					<li>Laravel Essentials</li>
 					<li>Advanced JavaScript Fundamentals</li>
 					<li>Your Obedient Assistant: Yeoman</li>
 					<li>Are You Using CoffeeScript?</li>
@@ -112,7 +113,6 @@
 			<div id="courses-2">
 				<h3>{{ HTML::link("https://tutsplus.com/", "Tuts+ Premium", array("title"=>"Open Tuts+ Premium in a new window/tab", "target"=>"_blank", "icon"=>"out-text")) }}</h3>	
 				<ul>
-					<li>Laravel Essentials</li>
 					<li>Hands-On: Build a Practical Web Application with Laravel</li>
 					<li>Connected to the Backbone</li>
 					<li>jQuery Plugin Development: Best Practices</li>
@@ -128,7 +128,8 @@
 					<li>Online CV (this site)</li>
 					<li>2D Gaming</li>
 					<li>Form Beautification</li>
-					<li>Conference Generatr</li>	
+					<li>Conference Generatr</li>
+					<li>SoShl Parade</li>	
 				</ul>
 			</div><!-- // courses-3 -->
 		</div><!-- // courses -->
@@ -142,6 +143,6 @@
 @endsection
 
 @section('scripts')
-	{{ HTML::script('/js/about.funcs.js') }}
 	{{ HTML::script('/js/vendor/jquery-ui-1.9.2.custom.js') }}
+	{{ HTML::script('/js/about.funcs.js') }}
 @endsection

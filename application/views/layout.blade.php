@@ -29,7 +29,7 @@
 				</div>
 				<div class="clear"></div>
 			</div>
-			<h4>Web Development</h4>
+			<h4>Web Developer</h4>
 		</header>
 		<ul class="drop" id="nav">
 			@section('nav')
@@ -61,7 +61,7 @@
 		</footer>
 	</div>
 	{{ HTML::script('/js/vendor/jquery-1.8.2.js') }}	
-	{{ HTML::script('/js/layout.funcs.js') }}
 	@yield('scripts')	
+	{{ HTML::script('/js/layout.funcs.js') }}
 </body>
 </html>

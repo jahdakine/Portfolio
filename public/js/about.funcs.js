@@ -1,4 +1,4 @@
 (function() {
-	$( "#skills" ).tabs();
-	$( "#courses" ).tabs();
+	$("#skills").tabs();
+	$("#courses").tabs();
 })();
