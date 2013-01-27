@@ -45,7 +45,7 @@
 	//setup links
 	list_img.css("display","none"); //hides images embedded in links
 	//nav menu clicks
-	//text
+		//text
 	menu_text.on('click', function(e) {
 		e.preventDefault();
 		list_img.hide(); //hides images embedded in links
@@ -57,9 +57,9 @@
 		block1.wrapAll('<div id="t1"></div>');
 		block2.wrapAll('<div id="t2"></div>');
 		block3.wrapAll('<div id="t3"></div>');
-		controls.addClass("hidden");
+		controls.addClass("transparent");
 	});
-	//graphics
+		//graphics
 	menu_graphics.on('click', function(e) {
 		e.preventDefault();
 		list_img.css("display","inline"); //displays hidden images embedded in links
@@ -67,7 +67,7 @@
 		list.addClass("list-carousel");
 		carousel_li.unwrap();
 		setCarousel(1);
-		controls.removeClass("hidden").addClass("controls").center({vertical: false});
+		controls.removeClass("transparent").addClass("controls").center({vertical: false});
 	});
 	//reset click
 	reset.on('click', function(e) {

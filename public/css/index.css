@@ -1,0 +1,119 @@
+/*
+| Image Matrix
+*/
+.image-matrix {
+  width:100%;
+  text-align:center;
+  margin: 7px auto;
+}
+.image-matrix div {
+    display:inline-block;
+    margin:10px 0;
+}
+.image-matrix a img {
+  border: 1px solid #ccc;
+  width: 150px;
+  height: 150px;
+  background-color: white;
+  padding: 9px;
+  margin: 7px;
+  position: relative;
+}
+/*
+| List Carousel
+*/
+.list-carousel {
+  padding: 15px 18px 15px 18px;
+}
+.list-carousel ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: block;
+}
+.list-carousel li {
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+  background-color: #ccc;
+  border: 5px solid #bbb;
+  width: 158px;
+  height: 158px;
+  padding: 0;
+  margin: 2px;
+  display: block;
+  float: left;
+}
+.clear-fix {
+  float: none;
+  clear: both;
+}
+/*
+| List Text
+*/
+.list-text {
+  width: 100%;
+  vertical-align: top;
+}
+#t1, #t2 {
+  width: 33%;
+  padding: 10px;
+  float:left;
+  list-style: none;
+}
+#t3 {
+  width:auto;
+  padding: 10px;
+  float:left;
+  list-style: none;
+}
+/*
+| Frames
+*/
+#contentFrame {
+  display:none;
+  list-style:none;
+  background-color: #ccc;
+  border: black 1px solid;
+  margin: 1em auto;
+  padding: 5px;
+  width: 100%;
+}
+/*
+| Sticky notes
+*/
+.notes {
+  width:50%;
+  margin: 50px auto;
+  padding: 10px;
+  position: relative;
+  -webkit-box-shadow: 10px 10px 20px rgba(0,0,0,.15);
+  -moz-box-shadow: 10px 10px 20px rgba(0,0,0,.15);
+  box-shadow: 10px 10px 20px rgba(0,0,0,.15);
+  background-color: #fcf59b;  
+  font-family: 'Special Elite', cursive;
+}
+.notes li {
+  list-style: square;
+  color: #2972A3;
+  line-height: 1em;
+  margin-bottom: 20px;
+}
+/*future sprite
+#ctrls a {background-image:url('/img/controls-icon.gif')}
+#ctrls .item1 {background-position:0 0}
+#ctrls .item2 {background-position:0 -72px}
+#ctrls .item3 {background-position:0 -143px;}
+#ctrls .item4 {background-position:0 -215px;}
+#ctrls .item5 {background-position:0 -215px;}
+#ctrls .item6 {background-position:0 -215px;}*/
+.controls {  
+  display: inline-block;
+  z-index: 1000;
+  list-style: none;
+  opacity: 1;
+  position: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  left: 50%; 
+}

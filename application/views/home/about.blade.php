@@ -5,8 +5,6 @@
 @endsection
 
 @section('header')
-	{{ HTML::style('/css/style.css') }}
-	{{ HTML::style('/css/vendor/jquery-ui-1.9.2.custom.css') }}	
 @endsection
 
 @section('nav')
@@ -143,6 +141,5 @@
 @endsection
 
 @section('scripts')
-	{{ HTML::script('/js/vendor/jquery-ui-1.9.2.custom.js') }}
 	{{ HTML::script('/js/about.funcs.js') }}
 @endsection

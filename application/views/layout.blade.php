@@ -5,8 +5,7 @@
 	<meta charset="utf-8"> 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<title>@yield('title')</title>
-	{{ HTML::style('http://fonts.googleapis.com/css?family=Croissant+One|Special+Elite') }}
-	{{ HTML::style('/css/style.css') }}
+	{{ HTML::style('/css/vendor/jquery-ui-1.9.2.custom.css') }}
 	{{ HTML::style('laravel/css/style.css') }}
 	@yield('header')
 </head>
@@ -20,12 +19,12 @@
 				<u class="def">
 					<dfn title="IPA phonetics: dʒɑ dɑ <strong>ki</strong> neɪ <br/>(sounds like: jaw duh <strong>key</strong> nay)">jahdakine</dfn>
 				</u>)
-				{{ HTML::a_img('#', '', 'Play nickname pronunciation audio (wav)', '/img/audio-icon.png', '', array('id' => 'nickButton'), array()) }}
+				{{ HTML::a_img('#', '', 'Play nickname pronunciation audio (wav)', '/img/audio-icon.png', '', array('id' => 'nickButton'), array("height" => "32px", "width" => "32px")) }}
 			</h2>
 			<div class="no-overflow">
 				<div id="audioWrap" class="to-left"></div>
 				<div id="nickHide" class="hide to-left">&nbsp;
-					{{ HTML::a_img('#', '', 'Dismiss player', '/img/delete-icon.png', '', array(), array()) }}
+					{{ HTML::a_img('#', '', 'Dismiss player', '/img/delete-icon.png', '', array(), array("height" => "16px", "width" => "16px")) }}
 				</div>
 				<div class="clear"></div>
 			</div>
@@ -61,6 +60,7 @@
 		</footer>
 	</div>
 	{{ HTML::script('/js/vendor/jquery-1.8.2.js') }}	
+	{{ HTML::script('/js/vendor/jquery-ui-1.9.2.custom.js') }}		
 	@yield('scripts')	
 	{{ HTML::script('/js/layout.funcs.js') }}
 </body>
