@@ -100,12 +100,23 @@
   margin-bottom: 20px;
 }
 .controls {
-  display: inline-block;
   z-index: 1000;
   list-style: none;
-  opacity: 1;
   position: fixed;
   margin-left: auto;
   margin-right: auto;
   left: 50%; 
 }
+#ctrls1, #ctrls2, #ctrls3, #ctrls4, #ctrls5, #ctrls6 {   
+  display: inline-table;
+  text-decoration:none;
+  background-image:url('/img/controls-icon.png');
+  background-repeat: no-repeat;  
+  width:23px; height:25px;
+}
+#ctrls1 { background-position: 0 0; }
+#ctrls2 { background-position: 0 -25px; }
+#ctrls3 { background-position: 0 -50px; }
+#ctrls4 { background-position: 0 -75px; }
+#ctrls5 { background-position: 0 -100px; }
+#ctrls6 { background-position: 0 -125px; }

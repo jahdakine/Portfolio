@@ -5,6 +5,8 @@
 //*make helper function
 //deferreds?
 //get square size from flickr
+//use carouFredSel method to resize
+//fix FF bug for button #6
 
 (function() {
 	//cache DOM vars
@@ -17,26 +19,42 @@
 			block3 = $(".block3"),
 			menu_text = $("#menuText"),
 			menu_graphics = $("#menuGraphics"),
-			controls = $("#ctrls");
+			c1 = $("#ctrls1"),
+			c2 = $("#ctrls2"),
+			c3 = $("#ctrls3"),
+			c4 = $("#ctrls4"),
+			c5 = $("#ctrls5"),
+			c6 = $("#ctrls6"),
+			ctrls = $("#ctrls");
 			reset = $("#reset"),
 			landing = $("#landing"),
 			feed_btn = $(".feedBtn"),
-			content_frame = $("#contentFrame");
+			content_frame = $("#contentFrame"),
+			num2Scroll = 1,
+			dir2Scroll = "left";
 	//setup carousel slider
-	function setCarousel(scroll) {
+	function setCarousel(num2Scroll, dir2Scroll) {
 		carousel.carouFredSel({
-			// debug						: true,
 			align						: "center",
 			width						: "100%",
 			onWindowResize	: 'throttle',
 			items						: Math.round(window.innerWidth/200),
-			scroll					: scroll
+			scroll					: window.num2Scroll,
+			direction       : window.dir2Scroll,
+			prev						: {
+        button				: c2
+			},
+			next						: {
+        button				: c5
+			}
+		}, {
+					debug       : true // !!! production  - set to false
 		});
 	}
-	//Fire carousel on resize - is there a method for this (check API)?
-	$(window).resize(function() {
+	//!!!Fire carousel on resize - is there a method for this (check API)?
+	$(window).resize(function(dir2Scroll) {
 		if(list_img.css("display") !== "none") {
-			setCarousel(1);
+			setCarousel(window.num2Scroll, window.dir2Scroll); //!!!dont reset
 		}
 	});
 	//set tooltips
@@ -48,26 +66,34 @@
 		//text
 	menu_text.on('click', function(e) {
 		e.preventDefault();
-		list_img.hide(); //hides images embedded in links
-		carousel.trigger("destroy", "origOrder"); //remove the carousel
-		list.removeClass("list-carousel");
-		list.addClass("list-text");
-		carousel.removeAttr("style");
-		//add 3 col divs back in
-		block1.wrapAll('<div id="t1"></div>');
-		block2.wrapAll('<div id="t2"></div>');
-		block3.wrapAll('<div id="t3"></div>');
-		controls.addClass("transparent");
+		if(!ctrls.hasClass("transparent")) {
+			list_img.hide(); //hides images embedded in links
+			carousel.trigger("destroy", "origOrder"); //remove the carousel
+			list.removeClass("list-carousel");
+			list.addClass("list-text");
+			carousel.removeAttr("style");
+			//add 3 col divs back in
+			block1.wrapAll('<div id="t1"></div>');
+			block2.wrapAll('<div id="t2"></div>');
+			block3.wrapAll('<div id="t3"></div>');
+			ctrls.addClass("transparent");
+			menu_text.addClass("pad-me");
+			menu_graphics.removeClass("pad-me");
+		}
 	});
 		//graphics
-	menu_graphics.on('click', function(e) {
+	menu_graphics.on('click', function(e, num2Scroll, dir2Scroll) {
 		e.preventDefault();
-		list_img.css("display","inline"); //displays hidden images embedded in links
-		list.removeClass("list-text");
-		list.addClass("list-carousel");
-		carousel_li.unwrap();
-		setCarousel(1);
-		controls.removeClass("transparent").addClass("controls").center({vertical: false});
+		if(list_img.css("display") !== "inline") {
+			list_img.css("display","inline"); //displays hidden images embedded in links
+			list.removeClass("list-text");
+			list.addClass("list-carousel");
+			carousel_li.unwrap();
+			setCarousel(window.num2Scroll, window.dir2Scroll);
+			ctrls.removeClass("transparent").center({vertical: false});
+			menu_graphics.addClass("pad-me");
+			menu_text.removeClass("pad-me");
+		}
 	});
 	//reset click
 	reset.on('click', function(e) {
@@ -75,6 +101,45 @@
 		content_frame.empty();
 		content_frame.css("display","none");
 		landing.css("display","inline");
+	});
+	//carousel controls
+	c1.on('click', function(e, num2Scroll, dir2Scroll) { //slow down num2Scroll
+		e.preventDefault();
+		if(window.num2Scroll > 1) {
+			carousel.trigger("configuration", ["scroll", window.num2Scroll-=1]);
+			carousel.trigger("play");
+		}
+	});
+	c2.on('click', function(e, num2Scroll, dir2Scroll) { //scroll backward
+		e.preventDefault();
+		carousel.trigger("configuration", ["direction", "right"]);
+		carousel.trigger("play");
+	});
+	c3.on('click', function(e, num2Scroll, dir2Scroll) { //pause scroll
+		e.preventDefault();
+		carousel.trigger("pause", true);
+	});
+	c4.on('click', function(e, num2Scroll, dir2Scroll) { //start scroll
+		e.preventDefault();
+		if(!carousel.triggerHandler("isScrolling")) {
+			carousel.trigger("play", [window.dir2Scroll, true]);
+		} else {
+			carousel.trigger("resume");
+		}
+	});
+	c5.on('click', function(e) { //scroll forward
+		e.preventDefault();
+		carousel.trigger("configuration", ["direction", "left"]);
+		carousel.trigger("play");
+	});
+	c6.on('click', function(e, num2Scroll, dir2Scroll) { //speed up scroll
+		e.preventDefault();
+		var numVisible = carousel.triggerHandler("configuration", "items.visible");
+		// console.log(numVisible);
+		if(window.num2Scroll < numVisible) {
+			carousel.trigger("configuration", ["scroll", window.num2Scroll+=1]);
+			carousel.trigger("play");
+		}
 	});
 	//feed click handler
 	feed_btn.on('click', function(e) {

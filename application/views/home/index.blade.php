@@ -20,7 +20,14 @@
 	</li>
 </ul>
 <ul class="reset">
-	<li id="ctrls" class="transparent"><img src="/img/controls-icon.png" alt="carousel controls" height="24px" width="139px"></li>
+	<li id="ctrls" class="controls transparent" style="padding-top:5px;">
+		<a href="#" id="ctrls1" title="Slow down the carousel scroll rate"></a>
+		<a href="#" id="ctrls2" title="Scroll backward"></a>
+  	<a href="#" id="ctrls3" title="Stop the carousel"></a>
+  	<a href="#" id="ctrls4" title="Start the carousel"></a>
+  	<a href="#" id="ctrls5" title="Scroll forward"></a>
+  	<a href="#" id="ctrls6" title="Speed up the carousel scroll rate"></a>
+  </li>
 @endsection 
 
 @section('content')
