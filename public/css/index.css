@@ -99,15 +99,7 @@
   line-height: 1em;
   margin-bottom: 20px;
 }
-/*future sprite
-#ctrls a {background-image:url('/img/controls-icon.gif')}
-#ctrls .item1 {background-position:0 0}
-#ctrls .item2 {background-position:0 -72px}
-#ctrls .item3 {background-position:0 -143px;}
-#ctrls .item4 {background-position:0 -215px;}
-#ctrls .item5 {background-position:0 -215px;}
-#ctrls .item6 {background-position:0 -215px;}*/
-.controls {  
+.controls {
   display: inline-block;
   z-index: 1000;
   list-style: none;

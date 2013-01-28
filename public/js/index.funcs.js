@@ -118,7 +118,7 @@
 			$.each(eval(obj), function(i,item) {
 				console.log(item);
 				html += eval(tmp);
-				//if(i === 4) { return false; } //show 5 items
+				if(i === 4) { return false; } //show 5 items
 			});
 			html += '</ul>';
 			console.log(html);

@@ -20,10 +20,7 @@
 	</li>
 </ul>
 <ul class="reset">
-	<!-- !!! make sprite
-	<div id="container" style="background: url(path/to/image.png) no-repeat 50% 50%"></div>
- 	-->
-	<li id="ctrls" class="transparent"><img src="/img/controls-icon.png" alt="carousel controls" height="24px" width="139px"><!--<a href="#"></a>--></li>
+	<li id="ctrls" class="transparent"><img src="/img/controls-icon.png" alt="carousel controls" height="24px" width="139px"></li>
 @endsection 
 
 @section('content')
@@ -115,6 +112,14 @@
 <div class="clear-fix"></div>	
 <div id="contentFrame"></div>
 <div id="landing">
+	<aside>
+		<h3>Legend</h3>
+		<ul>
+			<li>Link to a webpage in a new window offsite: {{ HTML::link("http://www.offsite.com", "External link", array("onclick" => "return false;")) }}</li>
+			<li>Link to another page onsite: {{ HTML::link("#", "Internal link") }}</li>
+		</ul>
+
+	</aside>
 	<article>
 		Welcome. This is my online 
 		<acronym title="Curriculum Vitae">CV</acronym>. 
@@ -142,7 +147,6 @@
 		<h3 align="center">To do:</h3> 
 		<ul>
 			<li>Add smooth transitions</li>
-			<li>find a different way to offsite link (too many img calls)</li>
 			<li>Add login area</li>
 			<li>DB social sites list</li>
 			<li>restructure xhr code</li>
