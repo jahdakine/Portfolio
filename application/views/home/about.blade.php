@@ -2,16 +2,19 @@
 
 @section('title')
 	About
-@endsection
+@endsection<!-- // title -->
 
 @section('header')
-@endsection
+@endsection<!-- // header -->
 
 @section('nav')
 	@parent
-@endsection
+@endsection<!-- // nav -->
 
-@section('content')
+@section('aside')
+@endsection<!-- // aside -->
+
+@section('main')
 <article>
 	<h3>History</h3>
 	<p>Started out in mechanical design after a stint in ranching, fast food, 
@@ -133,13 +136,11 @@
 		</div><!-- // courses -->
 	</div><!-- // wrapper -->
 </section>             
-
-@endsection
+@endsection<!-- // main -->
 
 @section('footer')
-	
-@endsection
+@endsection<!-- // footer -->
 
 @section('scripts')
 	{{ HTML::script('/js/about.funcs.js') }}
-@endsection
+@endsection<!-- // scripts -->

@@ -187,7 +187,11 @@
 			$.each(eval(obj), function(i,item) {
 				console.log(item);
 				html += eval(tmp);
+<<<<<<< HEAD
 				if(i === limit) { return false; } 
+=======
+				if(i === limit) { return false; }
+>>>>>>> aside
 			});
 			html += '</ul>';
 			console.log(html);

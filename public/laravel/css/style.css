@@ -1,16 +1,29 @@
 @import url(http://fonts.googleapis.com/css?family=Croissant+One|Special+Elite|Droid+Sans);
+/* * { border: 1px solid red !important; } useful layout tool - comment when not needed */
 body
 {
 	font-family:'Droid Sans', sans-serif;
 	font-size:10pt;
 	color:#555;
 	line-height: 25px;
-  background-color: #ddd;
+  background-color: #eee;
   min-width: 750px;
 }
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
 abbr[title] { border-bottom: 1px dotted; }
 dfn { font-style: italic; }
+hr { border-radius:0; margin-top:0;}
+/*
+| Layout
+*/
+aside {
+  float: right;
+  border: 1px black dotted;
+  background-color: #ddd; 
+  font-size: 80%;
+  padding: 5px;
+  margin: 5px 15px;
+}
 /*
 | Links
 */
@@ -91,7 +104,7 @@ a[href^="http://http://jahdakine.pagodabox.com/"]:after {
 .container {
   margin : 1em;
 }
-ul#nav { 
+ul#nav{ 
   width: 100%;
   background-color: #333;
   margin:0 0 1em 0;
@@ -121,12 +134,20 @@ ul.drop li:hover > ul { visibility: visible }
 .hide { display:none; }
 .display{ position:relative; }
 .transparent { opacity: 0 }
-.nolist { list-style:none; }
+.nolist { 
+	list-style:none; 
+	margin: 0;
+	padding: 0;
+}
 .shim { padding-bottom: 3px; }
 .to-right { float:right !important; }
 .to-left { float:left !important; }
 .no-overflow { overflow:hidden !important; }
+<<<<<<< HEAD
 .def, acronym {
+=======
+.def, .acronym {
+>>>>>>> aside
   text-decoration:none;
   border-bottom:1px dotted;
   color: rgb(0,100,200);
