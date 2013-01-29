@@ -68,7 +68,7 @@
 		e.preventDefault();
 		if(!ctrls.hasClass("transparent")) {
 			list_img.hide(); //hides images embedded in links
-			carousel.trigger("destroy", "origOrder"); //remove the carousel
+			carousel.trigger("destroy", "origOrder");
 			list.removeClass("list-carousel");
 			list.addClass("list-text");
 			carousel.removeAttr("style");
@@ -135,7 +135,6 @@
 	c6.on('click', function(e, num2Scroll, dir2Scroll) { //speed up scroll
 		e.preventDefault();
 		var numVisible = carousel.triggerHandler("configuration", "items.visible");
-		// console.log(numVisible);
 		if(window.num2Scroll < numVisible) {
 			carousel.trigger("configuration", ["scroll", window.num2Scroll+=1]);
 			carousel.trigger("play");
@@ -155,25 +154,30 @@
 				http = 'https://www.googleapis.com/blogger/v3/blogs/2575251403540723939/posts?key=AIzaSyC4Zhv-nd_98_9Vn8Ad3U6TjY99Pd2YzOQ';
 				obj = 'data.items';
 				tmp = "'<li><time datetime=\"' + item.updated.split('T') + '\">' + item.updated.split('T') + '</time>: <a href=\"' + item.url + '\" target=\"_blank\">' + item.title + '</a></li>'";
+        limit = 5;
         break;
       case ('twitter'):
 				http = 'http://search.twitter.com/search.json?q=jahdakine&callback=?';
 				obj = 'data.results';
 				tmp = "'<li><img src=\"' +item.profile_image_url+ '\" height=\"24\" width=\"24\" alt=\"profile icon\"/>&nbsp;<time datetime=\"' +item.created_at.split(' ').slice(0, 4).join(' ')+ '\">' +item.created_at.split(' ').slice(0, 4).join(' ')+ '</time>:&nbsp;<a href=\"http://twitter.com/jahdakine/status/' +item.id_str+ '\" target=\"_blank\">' +item.text+ '</a></li>'";
+        limit = 10;
         break;
       case ('meetup'):
 				http = 'https://api.meetup.com/http:--www.meetup.com-HTML5-Denver-Users-Group-/events/65732862/attendance?key=4c20142a4141d657e707171794141c&sign=true&page=20';
 				obj = ''; //!!!not sure about this one
+				limit = 3;
         break;
       case ('linkedin'):
 				http = 'http://api.linkedin.com/v1/people/~:(14123195)?format=json';
 				obj = ''; //!!!needs oauth
+				limit = 10;
         break;
       case ('flickr'):
 				http = 'http://api.flickr.com/services/feeds/photos_public.gne?id=23019891@N00&lang=en-us&format=json&jsoncallback=?';
 				obj = 'data.items';
 				tmp = "'<a href=\"' + item.link + '\" target=\"_blank\" title=\"' + item.title + '\"><img src=\"' + item.media.m + '\" /></a>'";
 				show = "content_frame.css('display','inline-block').addClass('image-matrix')";
+				limit = 20;
         break;
     }
 		e.preventDefault();
@@ -183,7 +187,7 @@
 			$.each(eval(obj), function(i,item) {
 				console.log(item);
 				html += eval(tmp);
-				if(i === 4) { return false; } //show 5 items
+				if(i === limit) { return false; }
 			});
 			html += '</ul>';
 			console.log(html);
