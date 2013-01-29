@@ -7,11 +7,11 @@
   margin: 7px auto;
 }
 .image-matrix div {
-    display:inline-block;
-    margin:10px 0;
+  display:inline;
+  margin:10px 0;
 }
 .image-matrix a img {
-  border: 1px solid #ccc;
+
   width: 150px;
   height: 150px;
   background-color: white;
@@ -75,8 +75,6 @@
 #contentFrame {
   display:none;
   list-style:none;
-  background-color: #ccc;
-  border: black 1px solid;
   margin: 1em auto;
   padding: 5px;
   width: 100%;

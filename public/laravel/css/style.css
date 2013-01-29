@@ -3,26 +3,32 @@
 body
 {
 	font-family:'Droid Sans', sans-serif;
-	font-size:10pt;
 	color:#555;
 	line-height: 25px;
   background-color: #eee;
-  min-width: 750px;
+  min-width: 825px;
+  height:100%;
 }
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
-abbr[title] { border-bottom: 1px dotted; }
-dfn { font-style: italic; }
-hr { border-radius:0; margin-top:0;}
+abbr[title], dfn, acronym, .def { border-bottom: 1px dotted; font-style: italic; text-decoration:none; color: rgb(0,100,200); }
+hr { border-radius:0; margin-top:0; }
 /*
 | Layout
 */
 aside {
   float: right;
-  border: 1px black dotted;
+  border: 1px #ccc solid;
   background-color: #ddd; 
   font-size: 80%;
   padding: 5px;
   margin: 5px 15px;
+  border-radius: 5px;
+  height: 100%;
+  display: inline;
+  min-width: 100px;
+}
+.content {
+ display: inline !important; 
 }
 /*
 | Links
@@ -97,9 +103,9 @@ a[href^="http://http://jahdakine.pagodabox.com/"]:after {
 /*
 | Navigation
 */
-.pad-me {
+.current {
 	color: #aaa !important;
-	padding: 5px;
+  font-size: 110%;
 }
 .container {
   margin : 1em;
@@ -109,7 +115,7 @@ ul#nav{
   background-color: #333;
   margin:0 0 1em 0;
 }
-ul.drop a { display:block; color: #FFF; font-family: Verdana; font-size: 14px; text-decoration: none;}
+ul.drop a { display:block; color: #FFF; font-family: Verdana; text-decoration: none;}
 ul.drop, ul.drop li, ul.drop ul { list-style: none; margin: 0; padding: 0; background: #555; color: #fff;}
 ul.drop { position: relative; z-index: 597; float: left; }
 ul.drop li { float: left; vertical-align: middle; zoom: 1; padding: 5px 10px; color: #333; }
@@ -143,23 +149,14 @@ ul.drop li:hover > ul { visibility: visible }
 .to-right { float:right !important; }
 .to-left { float:left !important; }
 .no-overflow { overflow:hidden !important; }
-<<<<<<< HEAD
-.def, acronym {
-=======
-.def, .acronym {
->>>>>>> aside
-  text-decoration:none;
-  border-bottom:1px dotted;
-  color: rgb(0,100,200);
-}
 /*
 | Footer
 */
 .copy {
-	color: #aaa;
-	font-style: italic;
-	text-align:center;
-	font-size:12px;
+  color: #aaa;
+  font-style: italic;
+  text-align:center;
+  font-size:12px;
 }
 
 /* end ------------------------ */

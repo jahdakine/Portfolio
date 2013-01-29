@@ -11,7 +11,7 @@
 </head>
 
 <body>
-	<a href="#maincontent" class="hidden">Skip navigation</a> 
+	<a href="#content" class="hidden">Skip navigation</a> 
 	<div class="wrapper">
 		<header class="headfont">
 			<h1>@yield("title")</h1>
@@ -32,27 +32,27 @@
 		<div id="navigation">
 			<ul class="drop" id="nav">
 				@section('nav')
-					@if(URI::is('home'))
-						<li class="pad-me">Home</li> 
+					@if(URI::is('home') || URI::is('/'))
+						<li class="current">Home</li> 
 					@else 
 						<li>{{ HTML::link('home/','Home') }}</li>
 					@endif 
 					@if(URI::is('home/about'))
-						<li class="pad-me">About</li> 
+						<li class="current">About</li> 
 					@else 
 						<li>{{ HTML::link('home/about', 'About') }}</li>
 					@endif 
 					@if(URI::is('home/contact'))
-						<li class="pad-me">Contact</li> 
+						<li class="current">Contact</li> 
 					@else 
 						<li>{{ HTML::link('home/contact','Contact') }}</li>
 					@endif 										
 				@yield_section <!-- will yield and close section -->
 			</ul>
-		</div><!-- // navigation -->
-		<div role="main" id="maincontent">	
-			@yield('top')	
-			<aside>
+		</div><!-- // navigation -->	
+		@yield('top')
+		<div role="main" id="content">		
+			<aside id="aside">
 				<h3 align="center">Legend</h3>
 				<ul class="nolist">
 					<li><span class="href" title="Style of links to webpages on my site">Onsite link</li>
@@ -62,13 +62,11 @@
 					<li><span class="dfn def" title="Style of tooltips">Acronym/Abbreviation/Definition</span></li>
 				</ul>
 				@yield('aside')
-			</aside>
-			<div class="container">
-				@yield('main')
-			</div>
-		</div><!-- // maincontent -->
+			</aside><!-- // aside -->
+			@yield('main')
+		</div><!-- // content -->
 		<div class="clear-fix"></div>
-		<footer class="footer">
+		<footer>
 			<p class="copy">copyright &copy;2013 John Chase (jahdakine)</p>
 			@yield('footer')
 		</footer>

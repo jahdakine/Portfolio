@@ -27,6 +27,7 @@
 			c6 = $("#ctrls6"),
 			ctrls = $("#ctrls");
 			reset = $("#reset"),
+			aside=$("#aside"),
 			landing = $("#landing"),
 			feed_btn = $(".feedBtn"),
 			content_frame = $("#contentFrame"),
@@ -77,8 +78,8 @@
 			block2.wrapAll('<div id="t2"></div>');
 			block3.wrapAll('<div id="t3"></div>');
 			ctrls.addClass("transparent");
-			menu_text.addClass("pad-me");
-			menu_graphics.removeClass("pad-me");
+			menu_text.addClass("current");
+			menu_graphics.removeClass("current");
 		}
 	});
 		//graphics
@@ -91,8 +92,8 @@
 			carousel_li.unwrap();
 			setCarousel(window.num2Scroll, window.dir2Scroll);
 			ctrls.removeClass("transparent").center({vertical: false});
-			menu_graphics.addClass("pad-me");
-			menu_text.removeClass("pad-me");
+			menu_graphics.addClass("current");
+			menu_text.removeClass("current");
 		}
 	});
 	//reset click
@@ -101,6 +102,8 @@
 		content_frame.empty();
 		content_frame.css("display","none");
 		landing.css("display","inline");
+		reset.addClass("current");
+		aside.css("display","inline");
 	});
 	//carousel controls
 	c1.on('click', function(e, num2Scroll, dir2Scroll) { //slow down num2Scroll
@@ -148,7 +151,7 @@
 				obj = '',
 				date = '';
 				show = '';
-		show = "content_frame.css('display','inline-block').removeClass('image-matrix')";
+		show = "content_frame.css('display','inline').removeClass('image-matrix')";
 		switch (id) {
 			case ('blogger'):
 				http = 'https://www.googleapis.com/blogger/v3/blogs/2575251403540723939/posts?key=AIzaSyC4Zhv-nd_98_9Vn8Ad3U6TjY99Pd2YzOQ';
@@ -187,17 +190,15 @@
 			$.each(eval(obj), function(i,item) {
 				console.log(item);
 				html += eval(tmp);
-<<<<<<< HEAD
-				if(i === limit) { return false; } 
-=======
 				if(i === limit) { return false; }
->>>>>>> aside
 			});
 			html += '</ul>';
 			console.log(html);
 			content_frame.html(html);
 		});
 		landing.css("display","none");
+		aside.css("display","none");
+		reset.removeClass("current");
 		eval(show);
 	});
 })();

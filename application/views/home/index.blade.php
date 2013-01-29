@@ -8,37 +8,27 @@
 
 @section('nav')
 	@parent
-	<li>{{ HTML::link("users/", "Sign on") }}</li>
+	<li>{{ HTML::link("users/", "Sign-on") }}</li>
 
-	<li class="to-right">{{ HTML::link("#", "Reset", array("title"=>"Clear dynamic content area", "id"=>"reset")) }}</li>
+	<li class="to-right">{{ HTML::link("#", "Reset", array("title"=>"Clear dynamic content area", "id"=>"reset", "class" => "current")) }}</li>
 	<li class="to-right">
 		{{ HTML::link("#", "List menu") }}
 		<ul>
 		  <li>{{ HTML::link("#", "Image List", array("title"=>"Change links to image carousel style", "id"=>"menuGraphics")) }}</li>
-		  <li>{{ HTML::link("#", "Text List", array("title"=>"Change links to text list style", "id"=>"menuText")) }}</li>	
+		  <li>{{ HTML::link("#", "Text List", array("title"=>"Change links to text list style", "id"=>"menuText", "class" => "current")) }}</li>	
 		</ul>
 	</li>
 </ul>
 <ul class="reset">
 	<li id="ctrls" class="controls transparent" style="padding-top:5px;">
-<<<<<<< HEAD
 		{{ HTML::link("#", "", array("title"=>"Slow down carousel scroll rate", "id"=>"ctrls1")) }}
-=======
-		{{ HTML::link("#", "", array("title"=>"Slow down carousel scroll rate", "id"=>"ctrls1")) }} 	
->>>>>>> aside
 		{{ HTML::link("#", "", array("title"=>"Scroll backward", "id"=>"ctrls2")) }}
 		{{ HTML::link("#", "", array("title"=>"Pause the carousel", "id"=>"ctrls3")) }}
 		{{ HTML::link("#", "", array("title"=>"Restart the carousel", "id"=>"ctrls4")) }}
 		{{ HTML::link("#", "", array("title"=>"Scroll forward", "id"=>"ctrls5")) }}
-<<<<<<< HEAD
-		{{ HTML::link("#", "", array("title"=>"Speed up carousel scroll rate", "id"=>"ctrls6")) }}										
-  </li>
-=======
 		{{ HTML::link("#", "", array("title"=>"Speed up carousel scroll rate", "id"=>"ctrls6")) }} 
 	</li>
->>>>>>> aside
 @endsection 
-
 @section('top')
 <div id="list">
 	<ul id="carousel">
@@ -125,79 +115,15 @@
 	</div><!-- // t3 -->
 	</ul>
 </div><!-- // list -->
-<<<<<<< HEAD
-<div class="clear-fix"></div>	
-<div id="contentFrame"></div>
-<div id="landing">
-	<aside>
-		<h3>Legend</h3>
-		<ul>
-			<li><span class="href" title="Style of links to webpages on my site">Onsite link</li>
-			<li><span class="href" title="Style of links to webpages on an external site">Offsite link</span><span class="offsite">&#8658;</span></li>
-			<li><span class="hover" title="Style of links with cursor above">Hover</span></li>
-			<li><span class="visited" title="Style of links that have been followed">Visited</span></li>
-			<li><span class="dfn def" title="Style of tooltips">Acronym/Abbreviation/Definition</span></li>
-		</ul>
-
-	</aside>
-	<article>
-		Welcome. This is my online 
-		<acronym title="Curriculum Vitae">CV</acronym>. 
-		Select from any of the menu items above to explore more of my interests 
-		and accomplishments, or contact me if you have a dream front-end web programming job 
-		opening! This website is powered by jQuery, <acronym title="PHP: Hypertext Preprocessor">PHP</acronym>, and Laravel, the 
-		<acronym title="Model View Controller">MVC</acronym>
-		framework that I've gravitated to. 
-		It includes a scrolling style jQuery image carousel, and 
-		<acronym title="Javascript Object Notation">jSON</acronym>
-		feeds. It is basically my playground to spend time trying new things and learning 
-		about what works and what doesn't in the fine art and science of internet 
-		programming and design. Tooltips and other user interface goodies found at 
-		{{ HTML::link("http://jqueryui.com/", "jQuery UI", array("title"=>"Offsite to jQuery UI in a new window", "target"=>"_blank")) }}.
-		Menu carousel is available at 
-		{{ HTML::link("http://caroufredsel.dev7studios.com/", "carouFred", array("title"=>"Offsite to carouFred in a new window", "target"=>"_blank")) }}.
-		Flickr jSON request example description is available at 
-		{{ HTML::link("http://api.jquery.com/jQuery.getJSON/", "jQuery API", array("title"=>"Offsite to jQuery API in a new window", "target"=>"_blank")) }}.
-		Mail hide utility demonstrated on {{ HTML::link("contact", "Contact page", array("title"=>"Contact page")) }} courtesy of Google's 
-		{{ HTML::link("http://www.google.com/recaptcha/mailhide/", "reCAPTCHA", array("title"=>"Offsite to Mail Hide in a new window", "target"=>"_blank")) }}. 
-		Slick icons from the folks at {{ HTML::link("http://www.iconarchive.com/", "IconArchive", array("title"=>"Offsite to IconArchive in a new window", "target"=>"_blank")) }}, 
-		and of some ultra nice styling from {{ HTML::link("http://twitter.github.com/bootstrap/customize", "Twitter's Bootstrap", array("title"=>"Offsite to Bootstrap Customization in a new window", "target"=>"_blank")) }}.
-		<br/>
-		This is as much a launching pad for me as it is a showcase of what I care about and can do. Please excuse the external linking to new windows, 
-		I keep this page open during my surfing day and would rather not have to right click links to get them into a separate tab. I will work on a switcher that 
-		allows an override of this functionality. 
-	</article>	
-	<section class="notes">
-		<h3 align="center">To do:</h3> 
-		<ul>
-			<li>Create external link switcher</li>
-			<li>Add smooth transitions</li>
-			<li>Gradient background header</li>
-			<li>Spitesheet all graphics</li>
-			<li>Move legend to sidebar</li>
-			<li>Add login area</li>
-			<li>DB social sites list</li>
-			<li>Restructure xhr code</li>
-			<li>Soliloquy blog</li>
-			<li>Facility for adding icons/sites</li>
-			<li>Add carousel controls, use sprite</li>
-			<li>Animate logo with Canvas JS</li>
-			<li>Package (minify, optimize)</li>
-			<li>Cure world hunger</li>
-		</ul>																
-	</section><!-- // notes -->
-</div><!-- // landing -->
-=======
 <div class="clear-fix"></div>
-<hr color="#333" size="36"/>		
-@endsection<!-- // top -->
-
-@section('aside')
-@endsection<!-- // aside -->
+<hr color="#333" size="36"/>	
+@endsection
 
 @section('main')
-	<div id="contentFrame"></div><!-- // contentFrame -->
-	<div id="landing">
+	@section('aside')
+	@endsection<!-- // aside -->	
+	<div id="contentFrame" class="content"></div><!-- // contentFrame -->
+	<div id="landing" style="width:90%">
 		<article>
 			Welcome. This is my online 
 			<acronym title="Curriculum Vitae">CV</acronym>. 
@@ -231,7 +157,8 @@
 				<li>Create external link switcher</li>
 				<li>Gradient background header</li>
 				<li>Spitesheet all graphics</li>
-				<li><strike>Move legend to sidebar</strike></li>				
+				<li><strike>Move legend to sidebar</strike></li>	
+				<li>Remove arrow from Flickr imgs</li>			
 				<li>Add smooth transitions</li>
 				<li>Add login area</li>
 				<li>DB social sites list</li>
@@ -245,13 +172,9 @@
 			</ul>																
 		</section><!-- // notes -->
 	</div><!-- // landing -->
-</div><!-- // content -->
->>>>>>> aside
-<div class="clear-fix"></div>
 @endsection<!-- // main -->
 
-@section('footer')
-	
+@section('footer')	
 @endsection<!-- // footer -->
 
 @section('scripts')
