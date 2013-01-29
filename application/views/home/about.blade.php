@@ -35,7 +35,7 @@
 	developer and web artisan.</p>
 </article>
 <section>
-	<h3>Skills/Training</h3>
+	<h3>Skills</h3>
 	<div id="wrapper">
 		<div id="skills">
 			<ul>

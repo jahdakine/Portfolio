@@ -37,7 +37,7 @@
 	<p>Thanks for stopping by!</p>
 </section>
 <section id="helper" class="hidden">
-	<h4>Popup Help</h4>
+	<h3>Popup Help</h3>
 	<ul class="nolist">
 		<li>
 			{{ HTML::a_img('http://support.mozilla.org/en-US/kb/pop-blocker-settings-exceptions-troubleshooting', 'Firefox', 'Open help for Firefox popups in a new window/tab', '/img/firefox-icon.png', '', array('target' => '_blank', "style" => "vertical-align:middle"), array("style" => "vertical-align:bottom"), true) }}

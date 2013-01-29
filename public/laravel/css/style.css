@@ -14,22 +14,22 @@ dfn { font-style: italic; }
 /*
 | Links
 */
-a { 
+a, .href { 
 	color: #2972A3; 
 	text-decoration:underline; 
 }
-a:visited {
+a:visited, .visited {
 	color: #72ADD4; 
 	text-decoration:none;
 }
-a:hover {
+a:hover, .hover {
 	color: #3dc1ff;
 }
 /*href external linking*/
-a[href^="http"]:after {
+a[href^="http"]:after, .offsite {
   color: #2972A3;
   content: "\21D2";
-  font-size: 12px;
+  font-size: 15px;
 }
 a[href^="http://laravel.dev:8888"]:after,
 a[href^="http://http://jahdakine.pagodabox.com/"]:after {
@@ -126,9 +126,10 @@ ul.drop li:hover > ul { visibility: visible }
 .to-right { float:right !important; }
 .to-left { float:left !important; }
 .no-overflow { overflow:hidden !important; }
-.def {
+.def, acronym {
   text-decoration:none;
   border-bottom:1px dotted;
+  color: rgb(0,100,200);
 }
 /*
 | Footer
