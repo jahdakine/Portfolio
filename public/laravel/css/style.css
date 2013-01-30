@@ -157,7 +157,10 @@ ul.drop li:hover > ul { visibility: visible }
 .shim { padding-bottom: 3px; }
 .to-right { float:right !important; }
 .to-left { float:left !important; }
-.to-center { text-align: center }
+.to-center { text-align: center; }
+.to-top { vertical-align: top; }
+.to-middle { vertical-align: middle; }
+.to-bottom { vertical-align: bottom; }
 .no-overflow { overflow:hidden !important; }
 /*
 | Footer
