@@ -55,11 +55,10 @@
 			@yield('main')
 		</div><!-- // content -->
 		<div class="clear-fix"></div>
+		<br/>
 		<footer class="flex-footer">
-			<div>
-				<div id="audioWrap" class="hide">
-					{{ HTML::a_img('#', '', 'Dismiss player', '/img/delete-icon.png', '', array("id" => "nickHide"), array("height" => "16px", "width" => "16px", "class" => "to-top")) }}
-				</div>
+			<div id="audioWrap" class="hide">
+				{{ HTML::a_img('#', '', 'Dismiss player', '/img/delete-icon.png', '', array("id" => "nickHide"), array("height" => "16px", "width" => "16px", "class" => "to-top")) }}
 			</div>
 			<p class="copy">copyright &copy;2013 John Chase (aka 
 				<u class="def">

@@ -45,8 +45,7 @@
 				<li><a href="#skills-2">Training</a></li>
 				<li><a href="#skills-3">Some familiarity</a></li>
 			</ul>
-			<div id="skills-1">
-			<br/>
+			<div id="skills-1"
 			<ul>
 				<li>ColdFusion (3-10)</li>
 				<li>Database Design</li>
@@ -58,7 +57,6 @@
 			</ul>
 			</div><!-- // skills-1 -->
 			<div id="skills-2">
-				<br/>
 				<ul>
 					<li>PHP (4 &amp; 5)</li>
 					<li>MAMP</li>
@@ -72,7 +70,6 @@
 				</ul> 
 			</div><!-- // skills-2 -->
 			<div id="skills-3">
-				<br/>
 			  <ul>
 					<li>BASH</li>
 					<li>Backbone</li>
@@ -95,7 +92,6 @@
 				<li><a href="#courses-3">Projects/Interests</a></li>
 			</ul>
 			<div id="courses-1">
-				<br/>
 				<h3>{{ HTML::link("https://tutsplus.com/", "Tuts+ Premium", array("title"=>"Open Tuts+ Premium in a new window/tab", "target"=>"_blank", "icon"=>"out-text")) }}</h3>
 				<ul>
 					<li>Laravel Essentials</li>
@@ -115,7 +111,6 @@
 				</ul>
 			</div><!-- // courses-1 -->
 			<div id="courses-2">
-				<br/>
 				<h3>{{ HTML::link("https://tutsplus.com/", "Tuts+ Premium", array("title"=>"Open Tuts+ Premium in a new window/tab", "target"=>"_blank", "icon"=>"out-text")) }}</h3>	
 				<ul>
 					<li>Hands-On: Build a Practical Web Application with Laravel</li>
@@ -129,7 +124,6 @@
 				</ul> 
 			</div><!-- // courses-2 -->
 			<div id="courses-3">
-				<br/>
 			  <ul>
 					<li>Online CV (this site)</li>
 					<li>2D Gaming</li>

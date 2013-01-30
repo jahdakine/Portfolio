@@ -154,7 +154,6 @@ ul.drop li:hover > ul { visibility: visible }
 	margin: 0;
 	padding: 0;
 }
-.shim { padding-bottom: 3px; }
 .to-right { float:right !important; }
 .to-left { float:left !important; }
 .to-center { text-align: center; }
