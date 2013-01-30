@@ -14,7 +14,7 @@
 	<li class="to-right">
 		{{ HTML::link("#", "List menu") }}
 		<ul>
-		  <li>{{ HTML::link("#", "Image List", array("title"=>"Change links to image carousel style", "id"=>"menuGraphics")) }}</li>
+		  <li>{{ HTML::link("#", "Image&nbsp;List", array("title"=>"Change links to image carousel style", "id"=>"menuGraphics")) }}</li>
 		  <li>{{ HTML::link("#", "Text List", array("title"=>"Change links to text list style", "id"=>"menuText", "class" => "current")) }}</li>	
 		</ul>
 	</li>
@@ -50,13 +50,13 @@
 			{{ HTML::a_img('#', '', 'Show 5 latest question/answers from my stackoverflow on this page', '/img/stackoverflow-icon.png', '', array('id' => 'stackoverflow', 'class' => 'feedBtn'), array('class' => 'listImg', "height" => "128px", "width" => "128px")) }}
 		</li>
 		<li class="block1">
-			Yelp<span class="listImg"><br/><img src="/img/yelp-icon.png" height="128px" width="128px" /></span>
+			Yelp<a href="#" title="You must be logged in to access"><span class="listImg"><br/><img src="/img/yelp-icon.png" height="128px" width="128px" /></span></a>
 		</li>
 		<li class="block1">
-			iCloud<span class="listImg"><br/><img src="/img/mobileme-icon.png" height="128px" width="128px" /></span>
+			iCloud<a href="#" title="You must be logged in to access"><span class="listImg"><br/><img src="/img/mobileme-icon.png" height="128px" width="128px" /></span></a>
 		</li>
 		<li class="block1">
-			Vimeo<span class="listImg"><br/><img src="/img/vimeo-icon.png" height="128px" width="128px" /></span>
+			Vimeo<a href="#" title="You must be logged in to access"><span class="listImg"><br/><img src="/img/vimeo-icon.png" height="128px" width="128px" /></span></a>
 		</li>		
 	</div><!-- // t1 -->
 	<div id="t2">	
@@ -77,13 +77,13 @@
 			{{ HTML::a_img('#', '', 'Show latest 5 articles from my blog on this page', '/img/blogger-icon.png', '', array('id' => 'blogger', 'class' => 'feedBtn'), array('class' => 'listImg', "height" => "128px", "width" => "128px")) }}
 		</li>
 		<li class="block2">
-			Evernote<span class="listImg"><br/><img src="/img/evernote-icon.png" height="128px" width="128px" /></span>
+			Evernote<a href="#" title="You must be logged in to access"><span class="listImg"><br/><img src="/img/evernote-icon.png" height="128px" width="128px" /></span></a>
 		</li>
 		<li class="block2">
-			Picassa<span class="listImg"><br/><img src="/img/picasa-icon.png" height="128px" width="128px" /></span>
+			Picassa<a href="#" title="You must be logged in to access"><span class="listImg"><br/><img src="/img/picasa-icon.png" height="128px" width="128px" /></span><a/>
 		</li>		
 		<li class="block2">
-			Amazon<span class="listImg"><br/><img src="/img/amazon-icon.png" height="128px" width="128px" /></span>
+			Amazon<a href="#" title="You must be logged in to access"><span class="listImg"><br/><img src="/img/amazon-icon.png" height="128px" width="128px" /></span></a>
 		</li>						
 	</div><!-- // t2 -->
 	<div id="t3">	
@@ -104,13 +104,13 @@
 			{{ HTML::a_img('#', '', 'Show 5 latest Meetup meetings attended on this page', '/img/meetup-icon.png', '', array('id' => 'meetup', 'class' => 'feedBtn'), array('class' => 'listImg', "height" => "128px", "width" => "128px")) }}
 		</li>		
 		<li class="block3">
-			PayPal<span class="listImg"><br/><img src="/img/paypal-icon.png" height="128px" width="128px" /></span>
+			PayPal<a href="#" title="You must be logged in to access"><span class="listImg"><br/><img src="/img/paypal-icon.png" height="128px" width="128px" /></span></a>
 		</li>
 		<li class="block3">
-			Skype<span class="listImg"><br/><img src="/img/skype-icon.png" height="128px" width="128px" /></span>
+			Skype<a href="#" title="You must be logged in to access"><span class="listImg"><br/><img src="/img/skype-icon.png" height="128px" width="128px" /></span></a>
 		</li>	
 		<li class="block3">
-			Gmail<span class="listImg"><br/><img src="/img/gmail-icon.png" height="128px" width="128px" /></span>
+			Gmail<a href="#" title="You must be logged in to access"><span class="listImg"><br/><img src="/img/gmail-icon.png" height="128px" width="128px" /></span></a>
 		</li>		
 	</div><!-- // t3 -->
 	</ul>
@@ -123,7 +123,7 @@
 	@section('aside')
 	@endsection<!-- // aside -->	
 	<div id="contentFrame" class="content"></div><!-- // contentFrame -->
-	<div id="landing" style="width:90%">
+	<div id="landing">
 		<article>
 			Welcome. This is my online 
 			<acronym title="Curriculum Vitae">CV</acronym>. 
@@ -155,17 +155,16 @@
 			<h3 align="center">To do:</h3> 
 			<ul>
 				<li>Create external link switcher</li>
-				<li>Gradient background header</li>
+				<li><strike>Gradient background</strike></li>
 				<li>Spitesheet all graphics</li>
-				<li><strike>Move legend to sidebar</strike></li>	
-				<li>Remove arrow from Flickr imgs</li>			
+				<li><strike>match laravel color in tabs - about</strike></li>
+				<li>Remove arrow from Flickr imgs</li>		
 				<li>Add smooth transitions</li>
 				<li>Add login area</li>
 				<li>DB social sites list</li>
 				<li>Restructure xhr code</li>
 				<li>Soliloquy blog</li>
 				<li>Facility for adding icons/sites</li>
-				<li>Add carousel controls, use sprite</li>
 				<li>Animate logo with Canvas JS</li>
 				<li>Package (minify, optimize)</li>
 				<li>Cure world hunger</li>

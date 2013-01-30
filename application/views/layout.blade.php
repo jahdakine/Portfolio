@@ -13,7 +13,7 @@
 <body>
 	<a href="#content" class="hidden">Skip navigation</a> 
 	<div class="wrapper">
-		<header class="headfont">
+		<header>
 			<h1>@yield("title")</h1>
 			<h2 id="nickName">John Chase (aka 
 				<u class="def">
@@ -55,18 +55,18 @@
 			<aside id="aside">
 				<h3 align="center">Legend</h3>
 				<ul class="nolist">
-					<li><span class="href" title="Style of links to webpages on my site">Onsite link</li>
-					<li><span class="href" title="Style of links to webpages on an external site">Offsite link</span><span class="offsite">&#8658;</span></li>
-					<li><span class="hover" title="Style of links with cursor above">Hover</span></li>
-					<li><span class="visited" title="Style of links that have been followed">Visited</span></li>
-					<li><span class="dfn def" title="Style of tooltips">Acronym/Abbreviation/Definition</span></li>
+					<li><span class="href" title="Links to webpages on my site">Onsite link</li>
+					<li><span class="href" title="Links to webpages on an external site">Offsite link</span><span class="offsite">&#8658;</span></li>
+					<li><span class="hover" title="Link style with cursor above">Hover</span></li>
+					<li><span class="visited" title="Links that have been followed">Visited</span></li>
+					<li><span class="dfn def" title="Tooltip style">Acronym/Abbreviation/Definition</span></li>
 				</ul>
 				@yield('aside')
 			</aside><!-- // aside -->
 			@yield('main')
 		</div><!-- // content -->
 		<div class="clear-fix"></div>
-		<footer>
+		<footer class="flex-footer">
 			<p class="copy">copyright &copy;2013 John Chase (jahdakine)</p>
 			@yield('footer')
 		</footer>

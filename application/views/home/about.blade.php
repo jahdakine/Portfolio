@@ -19,22 +19,21 @@
 	<h3>History</h3>
 	<p>Started out in mechanical design after a stint in ranching, fast food, 
 	encyclopedia sales, hardware, and quality assurance testing. Worked in solids modeling 
-	and quality control for tape drive manufacturer. Developed a taste for computer programming while automating 
+	and quality control for a tape drive manufacturer. Developed a taste for computer programming while automating 
 	processes and writing batch files.</p>
 
 	<p>Apprenticed with a traffic crash analysis software firm testing and writing Delphi code.
-	Completed a 4 year program in Computer Information 
-	Systems and began testing C++ code for a medical manufacturer.</p> 
+	Completed a 4 year program in Computer Information Systems and began testing C++ code for a medical manufacturer.</p> 
 
-	<p>Went on to do various SQL tasks for accounting department at a computer solutions sales group.
+	<p>Went on to do various SQL tasks for an accounting department at a computer solutions sales group.
 	Eventually landed a web programming position in a communications department for Government 
 	intra and extranets. This entailed design, documentation, programming and testing web applications.</p>
 
 	<h3>Future</h3>
-	<p>Sure, knowing how to serve up data correctly and guide users through complicated processes and make dificult concepts 
+	<p>Sure, knowing how to serve up data correctly and guide users through complicated processes and make difficult concepts 
 	understandable has its place, but the right side of my brain has begun to rebel a little and now has tipped the
-	scales toward balance in additional creative outlets. The good news is the web is still a wonderful place to balance both 
-	creative and analytical skills! So my new carreer will include more front end work. My goal will be to round into a full-stack
+	scales toward balance in additional creative outlets. The good news is the web is still a wonderful place to enhance both 
+	creative and analytical skills! So my new career will include more front end work. My goal is to round into a full-stack
 	developer and web artisan.</p>
 </article>
 <section>
@@ -47,6 +46,7 @@
 				<li><a href="#skills-3">Some familiarity</a></li>
 			</ul>
 			<div id="skills-1">
+			<br/>
 			<ul>
 				<li>ColdFusion (3-10)</li>
 				<li>Database Design</li>
@@ -58,6 +58,7 @@
 			</ul>
 			</div><!-- // skills-1 -->
 			<div id="skills-2">
+				<br/>
 				<ul>
 					<li>PHP (4 &amp; 5)</li>
 					<li>MAMP</li>
@@ -71,6 +72,7 @@
 				</ul> 
 			</div><!-- // skills-2 -->
 			<div id="skills-3">
+				<br/>
 			  <ul>
 					<li>BASH</li>
 					<li>Backbone</li>
@@ -93,6 +95,7 @@
 				<li><a href="#courses-3">Projects/Interests</a></li>
 			</ul>
 			<div id="courses-1">
+				<br/>
 				<h3>{{ HTML::link("https://tutsplus.com/", "Tuts+ Premium", array("title"=>"Open Tuts+ Premium in a new window/tab", "target"=>"_blank", "icon"=>"out-text")) }}</h3>
 				<ul>
 					<li>Laravel Essentials</li>
@@ -112,6 +115,7 @@
 				</ul>
 			</div><!-- // courses-1 -->
 			<div id="courses-2">
+				<br/>
 				<h3>{{ HTML::link("https://tutsplus.com/", "Tuts+ Premium", array("title"=>"Open Tuts+ Premium in a new window/tab", "target"=>"_blank", "icon"=>"out-text")) }}</h3>	
 				<ul>
 					<li>Hands-On: Build a Practical Web Application with Laravel</li>
@@ -125,6 +129,7 @@
 				</ul> 
 			</div><!-- // courses-2 -->
 			<div id="courses-3">
+				<br/>
 			  <ul>
 					<li>Online CV (this site)</li>
 					<li>2D Gaming</li>
