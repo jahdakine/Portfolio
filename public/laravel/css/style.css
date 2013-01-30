@@ -22,7 +22,7 @@ aside {
   background-color: #ddd; 
   font-size: 80%;
   padding: 5px;
-  margin: 5px 15px;
+  margin: 20px 15px 5px 15px;
   border-radius: 5px;
   min-width: 100px;
 }
@@ -44,16 +44,20 @@ a:visited, .visited {
 a:hover, .hover {
 	color: #3dc1ff;
 }
-/*href external linking*/
-a[href^="http"]:after, .offsite {
+/*internal linking
+a[href*="8888"]:after,
+a[href*="pagodabox"]:after, 
+a.onsite:after {
+  content: "";
+}*/
+/*external linking 
+a[href^="http"], buggy */
+a.offsite:after {
   color: #2972A3;
   content: "\21D2";
   font-size: 15px;
 }
-a[href^="http://laravel.dev:8888"]:after,
-a[href^="http://http://jahdakine.pagodabox.com/"]:after {
-  content: "";
-}
+
 /*
 | Tooltip
  */

@@ -3,7 +3,7 @@
 //*one class for button clicks
 //CACHE jSON
 //*make helper function
-//*deferreds?
+//*JSON error?
 //get square size from flickr
 //use carouFredSel method to resize
 //*fix FF bug for button #6
@@ -49,7 +49,7 @@
         button				: c5
 			}
 		}, {
-					debug       : true // !!! production  - set to false
+					debug       : false // !!! production  - set to false
 		});
 	}
 	//!!!Fire carousel on resize - is there a method for this (check API)?
@@ -166,9 +166,10 @@
 				tmp = "'<li><img src=\"' +item.profile_image_url+ '\" height=\"24\" width=\"24\" alt=\"profile icon\"/>&nbsp;<time datetime=\"' +item.created_at.split(' ').slice(0, 4).join(' ')+ '\">' +item.created_at.split(' ').slice(0, 4).join(' ')+ '</time>:&nbsp;<a href=\"http://twitter.com/jahdakine/status/' +item.id_str+ '\" target=\"_blank\">' +item.text+ '</a></li>'";
         limit = 10;
         break;
-      case ('meetup'):
-				http = 'https://api.meetup.com/http:--www.meetup.com-HTML5-Denver-Users-Group-/events/65732862/attendance?key=4c20142a4141d657e707171794141c&sign=true&page=20';
-				obj = ''; //!!!not sure about this one
+      case ('meetup'): //venue=1139097 member=65732862 group=1769691 group_urlname=HTML5-Denver-Users-Group
+				http = 'https://api.meetup.com/2/checkins?group_id=1769691&key=4c20142a4141d657e707171794141c&_=1359581403601&event_id=93211712&order=time&desc=True&member_id=65732862&offset=0&callback=jQuery1710643855888454944_1359581333830&format=json&page=20&sign=true';
+				obj = 'results';
+				tmp = "<li><li>";
 				limit = 3;
         break;
       case ('linkedin'):
@@ -176,10 +177,15 @@
 				obj = ''; //!!!needs oauth
 				limit = 10;
         break;
+      case ('grooveshark'):
+        //http = "http://api.grooveshark.com/ws3.php?sig=cd3ccc949251e0ece014d620bbf306e7{'method': 'addUserFavoriteSong', 'parameters': {'songID': 0}, 'header': {'wsKey': 'key', 'sessionID': 'sessionID'}}";
+				obj = ''; //!!!just a placeholder
+				limit = 10;
+        break;
       case ('flickr'):
 				http = 'http://api.flickr.com/services/feeds/photos_public.gne?id=23019891@N00&lang=en-us&format=json&jsoncallback=?';
 				obj = 'data.items';
-				tmp = "'<a href=\"' + item.link + '\" target=\"_blank\" title=\"' + item.title + '\"><img src=\"' + item.media.m + '\" /></a>'";
+				tmp = "'<a href=\"' + item.link + '\" target=\"_blank\" title=\"Open Flickr page titled &#34;' + item.title + '&#34;<br/> in a new window/tab\"><img src=\"' + item.media.m + '\" /></a>'";
 				show = "content_frame.css('display','inline-block').addClass('image-matrix')";
 				limit = 20;
         break;
@@ -193,10 +199,10 @@
 			eval(show);
     }
 		function getFeed(http, obj, tmp, html) {
-			//!!!cache?
+			//!!!cache? Would need to use local storage or DB
 			return $.getJSON(http, function(data) {
 				success = true;
-				//console.log(data);
+				console.log(data);
 				$.each(eval(obj), function(i,item) {
 						console.log(item);
 						html += eval(tmp);
