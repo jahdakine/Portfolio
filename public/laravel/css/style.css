@@ -6,7 +6,7 @@ body
 	color:#555;
 	line-height: 25px;
   background-color: #eee;
-  min-width: 825px;
+  .min-width: 850px;
   height:100%;
   margin:0;
 }

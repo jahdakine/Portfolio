@@ -8,8 +8,7 @@
 
 @section('nav')
 	@parent
-	<li>{{ HTML::link("users/", "Sign-on") }}</li>
-
+	<!-- <li>{{ HTML::link("users/", "Sign-on") }}</li> -->
 	<li class="to-right">{{ HTML::link("#", "Reset", array("title"=>"Clear dynamic content area", "id"=>"reset", "class" => "current")) }}</li>
 	<li class="to-right">
 		{{ HTML::link("#", "List menu") }}
@@ -80,7 +79,7 @@
 			Evernote<a href="#" title="You must be logged in to access"><span class="listImg"><br/><img src="/img/evernote-icon.png" height="128px" width="128px" /></span></a>
 		</li>
 		<li class="block2">
-			Picassa<a href="#" title="You must be logged in to access"><span class="listImg"><br/><img src="/img/picasa-icon.png" height="128px" width="128px" /></span><a/>
+			Picassa<a href="#" title="You must be logged in to access"><span class="listImg"><br/><img src="/img/picasa-icon.png" height="128px" width="128px" /></span></a>
 		</li>		
 		<li class="block2">
 			Amazon<a href="#" title="You must be logged in to access"><span class="listImg"><br/><img src="/img/amazon-icon.png" height="128px" width="128px" /></span></a>
@@ -132,9 +131,9 @@
 			opening! This website is powered by jQuery, <acronym title="PHP: Hypertext Preprocessor">PHP</acronym>, and Laravel, the 
 			<acronym title="Model View Controller">MVC</acronym>
 			framework that I've gravitated to. 
-			It includes a scrolling style jQuery image carousel, and 
+			It includes a scrolling style jQuery image carousel (List menu | Image list), and 
 			<acronym title="Javascript Object Notation">jSON</acronym>
-			feeds. It is basically my playground to spend time trying new things and learning 
+			feeds via icon selection. It is basically my playground to spend time trying new things and learning 
 			about what works and what doesn't in the fine art and science of internet 
 			programming and design. Tooltips and other user interface goodies found at 
 			{{ HTML::link("http://jqueryui.com/", "jQuery UI", array("title"=>"Offsite to jQuery UI in a new window", "target"=>"_blank")) }}.
@@ -146,10 +145,11 @@
 			{{ HTML::link("http://www.google.com/recaptcha/mailhide/", "reCAPTCHA", array("title"=>"Offsite to Mail Hide in a new window", "target"=>"_blank")) }}. 
 			Slick icons from the folks at {{ HTML::link("http://www.iconarchive.com/", "IconArchive", array("title"=>"Offsite to IconArchive in a new window", "target"=>"_blank")) }}, 
 			and of some ultra nice styling from {{ HTML::link("http://twitter.github.com/bootstrap/customize", "Twitter's Bootstrap", array("title"=>"Offsite to Bootstrap Customization in a new window", "target"=>"_blank")) }}.
-			<br/>
-			This is as much a launching pad for me as it is a showcase of what I care about and can do. Please excuse the external linking to new windows, 
-			I keep this page open during my surfing day and would rather not have to right click links to get them into a separate tab. I will work on a switcher that 
-			allows an override of this functionality. 
+			<p>
+				This is as much a launching pad for me as it is a showcase of what I care about and can do. Please excuse the external linking to new windows, 
+				I keep this page open during my surfing day and would rather not have to right click links to get them into a separate tab. I will work on a switcher that 
+				allows an override of this functionality. 
+			</p>
 		</article>	
 		<section class="notes">
 			<h3 align="center">To do:</h3> 
@@ -158,7 +158,8 @@
 				<li><strike>Gradient background</strike></li>
 				<li>Spitesheet all graphics</li>
 				<li><strike>match laravel color in tabs - about</strike></li>
-				<li>Remove arrow from Flickr imgs</li>		
+				<li>Remove arrow from Flickr imgs</li>	
+				<li>Compress carousel controls</li>	
 				<li>Add smooth transitions</li>
 				<li>Add login area</li>
 				<li>DB social sites list</li>
