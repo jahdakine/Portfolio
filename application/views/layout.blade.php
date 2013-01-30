@@ -56,18 +56,17 @@
 		</div><!-- // content -->
 		<div class="clear-fix"></div>
 		<footer class="flex-footer">
+			<div class="no-overflow">
+				<div id="audioWrap" class="hide">
+					{{ HTML::a_img('#', '', 'Dismiss player', '/img/delete-icon.png', '', array("id" => "nickHide"), array("height" => "16px", "width" => "16px")) }}
+				</div>
+			</div>
 			<p class="copy">copyright &copy;2013 John Chase (aka 
 				<u class="def">
 					<dfn title="IPA phonetics: dʒɑ dɑ <strong>ki</strong> neɪ <br/>(sounds like: jaw duh <strong>key</strong> nay)">jahdakine</dfn>
 				</u>){{ HTML::a_img('#', '', 'Play nickname pronunciation audio (wav)', '/img/audio-icon.png', '', array('id' => 'nickButton'), array("height" => "32px", "width" => "32px")) }}
 			</p>
-			<div class="no-overflow">
-				<div id="audioWrap" class="to-left"></div>
-				<div id="nickHide" class="hide to-left">&nbsp;
-					{{ HTML::a_img('#', '', 'Dismiss player', '/img/delete-icon.png', '', array(), array("height" => "16px", "width" => "16px")) }}
-				</div>
-				<div class="clear"></div>
-			</div>
+			
 			@yield('footer')
 		</footer>
 	</div> <!-- // wrapper -->

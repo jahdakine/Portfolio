@@ -19,13 +19,15 @@
 	</li>
 </ul>
 <ul class="reset">
-	<li id="ctrls" class="controls transparent" style="padding-top:5px;">
+	<li id="ctrls" class="controls transparent">
+		<img src="/img/spacer.gif" width="5" height="1" alt=""/>
 		{{ HTML::link("#", "", array("title"=>"Slow down carousel scroll rate", "id"=>"ctrls1")) }}
 		{{ HTML::link("#", "", array("title"=>"Scroll backward", "id"=>"ctrls2")) }}
 		{{ HTML::link("#", "", array("title"=>"Pause the carousel", "id"=>"ctrls3")) }}
 		{{ HTML::link("#", "", array("title"=>"Restart the carousel", "id"=>"ctrls4")) }}
 		{{ HTML::link("#", "", array("title"=>"Scroll forward", "id"=>"ctrls5")) }}
 		{{ HTML::link("#", "", array("title"=>"Speed up carousel scroll rate", "id"=>"ctrls6")) }} 
+		<img src="/img/spacer.gif" width="5" height="1" alt=""/>
 	</li>
 @endsection 
 @section('top')
@@ -159,7 +161,6 @@
 				<li>Spitesheet all graphics</li>
 				<li><strike>match laravel color in tabs - about</strike></li>
 				<li>Remove arrow from Flickr imgs</li>	
-				<li>Compress carousel controls</li>	
 				<li>Add smooth transitions</li>
 				<li>Add login area</li>
 				<li>DB social sites list</li>

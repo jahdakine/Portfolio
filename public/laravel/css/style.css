@@ -6,7 +6,7 @@ body
 	color:#555;
 	line-height: 25px;
   background-color: #eee;
-  .min-width: 850px;
+  min-width: 575px;
   height:100%;
   margin:0;
 }
@@ -24,7 +24,6 @@ aside {
   padding: 5px;
   margin: 5px 15px;
   border-radius: 5px;
-  .display: inline;
   min-width: 100px;
 }
 .content {
@@ -111,21 +110,24 @@ a[href^="http://http://jahdakine.pagodabox.com/"]:after {
 */
 .current {
 	color: #aaa !important;
-  font-size: 110%;
-  padding-right: 0;
+  font-size: 90%;
+  display:block; 
+  text-decoration: none;
 }
 .container {
   margin : 1em;
 }
 ul#nav{ 
+  font-size: 12px !important;
   width: 100%;
   background-color: #333;
-  margin:0 0 1em 0;
+  margin:0;
+  padding:0;
 }
-ul.drop a { display:block; color: #FFF; font-family: Verdana; text-decoration: none;}
+ul.drop a { display:block; color: #f79f34; text-decoration: none;}
 ul.drop, ul.drop li, ul.drop ul { list-style: none; margin: 0; padding: 0; background: #555; color: #fff;}
 ul.drop { position: relative; z-index: 597; float: left; }
-ul.drop li { float: left; vertical-align: middle; zoom: 1; padding: 5px 10px; color: #333; }
+ul.drop li { float: left; vertical-align: middle; padding: 5px 10px; color: #333; }
 ul.drop li.hover, ul.drop li:hover { position: relative; z-index: 599; cursor: default; background: #0b75b2; }
 ul.drop ul { visibility: hidden; position: absolute; top: 100%; left: 0; z-index: 598; background: #555; }
 ul.drop ul li { float: none; }
@@ -155,6 +157,7 @@ ul.drop li:hover > ul { visibility: visible }
 .shim { padding-bottom: 3px; }
 .to-right { float:right !important; }
 .to-left { float:left !important; }
+.to-center { text-align: center }
 .no-overflow { overflow:hidden !important; }
 /*
 | Footer

@@ -64,7 +64,7 @@ jQuery.fn.center = function(params) {
 		if(positionType == 'static') {
 			$self.parent().css("position","relative");
 		}
-		//aplying the css
+		//applying the css
 		$self.css(cssProp);
    });
 };
