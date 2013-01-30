@@ -1,12 +1,12 @@
 //!!! TODO
-//make OOP
+//make OOP - maybe next iteration
 //*one class for button clicks
 //CACHE jSON
 //*make helper function
-//deferreds?
+//*deferreds?
 //get square size from flickr
 //use carouFredSel method to resize
-//fix FF bug for button #6
+//*fix FF bug for button #6
 
 (function() {
 	//cache DOM vars
@@ -143,14 +143,15 @@
 			carousel.trigger("play");
 		}
 	});
-	//feed click handler
+	//!!!feed click handler - I'm sure there's a better way
 	feed_btn.on('click', function(e) {
 		var id = this.id,
 				html = '<h2 align="center">Latest ' +id.substr(0,1).toUpperCase()+id.substr(1)+ ' Updates</h2><ul style="list-style:none">',
 				http = '',
 				obj = '',
-				date = '';
-				show = '';
+				date = '',
+				show = '',
+				success = false;
 		show = "content_frame.css('display','inline').removeClass('image-matrix')";
 		switch (id) {
 			case ('blogger'):
@@ -183,22 +184,36 @@
 				limit = 20;
         break;
     }
-		e.preventDefault();
-		content_frame.empty();
-		$.getJSON(http, function(data) {
-			console.log(data);
-			$.each(eval(obj), function(i,item) {
-				console.log(item);
-				html += eval(tmp);
-				if(i === limit) { return false; }
-			});
-			html += '</ul>';
+    function appendDOM(html) {
 			console.log(html);
 			content_frame.html(html);
-		});
-		landing.css("display","none");
-		aside.css("display","none");
-		reset.removeClass("current");
-		eval(show);
+			landing.css("display","none");
+			aside.css("display","none");
+			reset.removeClass("current");
+			eval(show);
+    }
+		function getFeed(http, obj, tmp, html) {
+			//!!!cache?
+			return $.getJSON(http, function(data) {
+				success = true;
+				//console.log(data);
+				$.each(eval(obj), function(i,item) {
+						console.log(item);
+						html += eval(tmp);
+						console.log(html);
+						if(i === limit) { return false; }
+					});
+				html += '</ul>';
+				appendDOM(html);
+			});
+		}
+		getFeed(http, obj, tmp, html);
+		// ERROR: Can be tested by commenting appendDOM(html) line in getFeed
+		setTimeout(function() {
+			if (!success) {
+				html = '<h2 align="center">Error!</h2><blockquote>There has been an error requesting ' +id.substr(0,1).toUpperCase()+id.substr(1)+ ' data</blockquote>';
+				appendDOM(html);
+			}
+		}, 5000);
 	});
 })();
