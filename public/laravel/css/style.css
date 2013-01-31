@@ -10,7 +10,9 @@ body
   height:100%;
   margin:0;
 }
+/* for legacy browsers - wnew html5 tags wont break layout */
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+
 abbr[title], dfn, acronym, .def { border-bottom: 1px dotted; text-decoration:none; color: #f6a828; }
 hr { border-radius:0; margin-top:0; }
 /*
@@ -37,15 +39,17 @@ aside {
 | Links
 */
 a, .href { 
-	color: #2972A3; 
+	color: #72ADD4;
+  text-shadow: 1px 0 0 blue;
 	text-decoration:underline; 
 }
 a:visited, .visited {
-	color: #72ADD4; 
+	color: #2972A3; 
 	text-decoration:none;
 }
 a:hover, .hover {
-	color: #3dc1ff;
+	color: #3dc1ff; 
+  text-shadow: 1px 0 2px #ddd;
 }
 /*internal linking
 a[href*="8888"]:after,
@@ -115,11 +119,12 @@ a.offsite:after {
 /*
 | Navigation
 */
-.current {
+.current, li.current:hover {
 	color: #aaa !important;
-  font-size: 90%;
   display:block; 
   text-decoration: none;
+  background-color: #555 !important;
+  background-repeat:repeat;
 }
 .container {
   margin : 1em;
@@ -131,7 +136,7 @@ ul#nav{
   margin:0;
   padding:0;
 }
-ul.drop a { display:block; color: #f79f34; text-decoration: none;}
+ul.drop a { display:block; color: #f79f34; text-decoration: none; text-shadow: 0 0 0 #ddd; }
 ul.drop, ul.drop li, ul.drop ul { list-style: none; margin: 0; padding: 0; background: #555; color: #fff;}
 ul.drop { position: relative; z-index: 597; float: left; }
 ul.drop li { float: left; vertical-align: middle; padding: 5px 10px; color: #333; }

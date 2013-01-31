@@ -9,12 +9,12 @@
 @section('nav')
 	@parent
 	<!-- <li>{{ HTML::link("users/", "Sign-on") }}</li> -->
-	<li class="to-right">{{ HTML::link("#", "Reset", array("title"=>"Clear dynamic content area", "id"=>"reset", "class" => "current")) }}</li>
+	<li class="to-right current">{{ HTML::link("#", "Reset", array("title"=>"Clear dynamic content area", "id"=>"reset", "class" => "current")) }}</li>
 	<li class="to-right">
 		{{ HTML::link("#", "List menu") }}
 		<ul>
 		  <li>{{ HTML::link("#", "Image&nbsp;List", array("title"=>"Change links to image carousel style", "id"=>"menuGraphics")) }}</li>
-		  <li>{{ HTML::link("#", "Text List", array("title"=>"Change links to text list style", "id"=>"menuText", "class" => "current")) }}</li>	
+		  <li class="current">{{ HTML::link("#", "Text List", array("title"=>"Change links to text list style", "id"=>"menuText", "class" => "current")) }}</li>	
 		</ul>
 	</li>
 </ul>

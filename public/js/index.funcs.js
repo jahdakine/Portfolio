@@ -78,8 +78,8 @@
 			block2.wrapAll('<div id="t2"></div>');
 			block3.wrapAll('<div id="t3"></div>');
 			ctrls.addClass("transparent");
-			menu_text.addClass("current");
-			menu_graphics.removeClass("current");
+			menu_text.addClass("current").parent().addClass("current");
+			menu_graphics.removeClass("current").parent().removeClass("current");
 		}
 	});
 		//graphics
@@ -92,8 +92,8 @@
 			carousel_li.unwrap();
 			setCarousel(window.num2Scroll, window.dir2Scroll);
 			ctrls.removeClass("transparent").center({vertical: false});
-			menu_graphics.addClass("current");
-			menu_text.removeClass("current");
+			menu_graphics.addClass("current").parent().addClass("current");
+			menu_text.removeClass("current").parent().removeClass("current");
 		}
 	});
 	//reset click
@@ -103,6 +103,7 @@
 		content_frame.css("display","none");
 		landing.css("display","inline");
 		reset.addClass("current");
+		reset.parent().addClass("current");
 		aside.css("display","inline");
 	});
 	//carousel controls
