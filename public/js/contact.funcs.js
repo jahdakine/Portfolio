@@ -1,5 +1,4 @@
 (function() {
-	$(document).tooltip();
 	$("#help").on('click', function(e) {
 		e.preventDefault();
 		$("#helper").removeClass("hidden");

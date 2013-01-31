@@ -58,8 +58,6 @@
 			setCarousel(window.num2Scroll, window.dir2Scroll); //!!!dont reset
 		}
 	});
-	//set tooltips
-	$(document).tooltip();
 	content_frame.css("display","none");
 	//setup links
 	list_img.css("display","none"); //hides images embedded in links

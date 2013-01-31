@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<title>@yield('title')</title>
 	{{ HTML::style('/css/vendor/jquery-ui-1.9.2.custom.css') }}
+	{{ HTML::style('/css/vendor/jquery.qtip2.css') }}
 	{{ HTML::style('laravel/css/style.css') }}
 	@yield('header')
 </head>
@@ -71,7 +72,8 @@
 		</footer>
 	</div> <!-- // wrapper -->
 	{{ HTML::script('/js/vendor/jquery-1.8.2.js') }}	
-	{{ HTML::script('/js/vendor/jquery-ui-1.9.2.custom.js') }}		
+	{{ HTML::script('/js/vendor/jquery-ui-1.9.2.custom.js') }}
+	{{ HTML::script('/js/vendor/jquery.qtip2.js') }}		
 	@yield('scripts')	
 	{{ HTML::script('/js/layout.funcs.js') }}
 </body>

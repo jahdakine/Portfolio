@@ -1,15 +1,15 @@
 (function() {
-	/* setup nickname pronunciation player */
+	/* flexible footer */
 	var windowHeight = window.innerHeight,
 			headerHeight = $("header").height(),
 			contentHeight = $("#content").height(),
 			footerHeight = $("footer").height(),
 			flexFooter = windowHeight - (headerHeight + contentHeight + footerHeight);
-	// !!! make footer flexible - only working on load
   function resizeFooter() {
     $(".flex-footer").css("min-height", flexFooter);
   }
   $(window).load(resizeFooter);
+  // !!! only working on load
   $(window).resize(function() {
 		//console.log(headerHeight + ' ' + contentHeight + ' ' + footerHeight + ' ' + flexFooter);
 		resizeFooter();
@@ -36,5 +36,26 @@
 		e.preventDefault();
 		audio_wrap.css("display", "none");
 		audio_wrap.attr("style", "padding: 0; margin: 0;");
+	});
+	//tooltips
+	$('a[title],.href,.hover,.visited').qtip({
+		def : false,
+		position: {
+			target: 'mouse',
+			viewport: $(window)
+		},
+		style: {
+			classes: 'qtip-blue'
+		}
+	});
+	$('acronym,dfn,abbr,.def').qtip({
+		def : false,
+		position: {
+			target: 'mouse',
+			viewport: $(window)
+		},
+		style: {
+			classes: 'qtip-orange'
+		}
 	});
 })();
