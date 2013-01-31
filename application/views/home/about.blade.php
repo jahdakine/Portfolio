@@ -11,6 +11,10 @@
 	@parent
 @endsection<!-- // nav -->
 
+@section('top')
+<hr style="margin-bottom:1em; position:absolute">
+@endsection<!-- // top -->
+
 @section('aside')
 @endsection<!-- // aside -->
 

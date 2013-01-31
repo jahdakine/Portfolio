@@ -117,14 +117,14 @@
 	</ul>
 </div><!-- // list -->
 <div class="clear-fix"></div>
-<hr color="#333" size="36"/>	
+<hr color="#333" size="36" style="margin-bottom:0"/>	
 @endsection
 
 @section('main')
 	@section('aside')
+	something new
 	@endsection<!-- // aside -->	
-	<div id="contentFrame" class="content"></div><!-- // contentFrame -->
-	<div id="landing" class="landing">
+	<div id="landing">
 		<article>
 			Welcome. This is my online 
 			<acronym title="Curriculum Vitae">CV</acronym>. 
@@ -170,6 +170,7 @@
 				<li>Cure world hunger</li>
 			</ul>																
 		</section><!-- // notes -->
+		<div id="contentFrame" class="content"></div><!-- // contentFrame -->
 	</div><!-- // landing -->
 @endsection<!-- // main -->
 

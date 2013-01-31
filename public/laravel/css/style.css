@@ -22,9 +22,12 @@ aside {
   background-color: #ddd; 
   font-size: 80%;
   padding: 5px;
-  margin: 20px 15px 5px 15px;
+  margin: 5px 15px 5px 15px;
   border-radius: 5px;
   min-width: 100px;
+}
+.main {
+  padding: 1em;
 }
 .content {
  display: inline !important; 

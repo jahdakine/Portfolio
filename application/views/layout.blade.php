@@ -39,8 +39,9 @@
 				@yield_section <!-- will yield and close section -->
 			</ul>
 		</div><!-- // navigation -->	
+		<div class="clear-fix"></div>
 		@yield('top')
-		<div role="main" id="content">		
+		<div role="main" id="content" class="main">		
 			<aside id="aside">
 				<h3 align="center">Legend</h3>
 				<ul class="nolist">

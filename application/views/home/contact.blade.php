@@ -11,12 +11,16 @@
 	@parent
 @endsection<!-- // nav -->
 
+@section('top')
+<hr style="padding-bottom:1em; position:absolute">
+@endsection<!-- // top -->
+
 @section('aside')
 @endsection<!-- // aside -->
 
 @section('main')
 <section id="communicate">
-	<h2>Get in touch</h2>
+	<h3>Get in touch</h3>
 	<p>To use the mail facilities, please allow popups from my site 
 	{{ HTML::a_img('#', '', 'Help with popups', '/img/help-icon.png', '', array('id' => 'help'), array('class' => 'to-middle', "width" => "16", "height" => "19"), true) }}
 	(this is the only time I promise).
