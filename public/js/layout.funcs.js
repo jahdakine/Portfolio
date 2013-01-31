@@ -1,4 +1,9 @@
 (function() {
+	/*
+	|	layout.blade.php functions
+	| common across site
+	*/
+
 	/* flexible footer */
 	var windowHeight = window.innerHeight,
 			headerHeight = $("header").height(),
@@ -37,7 +42,8 @@
 		audio_wrap.css("display", "none");
 		audio_wrap.attr("style", "padding: 0; margin: 0;");
 	});
-	//tooltips - ordinary blue style
+	/*tooltips */
+	//ordinary - blue style
 	$('a[title],.href,.hover,.visited').qtip({
 		def : false,
 		position: {
@@ -62,7 +68,7 @@
 	//futuristic links created on the fly
 	$('.flickr-img').live('mouseover', function(event) {
 		$(this).qtip({
-			overwrite: false, 
+			overwrite: false,
 			position: {
 				target: 'mouse',
 				viewport: $(window)
@@ -71,8 +77,8 @@
 				classes: 'qtip-blue'
 			},
 			show: {
-				event: event.type, 
-				ready: true 
+				event: event.type,
+				ready: true
 			}
 		}, event);
 	});

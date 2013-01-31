@@ -1,12 +1,13 @@
-//!!! TODO
+/*
+| layout.blade.php functions
+| for index only
+*/
+
+/*!!! TODO */
 //make OOP - maybe next iteration
-//*one class for button clicks
 //CACHE jSON
-//*make helper function
-//*JSON error?
 //get square size from flickr
 //use carouFredSel method to resize
-//*fix FF bug for button #6
 
 (function() {
 	//cache DOM vars
@@ -33,7 +34,7 @@
 			content_frame = $("#contentFrame"),
 			num2Scroll = 1,
 			dir2Scroll = "left";
-	//setup carousel slider
+	/*setup carousel slider*/
 	function setCarousel(num2Scroll, dir2Scroll) {
 		carousel.carouFredSel({
 			align						: "center",
@@ -59,10 +60,9 @@
 		}
 	});
 	content_frame.css("display","none");
-	//setup links
+	/*setup links*/
 	list_img.css("display","none"); //hides images embedded in links
-	//nav menu clicks
-		//text
+	//nav menu clicks - text
 	menu_text.on('click', function(e) {
 		e.preventDefault();
 		if(!ctrls.hasClass("transparent")) {
@@ -80,7 +80,7 @@
 			menu_graphics.removeClass("current").parent().removeClass("current");
 		}
 	});
-		//graphics
+	//nav menu clicks - graphics
 	menu_graphics.on('click', function(e, num2Scroll, dir2Scroll) {
 		e.preventDefault();
 		if(list_img.css("display") !== "inline") {
@@ -94,17 +94,17 @@
 			menu_text.removeClass("current").parent().removeClass("current");
 		}
 	});
-	//reset click
+	/*reset button click*/
 	reset.on('click', function(e) {
 		e.preventDefault();
 		content_frame.empty();
 		content_frame.css("display","none");
 		landing.css("display","inline");
 		reset.addClass("current");
-		reset.parent().addClass("current");
+		reset.parent().addClass("current"); //sets the parent li - otherwise hover color bleeds thru padding
 		aside.css("display","inline");
 	});
-	//carousel controls
+	/*carousel controls*/
 	c1.on('click', function(e, num2Scroll, dir2Scroll) { //slow down num2Scroll
 		e.preventDefault();
 		if(window.num2Scroll > 1) {
@@ -142,7 +142,7 @@
 			carousel.trigger("play");
 		}
 	});
-	//!!!feed click handler - I'm sure there's a better way
+	/*!!!feed click handler - I'm sure there's a better way*/
 	feed_btn.on('click', function(e) {
 		var id = this.id,
 				html = '<h2 align="center">Latest ' +id.substr(0,1).toUpperCase()+id.substr(1)+ ' Updates</h2><ul style="list-style:none">',
@@ -189,6 +189,7 @@
 				limit = 20;
         break;
     }
+    //put html into content frame
     function appendDOM(html) {
 			//console.log(html);
 			content_frame.html(html);
@@ -197,6 +198,7 @@
 			reset.removeClass("current");
 			eval(show);
     }
+    //make xhr request
 		function getFeed(http, obj, tmp, html) {
 			//!!!cache? Would need to use local storage or DB
 			return $.getJSON(http, function(data) {

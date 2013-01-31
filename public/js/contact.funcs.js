@@ -1,4 +1,10 @@
+/*
+| layout.contact.php functions
+| for contact only
+*/
+
 (function() {
+	/*hide/show popup help*/
 	$("#help").on('click', function(e) {
 		e.preventDefault();
 		$("#helper").removeClass("hidden");
