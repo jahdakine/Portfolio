@@ -137,8 +137,10 @@
 			<acronym title="Javascript Object Notation">jSON</acronym>
 			feeds via icon selection. It is basically my playground to spend time trying new things and learning 
 			about what works and what doesn't in the fine art and science of internet 
-			programming and design. Tooltips and other user interface goodies found at 
+			programming and design. Tabs and other user interface goodies can be found at 
 			{{ HTML::link("http://jqueryui.com/", "jQuery UI", array("title"=>"Offsite to jQuery UI in a new window", "target"=>"_blank", "class" => "offsite")) }}.
+			Customizable tooltips:
+			{{ HTML::link("http://craigsworks.com/projects/qtip2/", "qTips2", array("title"=>"Offsite to qTips2 in a new window", "target"=>"_blank", "class" => "offsite")) }}.
 			Menu carousel is available at 
 			{{ HTML::link("http://caroufredsel.dev7studios.com/", "carouFred", array("title"=>"Offsite to carouFred in a new window", "target"=>"_blank", "class" => "offsite")) }}.
 			Flickr jSON request example description is available at 

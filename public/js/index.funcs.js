@@ -184,13 +184,13 @@
       case ('flickr'):
 				http = 'http://api.flickr.com/services/feeds/photos_public.gne?id=23019891@N00&lang=en-us&format=json&jsoncallback=?';
 				obj = 'data.items';
-				tmp = "'<a href=\"' + item.link + '\" target=\"_blank\" title=\"Open Flickr page titled &#34;' + item.title + '&#34;<br/> in a new window/tab\"><img src=\"' + item.media.m + '\" /></a>'";
+				tmp = "'<a href=\"' + item.link + '\" target=\"_blank\" class=\"flickr-img\" title=\"Open Flickr page titled &#34;' + item.title + '&#34; in a new window/tab\"><img src=\"' + item.media.m + '\" /></a>'";
 				show = "content_frame.css('display','inline-block').addClass('image-matrix')";
 				limit = 20;
         break;
     }
     function appendDOM(html) {
-			console.log(html);
+			//console.log(html);
 			content_frame.html(html);
 			landing.css("display","none");
 			aside.css("display","none");
@@ -201,7 +201,7 @@
 			//!!!cache? Would need to use local storage or DB
 			return $.getJSON(http, function(data) {
 				success = true;
-				console.log(data);
+				//console.log(data);
 				$.each(eval(obj), function(i,item) {
 						//console.log(item);
 						html += eval(tmp);
