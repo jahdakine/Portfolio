@@ -204,9 +204,9 @@
 				success = true;
 				console.log(data);
 				$.each(eval(obj), function(i,item) {
-						console.log(item);
+						//console.log(item);
 						html += eval(tmp);
-						console.log(html);
+						//console.log(html);
 						if(i === limit) { return false; }
 					});
 				html += '</ul>';

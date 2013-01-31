@@ -1,3 +1,4 @@
+.landing { padding:0 1em 1em 1em; margin-top:0; }
 /*
 | Image Matrix
 */
@@ -99,6 +100,9 @@
   line-height: 1em;
   margin-bottom: 20px;
 }
+/*
+| Carousel controls
+*/
 .controls {
   z-index: 1000;
   list-style: none;

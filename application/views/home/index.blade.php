@@ -170,8 +170,8 @@
 				<li>Cure world hunger</li>
 			</ul>																
 		</section><!-- // notes -->
-		<div id="contentFrame" class="content"></div><!-- // contentFrame -->
 	</div><!-- // landing -->
+	<div id="contentFrame" class="content"></div><!-- // contentFrame -->
 @endsection<!-- // main -->
 
 @section('footer')	

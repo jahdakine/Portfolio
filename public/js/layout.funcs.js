@@ -11,7 +11,7 @@
   }
   $(window).load(resizeFooter);
   $(window).resize(function() {
-		console.log(headerHeight + ' ' + contentHeight + ' ' + footerHeight + ' ' + flexFooter);
+		//console.log(headerHeight + ' ' + contentHeight + ' ' + footerHeight + ' ' + flexFooter);
 		resizeFooter();
   });
 	/* setup nickname pronunciation player */
