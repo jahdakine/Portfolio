@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Croissant+One|Special+Elite|Droid+Sans);
-/** { border: 1px solid red !important; }  useful layout tool - comment when not needed */
+/* * { border: 1px solid red !important; }  useful layout tool - comment when not needed*/
 body
 {
 	font-family:'Droid Sans', sans-serif;
@@ -32,7 +32,7 @@ aside {
   padding: 1em;
 }
 .content {
- display: inline !important; 
+ display: inline !important;
  padding: 0 5px 5px 5px;
 }
 /*
@@ -64,37 +64,6 @@ a.offsite:after {
   content: "\21D2";
   font-size: 15px;
 }
-
-/*
-| Tooltip
-
-/* Fades and background-images don't work well together in IE6, drop the image 
-* html .ui-tooltip { background-image: none; }
-body .ui-tooltip { border-width: 2px; }
-
-.ui-tooltip, .arrow:after {
-  background: #eee;
-  border: 2px solid #3dc1ff;
-}
-.ui-tooltip:abbr, .ui-tooltip:dfn, .ui-tooltip:acronym, .ui-tooltip:def  {
-  color: #f79f34;
-  -webkit-box-shadow: 8px 8px 12px #f79f34;
-  -moz-box-shadow: 8px 8px 12px #f79f34; 
-  box-shadow: 8px 8px 12px #f79f34;  
-}
-.ui-tooltip {
-  padding: 5px 10px;
-  color: #333;
-  border-radius: 5px;
-  font: 80% "Helvetica Neue", Sans-Serif;
-  position: absolute;
-  z-index: 9999;
-  max-width: 300px;
-  -webkit-box-shadow: 8px 8px 12px #2972A3;
-  -moz-box-shadow: 8px 8px 12px #2972A3; 
-  box-shadow: 8px 8px 12px #2972A3;
-}
- */
 /*
 |Wrapper
 */
@@ -136,7 +105,7 @@ body .ui-tooltip { border-width: 2px; }
 | Navigation
 */
 .current, li.current:hover {
-	color: #aaa !important;
+	color: #f6a828 !important;
   display:block; 
   text-decoration: none;
   background-color: #555 !important;
@@ -152,7 +121,7 @@ ul#nav{
   margin:0;
   padding:0;
 }
-ul.drop a { display:block; color: #f79f34; text-decoration: none; text-shadow: 0 0 0 #ddd; }
+ul.drop a { display:block; color: #aaa; text-decoration: none; text-shadow: none; }
 ul.drop, ul.drop li, ul.drop ul { list-style: none; margin: 0; padding: 0; background: #555; color: #fff;}
 ul.drop { position: relative; z-index: 597; float: left; }
 ul.drop li { float: left; vertical-align: middle; padding: 5px 10px; color: #333; }

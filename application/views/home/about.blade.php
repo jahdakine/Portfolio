@@ -5,6 +5,7 @@
 @endsection<!-- // title -->
 
 @section('header')
+	{{ HTML::style('/css/about.css') }}
 @endsection<!-- // header -->
 
 @section('nav')
@@ -49,7 +50,7 @@
 				<li><a href="#skills-2">Training</a></li>
 				<li><a href="#skills-3">Some familiarity</a></li>
 			</ul>
-			<div id="skills-1"
+			<div id="skills-1">
 			<ul>
 				<li>ColdFusion (3-10)</li>
 				<li>Database Design</li>

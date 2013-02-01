@@ -5,7 +5,6 @@
 	<meta charset="utf-8"> 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<title>@yield('title')</title>
-	{{ HTML::style('/css/vendor/jquery-ui-1.9.2.custom.css') }}
 	{{ HTML::style('/css/vendor/jquery.qtip2.css') }}
 	{{ HTML::style('laravel/css/style.css') }}
 	@yield('header')
