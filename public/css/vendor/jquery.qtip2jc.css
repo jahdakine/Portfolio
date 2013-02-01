@@ -1,0 +1,161 @@
+/*!
+ * qTip2 - Pretty powerful tooltips - v2.0.1-4-g
+ * http://qtip2.com
+ *
+ * Copyright (c) 2013 Craig Michael Thompson
+ * Released under the MIT, GPL licenses
+ * http://jquery.org/license
+ *
+ * Date: Fri Jan 4 2013 04:05 GMT+0000
+ * Plugins: svg ajax tips modal viewport imagemap ie6
+ * Styles: basic css3
+ */
+
+/* Core qTip styles */
+.qtip, .qtip {
+	position: absolute;
+	left: -28000px;
+	top: -28000px;
+	display: none;
+	max-width: 280px;
+	min-width: 50px;	
+	font-size: 10.5px;
+	line-height: 12px;
+	direction: ltr;
+}
+	.qtip-content {
+		position: relative;
+		overflow: hidden;
+		text-align: left;
+		word-wrap: break-word;
+	}
+	.qtip-titlebar {
+		position: relative;
+		padding: 5px 35px 5px 10px;
+		overflow: hidden;
+		border-width: 0 0 1px;
+		font-weight: bold;
+	}
+	.qtip-titlebar + .qtip-content { border-top-width: 0 !important; }
+	/* Default close button class */
+	.qtip-close {
+		position: absolute;
+		right: -9px; top: -9px;
+		outline: medium none;
+		border-width: 1px;
+		border-style: solid;
+		border-color: transparent;
+	}
+		.qtip-titlebar .qtip-close {
+			right: 4px; top: 50%;
+			margin-top: -9px;
+		}	
+		* html .qtip-titlebar .qtip-close{ top: 16px; } /* IE fix */
+		.qtip-titlebar .ui-icon,
+		.qtip-icon .ui-icon {
+			display: block;
+			text-indent: -1000em;
+			direction: ltr;
+			vertical-align: middle;
+		}
+		.qtip-icon, .qtip-icon .ui-icon {
+			-moz-border-radius: 3px;
+			-webkit-border-radius: 3px;
+			border-radius: 3px;
+			text-decoration: none;
+		}
+			.qtip-icon .ui-icon {
+				width: 18px;
+				height: 14px;
+				text-align: center;
+				text-indent: 0;
+				font: normal bold 10px/13px Tahoma,sans-serif;
+				color: inherit;
+				background: transparent none no-repeat -100em -100em;
+			}
+/* Applied to 'focused' tooltips e.g. most recently displayed/interacted with */
+.qtip-focus {}
+/* Applied on hover of tooltips i.e. added/removed on mouseenter/mouseleave respectively */
+.qtip-hover {}
+/*! Orange tooltip style */
+.qtip-orange {
+	color: #333;  
+	background: #fff;
+	padding: 5px 10px;
+  border-radius: 5px;
+  font: 80%;
+  position: absolute;
+  z-index: 9999;
+  max-width: 300px;
+  border: 2px solid #f6a828;  
+  -webkit-box-shadow: 6px 6px 10px #cd8d29;
+  -moz-box-shadow: 6px 6px 10px #cd8d29; 
+  box-shadow: 6px 6px 10px #cd8d29;
+  border-color: #f6a828;
+}
+	.qtip-orange .qtip-titlebar {
+		background-color: #B0DE78;
+	}
+	.qtip-orange .qtip-close .qtip-icon {
+		background-position: -42px 0;
+	}
+/*! Blue tooltip style */
+.qtip-blue {
+	color: #333;  
+	background: #fff;
+	padding: 5px 10px;
+  border-radius: 5px;
+  font: 80%;
+  position: absolute;
+  z-index: 9999;
+  max-width: 300px;
+  border: 2px solid #3dc1ff;  
+  -webkit-box-shadow: 6px 6px 10px #2972A3;
+  -moz-box-shadow: 6px 6px 10px #2972A3; 
+  box-shadow: 6px 6px 10px #2972A3;
+	border-color: #3dc1ff; 
+}
+	.qtip-blue .qtip-titlebar {
+		background-color: #D0E9F5;
+	}
+	.qtip-blue .qtip-close .qtip-icon {
+		background-position: -2px 0;
+	}
+/* Add rounded corners to your tooltips in: FF3+, Chrome 2+, Opera 10.6+, IE9+, Safari 2+ */
+.qtip-rounded,
+.qtip-tipsy,
+.qtip-bootstrap{
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+.qtip-rounded .qtip-titlebar {
+	-moz-border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+}
+/* IE9 fix - removes all filters */
+.qtip:not(.ie9haxors) div.qtip-content,
+.qtip:not(.ie9haxors) div.qtip-titlebar {
+	filter: none;
+	-ms-filter: none;
+}
+/* Tips plugin - for extended pointer */
+.qtip .qtip-tip {
+	margin: 0 auto;
+	overflow: hidden;
+	z-index: 10;
+}
+	.qtip .qtip-tip,
+	.qtip .qtip-tip .qtip-vml {
+		position: absolute;
+		color: #123456;
+		background: transparent;
+		border: 0 dashed transparent;
+	}
+	.qtip .qtip-tip canvas { top: 0; left: 0; }
+	.qtip .qtip-tip .qtip-vml {
+		behavior: url(#default#VML);
+		display: inline-block;
+		visibility: visible;
+	}

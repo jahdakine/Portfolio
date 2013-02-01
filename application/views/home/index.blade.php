@@ -180,7 +180,7 @@
 @endsection<!-- // footer -->
 
 @section('scripts')
-	{{ HTML::script('/js/vendor/jquery.carouFredSel.js') }}
-	{{ HTML::script('/js/vendor/jquery.center.js') }}	
+	{{ HTML::script('/js/vendor/jquery.carouFredSel-6.2.0-packed.js') }}
+	{{ HTML::script('/js/vendor/jquery.center.min.js') }}	
 	{{ HTML::script('/js/index.funcs.js') }}
 @endsection<!-- // scripts -->

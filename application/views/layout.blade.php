@@ -70,9 +70,9 @@
 			@yield('footer')
 		</footer>
 	</div> <!-- // wrapper -->
-	{{ HTML::script('/js/vendor/jquery-1.8.2.js') }}	
-	{{ HTML::script('/js/vendor/jquery-ui-1.9.2.custom.js') }}
-	{{ HTML::script('/js/vendor/jquery.qtip2.js') }}		
+	{{ HTML::script('/js/vendor/jquery-1.8.2.min.js') }}	
+	{{ HTML::script('/js/vendor/jquery-ui-1.9.2.custom.min.js') }}
+	{{ HTML::script('/js/vendor/jquery.qtip2.min.js') }}		
 	@yield('scripts')	
 	{{ HTML::script('/js/layout.funcs.js') }}
 </body>

@@ -221,6 +221,6 @@
 				html = '<h2 align="center">Error!</h2><blockquote>There has been an error requesting ' +id.substr(0,1).toUpperCase()+id.substr(1)+ ' data</blockquote>';
 				appendDOM(html);
 			}
-		}, 5000);
+		}, 4000);
 	});
 })();

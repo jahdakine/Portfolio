@@ -43,38 +43,47 @@
 		audio_wrap.attr("style", "padding: 0; margin: 0;");
 	});
 	/*tooltips */
-	//ordinary - blue style
-	$('a[title],.href,.hover,.visited').qtip({
-		def : false,
+	var shared = {
 		position: {
-			target: 'mouse',
-			viewport: $(window)
+				target: 'mouse',
+				viewport: $(window),
+				my: 'top left',
+				at: 'left bottom',
+				adjust: {
+					x: 15, y: 15, mouse: true //must move mouse off tip or it absorbs: http://craigsworks.com/projects/forums/thread-solved-onclick-event-on-tipped-item
+				}
 		},
 		style: {
-			classes: 'qtip-blue'
+			tip: true
 		}
-	});
-	//definition - orange style
-	$('acronym,dfn,abbr,.def').qtip({
-		def : false,
-		position: {
-			target: 'mouse',
-			viewport: $(window)
-		},
+	};
+	// Setup our first tooltip, adding some other options
+	$('a,.href,.hover,.visited').qtip( $.extend({}, shared, {
+		style: {
+			classes: 'qtip-light-blue'
+		}
+	}));
+	// Setup our second tooltip, again adding some new options
+	$('acronym,dfn,abbr,.def').qtip( $.extend({}, shared, {
 		style: {
 			classes: 'qtip-orange'
 		}
-	});
-	//futuristic links created on the fly
+	}));
+	//futuristic links created on the fly - !!! can't chain with shared?
 	$('.flickr-img').live('mouseover', function(event) {
 		$(this).qtip({
 			overwrite: false,
 			position: {
-				target: 'mouse',
-				viewport: $(window)
+					target: 'mouse',
+					viewport: $(window),
+					my: 'top left',
+					at: 'left bottom',
+					adjust: {
+						x: 15, y: 15, mouse: true
+					}
 			},
 			style: {
-				classes: 'qtip-blue'
+				classes: 'qtip-light-blue'
 			},
 			show: {
 				event: event.type,
@@ -83,3 +92,4 @@
 		}, event);
 	});
 })();
+

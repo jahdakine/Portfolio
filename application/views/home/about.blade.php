@@ -56,6 +56,7 @@
 				<li>Database Design</li>
 				<li>SQL - (SQL Server 2000/2008, mySQL, Postgres)</li>
 				<li>HTML4.01</li>
+				<li>CSS</li>
 				<li>JavaScript (vanilla)</li>
 				<li>RegEx</li>
 				<li>Web Application Security</li>
@@ -92,9 +93,9 @@
 	<div id="wrapper">
 		<div id="courses">
 			<ul>
-				<li><a href="#courses-1">Completed Courses/Tutorials</a></li>
-				<li><a href="#courses-2">Current Courses/Tutorials</a></li>
-				<li><a href="#courses-3">Projects/Interests</a></li>
+				<li><a href="#courses-1">Completed Courses</a></li>
+				<li><a href="#courses-2">Current Courses</a></li>
+				<li><a href="#courses-3">Projects</a></li>
 			</ul>
 			<div id="courses-1">
 				<h3>{{ HTML::link("https://tutsplus.com/", "Tuts+ Premium", array("title"=>"Open Tuts+ Premium in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}</h3>
