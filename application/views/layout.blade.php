@@ -5,7 +5,7 @@
 	<meta charset="utf-8"> 
 	<title>@yield('title')</title>
 	{{ HTML::style('/css/vendor/jquery.qtip2.css') }}
-	{{ HTML::style('laravel/css/style.css') }}
+	{{ HTML::style('/css/layout.css') }}
 	@yield('header')
 </head>
 
@@ -55,8 +55,8 @@
 			@yield('main')
 		</div><!-- // content -->
 		<div class="clear-fix"></div>
-		<br/>
 		<footer class="flex-footer">
+			@yield('footer')
 			<div id="audioWrap" class="hide">
 				{{ HTML::a_img('#', '', 'Dismiss player', '/img/delete-icon.png', '', array("id" => "nickHide"), array("height" => "16", "width" => "16", "class" => "to-top")) }}
 			</div>
@@ -64,9 +64,7 @@
 				<u class="def">
 					<dfn title="IPA phonetics: dʒɑ dɑ <strong>ki</strong> neɪ <br/>(sounds like: jaw duh <strong>key</strong> nay)">jahdakine</dfn>
 				</u>)<span style="padding-top:2px;">{{ HTML::a_img('#', '', 'Play nickname pronunciation audio (wav)', '/img/audio-icon.png', '', array('id' => 'nickButton'), array("height" => "16", "width" => "21", "class" => "to-middle")) }}</span>
-			</p>
-			
-			@yield('footer')
+			</p>	
 		</footer>
 	</div> <!-- // wrapper -->
 	{{ HTML::script('/js/vendor/jquery-1.8.2.min.js') }}	

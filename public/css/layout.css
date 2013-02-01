@@ -39,8 +39,7 @@ aside {
 | Links
 */
 a, .href { 
-	color: #72ADD4;
-  text-shadow: 1px 0 2px blue;
+	color: #3dc1ff;
 	text-decoration:underline; 
 }
 a:visited, .visited {
@@ -48,8 +47,8 @@ a:visited, .visited {
 	text-decoration:none;
 }
 a:hover, .hover {
-	color: #3dc1ff; 
-  text-shadow: 1px 0 2px #ddd;
+	color: #fff; 
+  text-shadow: 1px 1px 4px #000;
 }
 /*internal linking
 a[href*="8888"]:after,
@@ -79,7 +78,7 @@ a.offsite:after {
 }
 .wrapper>header {
 	font-family: 'Croissant One', cursive;
-	background-image:url(../img/logoback.png);
+	background-image:url(/img/logoback.png);
 	background-repeat:no-repeat;
 	background-position:right;
 	text-shadow:2px 1px 0 #fff;
@@ -166,7 +165,7 @@ ul.drop li:hover > ul { visibility: visible }
   font-style: italic;
   text-align:center;
   font-size: 85%;
-  text-shadow: 1px 1px 2px #000;
+  text-shadow: 1px 1px 4px #000;
 }
 
 /* end ------------------------ */

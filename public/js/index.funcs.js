@@ -72,9 +72,9 @@
 			list.addClass("list-text");
 			carousel.removeAttr("style");
 			//add 3 col lis back in
-			block1.wrapAll('<li id="t1"><ul></ul></li>');
-			block2.wrapAll('<li id="t2"><ul></ul></li>');
-			block3.wrapAll('<li id="t3"><ul></ul></li>');
+			block1.wrapAll('<ul id="t1"></ul>');
+			block2.wrapAll('<ul id="t2"></ul>');
+			block3.wrapAll('<ul id="t3"></ul>');
 			ctrls.addClass("transparent");
 			menu_text.addClass("current").parent().addClass("current");
 			menu_graphics.removeClass("current").parent().removeClass("current");
