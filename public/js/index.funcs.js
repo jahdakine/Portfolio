@@ -71,10 +71,10 @@
 			list.removeClass("list-carousel");
 			list.addClass("list-text");
 			carousel.removeAttr("style");
-			//add 3 col divs back in
-			block1.wrapAll('<div id="t1"></div>');
-			block2.wrapAll('<div id="t2"></div>');
-			block3.wrapAll('<div id="t3"></div>');
+			//add 3 col lis back in
+			block1.wrapAll('<li id="t1"><ul></ul></li>');
+			block2.wrapAll('<li id="t2"><ul></ul></li>');
+			block3.wrapAll('<li id="t3"><ul></ul></li>');
 			ctrls.addClass("transparent");
 			menu_text.addClass("current").parent().addClass("current");
 			menu_graphics.removeClass("current").parent().removeClass("current");

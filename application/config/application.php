@@ -67,7 +67,7 @@ return array(
 	|
 	*/
 
-	'profiler' => true,
+	'profiler' => false, //keep false for production
 
 	/*
 	|--------------------------------------------------------------------------

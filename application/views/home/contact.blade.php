@@ -2,21 +2,21 @@
 
 @section('title')
 	Contact
-@endsection<!-- // title -->
+@endsection
 
 @section('header')
-@endsection<!-- // header -->
+@endsection
 
 @section('nav')
 	@parent
-@endsection<!-- // nav -->
+@endsection
 
 @section('top')
 <hr style="padding-bottom:1em; position:absolute">
-@endsection<!-- // top -->
+@endsection
 
 @section('aside')
-@endsection<!-- // aside -->
+@endsection
 
 @section('main')
 <section id="communicate">
@@ -24,7 +24,7 @@
 	<p>To use the mail facilities, please allow popups from my site 
 	{{ HTML::a_img('#', '', 'Help with popups', '/img/help-icon.png', '', array('id' => 'help'), array('class' => 'to-middle', "width" => "16", "height" => "19"), true) }}
 	(this is the only time I promise).
-	A <acronym title="Completely Automated Public Turing test to tell Computers and Humans Apart">CAPTCHA</acronym> 
+	A <abbr title="Completely Automated Public Turing test to tell Computers and Humans Apart">CAPTCHA</abbr> 
 	will be displayed in a new window to help prevent spam to my inboxes and reveal my email addresses.</p>
 	<ul class="nolist">
 		<li>
@@ -34,7 +34,7 @@
 			{{ HTML::a_img('http://www.google.com/recaptcha/mailhide/d?k=01QoO8IU9RiXd2fkEo9RIO9g==&amp;c=z11k5PSfeXXPl_TPeGhabRsf9FNzh2EmS1_Y2mJjoUc=', 'Mac Mail', 'Reveal this e-mail address for Mac mail', '/img/mail-icon.png', '', array('class' => 'popup','onclick' => "window.open('http://www.google.com/recaptcha/mailhide/d?k\07501QoO8IU9RiXd2fkEo9RIO9g\75\75\46c\75z11k5PSfeXXPl_TPeGhabRsf9FNzh2EmS1_Y2mJjoUc\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=860,height=600,left=100,top=100'); return false;", "class" => "to-middle offsite"), array('class' => 'to-bottom', "width" => "32", "height" => "32"), true) }}
 		</li>
 		<li>
-			{{ HTML::a_img('skype:jahdakine?call', "Skype call (best to email first - I don't camp out there)", 'Open Skype', '/img/skype-sm-icon.png', '', array('target' => '_blank' ,"class" => "to-middle"), array('class' => 'to-bottom', "width" => "32", "height" => "32"), true) }}
+			{{ HTML::a_img('callto:jahdakine?call', "Skype call (best to email first - I don't camp out there)", 'Open Skype', '/img/skype-sm-icon.png', '', array('target' => '_blank' ,"class" => "to-middle"), array('class' => 'to-bottom', "width" => "32", "height" => "32"), true) }}
 		</li>
 	</ul>
 	<p>
@@ -62,11 +62,11 @@
 		</li>
 	</ul>
 </section><!-- // helper -->
-@endsection<!-- // main -->
+@endsection
 
 @section('footer')
-@endsection<!-- // footer -->
+@endsection
 
 @section('scripts')
 	{{ HTML::script('/js/contact.funcs.js') }}
-@endsection<!-- // scripts -->
+@endsection

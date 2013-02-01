@@ -13,7 +13,7 @@ body
 /* for legacy browsers - wnew html5 tags wont break layout */
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
 
-abbr[title], dfn, acronym, .def { border-bottom: 1px dotted; text-decoration:none; color: #f6a828; }
+abbr[title], dfn, .def { border-bottom: 1px dotted; text-decoration:none; color: #f6a828; }
 hr { border-radius:0; margin-top:0; }
 /*
 | Layout

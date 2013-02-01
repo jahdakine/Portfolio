@@ -29,7 +29,7 @@ direction: ltr;
 
 .qtip-content{
 position: relative;
-padding: 5px 9px;
+padding: 0; /*modified - originally 6px 9px*/
 overflow: hidden;
 
 text-align: left;

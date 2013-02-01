@@ -3,7 +3,6 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8"> 
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<title>@yield('title')</title>
 	{{ HTML::style('/css/vendor/jquery.qtip2.css') }}
 	{{ HTML::style('laravel/css/style.css') }}
@@ -43,9 +42,9 @@
 		@yield('top')
 		<div role="main" id="content" class="main">		
 			<aside id="aside">
-				<h3 align="center">Legend</h3>
+				<h3 class="to-center">Legend</h3>
 				<ul class="nolist">
-					<li><span class="href" title="Links to webpages on my site">Onsite link</li>
+					<li><span class="href" title="Links to webpages on my site">Onsite link</span></li>
 					<li><span class="href" title="Links to webpages on an external site">Offsite link</span><span class="offsite">&#8658;</span></li>
 					<li><span class="hover" title="Link style with cursor above">Hover</span></li>
 					<li><span class="visited" title="Links that have been followed">Visited</span></li>
@@ -59,12 +58,12 @@
 		<br/>
 		<footer class="flex-footer">
 			<div id="audioWrap" class="hide">
-				{{ HTML::a_img('#', '', 'Dismiss player', '/img/delete-icon.png', '', array("id" => "nickHide"), array("height" => "16px", "width" => "16px", "class" => "to-top")) }}
+				{{ HTML::a_img('#', '', 'Dismiss player', '/img/delete-icon.png', '', array("id" => "nickHide"), array("height" => "16", "width" => "16", "class" => "to-top")) }}
 			</div>
 			<p class="copy">copyright &copy;2013 John Chase (aka 
 				<u class="def">
 					<dfn title="IPA phonetics: dʒɑ dɑ <strong>ki</strong> neɪ <br/>(sounds like: jaw duh <strong>key</strong> nay)">jahdakine</dfn>
-				</u>)<span style="padding-top:2px;">{{ HTML::a_img('#', '', 'Play nickname pronunciation audio (wav)', '/img/audio-icon.png', '', array('id' => 'nickButton'), array("height" => "16px", "width" => "21px", "class" => "to-middle")) }}</span>
+				</u>)<span style="padding-top:2px;">{{ HTML::a_img('#', '', 'Play nickname pronunciation audio (wav)', '/img/audio-icon.png', '', array('id' => 'nickButton'), array("height" => "16", "width" => "21", "class" => "to-middle")) }}</span>
 			</p>
 			
 			@yield('footer')

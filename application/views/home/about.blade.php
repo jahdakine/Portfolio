@@ -2,22 +2,22 @@
 
 @section('title')
 	About
-@endsection<!-- // title -->
+@endsection
 
 @section('header')
 	{{ HTML::style('/css/about.css') }}
-@endsection<!-- // header -->
+@endsection
 
 @section('nav')
 	@parent
-@endsection<!-- // nav -->
+@endsection
 
 @section('top')
 <hr style="margin-bottom:1em; position:absolute">
-@endsection<!-- // top -->
+@endsection
 
 @section('aside')
-@endsection<!-- // aside -->
+@endsection
 
 @section('main')
 <article>
@@ -43,7 +43,7 @@
 </article>
 <section>
 	<h3>Skills</h3>
-	<div id="wrapper">
+	<div id="wrapper1">
 		<div id="skills">
 			<ul>
 				<li><a href="#skills-1">Solid Experience</a></li>
@@ -88,9 +88,9 @@
 				</ul>
 			</div><!-- // skills-3 -->
 		</div><!-- // skills -->
-
+	</div><!-- // wrapper1 -->
 	<h3>Training</h3>
-	<div id="wrapper">
+	<div id="wrapper2">
 		<div id="courses">
 			<ul>
 				<li><a href="#courses-1">Completed Courses</a></li>
@@ -139,13 +139,13 @@
 				</ul>
 			</div><!-- // courses-3 -->
 		</div><!-- // courses -->
-	</div><!-- // wrapper -->
+	</div><!-- // wrapper2 -->
 </section>             
-@endsection<!-- // main -->
+@endsection
 
 @section('footer')
-@endsection<!-- // footer -->
+@endsection
 
 @section('scripts')
 	{{ HTML::script('/js/about.funcs.js') }}
-@endsection<!-- // scripts -->
+@endsection
