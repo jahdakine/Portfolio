@@ -52,15 +52,15 @@
 			</li>
 			<li class="block1">
 				{{ HTML::link("www.yelp.com/", "Yelp", array("title"=>"Open Yelp site in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
-				{{ HTML::link('#', '', array('id' => 'yelp', 'class' => 'feedBtn listImg', 'title' => 'You must be logged in to access', "onclick" => "return false;")) }}				
+				{{ HTML::link('#', '', array('id' => 'yelp', 'class' => 'feedBtn listImg', 'title' => 'You must be logged in to access private account', "onclick" => "return false;")) }}				
 			</li>
 			<li class="block1">
 				{{ HTML::link("https://www.icloud.com/", "iCloud", array("title"=>"Open iCloud site in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
-				{{ HTML::link('#', '', array('id' => 'icloud', 'class' => 'feedBtn listImg', 'title' => 'You must be logged in to access', "onclick" => "return false;")) }}				
+				{{ HTML::link('#', '', array('id' => 'icloud', 'class' => 'feedBtn listImg', 'title' => 'You must be logged in to access private account', "onclick" => "return false;")) }}				
 			</li>
 			<li class="block1">
 				{{ HTML::link("https://vimeo.com/", "Vimeo", array("title"=>"Open Vimeo site in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
-				{{ HTML::link('#', '', array('id' => 'vimeo', 'class' => 'feedBtn listImg', 'title' => 'You must be logged in to access', "onclick" => "return false;")) }}				
+				{{ HTML::link('#', '', array('id' => 'vimeo', 'class' => 'feedBtn listImg', 'title' => 'You must be logged in to access private account', "onclick" => "return false;")) }}				
 			</li>		
 		</ul><!-- //t1 -->
 		<ul id="t2">
@@ -82,15 +82,15 @@
 			</li>
 			<li class="block2">
 				{{ HTML::link("http://evernote.com/", "Evernote", array("title"=>"Open Evernote site in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
-				{{ HTML::link('#', '', array('id' => 'evernote', 'class' => 'feedBtn listImg', 'title' => 'You must be logged in to access', "onclick" => "return false;")) }}								
+				{{ HTML::link('#', '', array('id' => 'evernote', 'class' => 'feedBtn listImg', 'title' => 'You must be logged in to access private account', "onclick" => "return false;")) }}								
 			</li>
 			<li class="block2">
 				{{ HTML::link("http://picasa.google.com/", "Picassa", array("title"=>"Open Picassa site in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
-				{{ HTML::link('#', '', array('id' => 'picassa', 'class' => 'feedBtn listImg', 'title' => 'You must be logged in to access', "onclick" => "return false;")) }}				
+				{{ HTML::link('#', '', array('id' => 'picassa', 'class' => 'feedBtn listImg', 'title' => 'You must be logged in to access private account', "onclick" => "return false;")) }}				
 			</li>		
 			<li class="block2">
 				{{ HTML::link("http://www.amazon.com/", "Amazon", array("title"=>"Open Amazon site in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
-				{{ HTML::link('#', '', array('id' => 'amazon', 'class' => 'feedBtn listImg', 'title' => 'You must be logged in to access', "onclick" => "return false;")) }}				
+				{{ HTML::link('#', '', array('id' => 'amazon', 'class' => 'feedBtn listImg', 'title' => 'You must be logged in to access private account', "onclick" => "return false;")) }}				
 			</li>						
 		</ul><!-- // t2 -->
 		<ul id="t3">	
@@ -112,19 +112,23 @@
 			</li>		
 			<li class="block3">
 				{{ HTML::link("https://www.paypal.com/", "PayPal", array("title"=>"Open PayPal site in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
-				{{ HTML::link('#', '', array('id' => 'paypal', 'class' => 'feedBtn listImg', 'title' => 'You must be logged in to access', "onclick" => "return false;")) }}				
+				{{ HTML::link('#', '', array('id' => 'paypal', 'class' => 'feedBtn listImg', 'title' => 'You must be logged in to access private account', "onclick" => "return false;")) }}				
 			</li>
 			<li class="block3">
 				{{ HTML::link("http://beta.skype.com/en/", "Skype", array("title"=>"Open Skype site in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
-				{{ HTML::link('#', '', array('id' => 'skype', 'class' => 'feedBtn listImg', 'title' => 'You must be logged in to access', "onclick" => "return false;")) }}				
+				{{ HTML::link('#', '', array('id' => 'skype', 'class' => 'feedBtn listImg', 'title' => 'You must be logged in to access private account', "onclick" => "return false;")) }}				
 			</li>	
 			<li class="block3">
 				{{ HTML::link("http://mail.google.com", "Gmail", array("title"=>"Open Skype site in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
-				{{ HTML::link('#', '', array('id' => 'gmail', 'class' => 'feedBtn listImg', 'title' => 'You must be logged in to access', "onclick" => "return false;")) }}				
+				{{ HTML::link('#', '', array('id' => 'gmail', 'class' => 'feedBtn listImg', 'title' => 'You must be logged in to access private account', "onclick" => "return false;")) }}				
 			</li>		
 		</ul><!-- // t3 -->
 	</div><!-- // carousel -->
 </div><!-- // list -->
+<!-- more to consider adding:
+	http://www.fandango.com/centuryboulder_aauni/theaterpage 
+  http://developer.netflix.com/docs/JavaScript_APIs
+-->
 <div class="clear-fix"></div>
 <hr class="separator"/>	
 @endsection
@@ -139,7 +143,7 @@
 			<abbr title="Curriculum Vitae">CV</abbr>. 
 			Select from any of the menu items above to explore more of my interests 
 			and accomplishments, or contact me if you have a dream front-end web programming job 
-			opening! This website is powered by jQuery, <abbr title="PHP: Hypertext Preprocessor">PHP</abbr>, and Laravel, the 
+			opening! This website is powered by jQuery, <abbr title="PHP: Hypertext Preprocessor">PHP</abbr>, and {{ HTML::link("http://laravel.com/docs", "Laravel", array("title"=>"Offsite to Laravel Documentation in a new window", "target"=>"_blank", "class" => "offsite")) }}, the 
 			<abbr title="Model View Controller">MVC</abbr>
 			framework that I've gravitated to. 
 			It includes a scrolling style jQuery image carousel (List menu | Image list), and 
@@ -156,7 +160,8 @@
 			{{ HTML::link("http://api.jquery.com/jQuery.getJSON/", "jQuery API", array("title"=>"Offsite to jQuery API in a new window", "target"=>"_blank", "class" => "offsite")) }}.
 			Mail hide utility demonstrated on {{ HTML::link("contact", "Contact page", array("title"=>"Contact page")) }} courtesy of Google's 
 			{{ HTML::link("http://www.google.com/recaptcha/mailhide/", "reCAPTCHA", array("title"=>"Offsite to Mail Hide in a new window", "target"=>"_blank", "class" => "offsite")) }}. 
-			Slick icons from the folks at {{ HTML::link("http://www.iconarchive.com/", "IconArchive", array("title"=>"Offsite to IconArchive in a new window", "target"=>"_blank", "class" => "offsite")) }}, 
+			Slick icons from the folks at {{ HTML::link("http://www.iconarchive.com/", "IconArchive", array("title"=>"Offsite to IconArchive in a new window", "target"=>"_blank", "class" => "offsite")) }},
+			a useful {{ HTML::link("http://www.floweringmind.com/sprite-creator/index.php", "sprite generator", array("title"=>"Open sprite generator in a new window/tab", "target"=>"_blank", "class" => "offsite")) }} that actually works,  
 			and of some ultra nice styling from {{ HTML::link("http://twitter.github.com/bootstrap/customize", "Twitter's Bootstrap", array("title"=>"Offsite to Bootstrap Customization in a new window", "target"=>"_blank", "class" => "offsite")) }}.
 			<p>
 				This is as much a launching pad for me as it is a showcase of what I care about and can do. Please excuse the external linking to new windows, 
@@ -168,12 +173,12 @@
 			<h3 class="to-center">To do:</h3> 
 			<ul>
 				<li>Create external link switcher</li>
-				<li>Spitesheet all graphics</li>
+				<li><strike>Spitesheet all graphics</strike></li>
 				<li>Add smooth transitions</li>
 				<li>Add login area</li>
 				<li>Facility for adding icons/sites</li>
 				<li>Package (minify, optimize)</li>
-				<li>Finish AJAX calls that error</li>
+				<li>Research remaining API calls</li>
 				<li>Cure world hunger</li>
 			</ul>																
 		</section><!-- // notes -->
