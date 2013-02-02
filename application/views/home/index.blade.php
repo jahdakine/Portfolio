@@ -8,7 +8,6 @@
 
 @section('nav')
 	@parent
-	<!-- <li>{{ HTML::link("users/", "Sign-on") }}</li> -->
 	<li class="to-right current">{{ HTML::link("#", "Reset", array("title"=>"Clear dynamic content area", "id"=>"reset", "class" => "current")) }}</li>
 	<li class="to-right">
 		{{ HTML::link("#", "List menu") }}
@@ -125,7 +124,7 @@
 		</ul><!-- // t3 -->
 	</div><!-- // carousel -->
 </div><!-- // list -->
-<!-- more to consider adding:
+<!-- !!!more to consider adding:
 	http://www.fandango.com/centuryboulder_aauni/theaterpage 
   http://developer.netflix.com/docs/JavaScript_APIs
 -->
@@ -142,15 +141,13 @@
 			Welcome. This is my online 
 			<abbr title="Curriculum Vitae">CV</abbr>. 
 			Select from any of the menu items above to explore more of my interests 
-			and accomplishments, or contact me if you have a dream front-end web programming job 
+			and accomplishments, or contact me if you have a dream web programming job 
 			opening! This website is powered by jQuery, <abbr title="PHP: Hypertext Preprocessor">PHP</abbr>, and {{ HTML::link("http://laravel.com/docs", "Laravel", array("title"=>"Offsite to Laravel Documentation in a new window", "target"=>"_blank", "class" => "offsite")) }}, the 
 			<abbr title="Model View Controller">MVC</abbr>
 			framework that I've gravitated to. 
-			It includes a scrolling style jQuery image carousel (List menu | Image list), and 
-			<abbr title="Javascript Object Notation">jSON</abbr>
-			feeds via icon selection. It is basically my playground to spend time trying new things and learning 
-			about what works and what doesn't in the fine art and science of internet 
-			programming and design. Tabs and other user interface goodies can be found at 
+			It is responsive, accessible, and includes a scrolling style jQuery menu carousel (List menu | Image list). It is basically my playground to spend time 
+			trying out new technologies and learning about what works and what doesn't in the fine art and science of internet programming and design. Tabs and other 
+			user interface goodies can be found at 
 			{{ HTML::link("http://jqueryui.com/", "jQuery UI", array("title"=>"Offsite to jQuery UI in a new window", "target"=>"_blank", "class" => "offsite")) }}.
 			Customizable tooltips:
 			{{ HTML::link("http://craigsworks.com/projects/qtip2/", "qTips2", array("title"=>"Offsite to qTips2 in a new window", "target"=>"_blank", "class" => "offsite")) }}.
@@ -165,16 +162,17 @@
 			and of some ultra nice styling from {{ HTML::link("http://twitter.github.com/bootstrap/customize", "Twitter's Bootstrap", array("title"=>"Offsite to Bootstrap Customization in a new window", "target"=>"_blank", "class" => "offsite")) }}.
 			<p>
 				This is as much a launching pad for me as it is a showcase of what I care about and can do. Please excuse the external linking to new windows, 
-				I keep this page open during my surfing day and would rather not have to right click links to get them into a separate tab. I will work on a switcher that 
+				I keep this page open during my surfing day and would rather not right click links to get them into a separate tab. I will work on a switcher that 
 				allows an override of this functionality. 
 			</p>
+			 Included on selected items in the image list carousel are <abbr title="Javascript Object Notation">jSON</abbr> feeds, via image links. All external links available in 
+			 the default text list are accessible above the site images.
 		</article>	
 		<section class="notes">
 			<h3 class="to-center">To do:</h3> 
 			<ul>
 				<li>Create external link switcher</li>
-				<li><strike>Spitesheet all graphics</strike></li>
-				<li>Add smooth transitions</li>
+				<li><strike>Add smooth transitions</strike></li>
 				<li>Add login area</li>
 				<li>Facility for adding icons/sites</li>
 				<li>Package (minify, optimize)</li>
