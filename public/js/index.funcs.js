@@ -28,10 +28,9 @@
 			c6 = $("#ctrls6"),
 			ctrls = $("#ctrls");
 			reset = $("#reset"),
-			aside=$("#aside"),
-			landing = $("#landing"),
 			feed_btn = $(".feedBtn"),
 			content_frame = $("#contentFrame"),
+			land_aside = $(".landAside"),
 			num2Scroll = 1,
 			dir2Scroll = "left";
 	/*setup carousel slider*/
@@ -97,12 +96,12 @@
 	/*reset button click*/
 	reset.on('click', function(e) {
 		e.preventDefault();
-		content_frame.empty();
-		content_frame.css("display","none");
-		landing.css("display","inline");
+		content_frame.fadeOut("slow", function() {
+			content_frame.empty();
+			land_aside.fadeIn("slow");
+		});
 		reset.addClass("current");
 		reset.parent().addClass("current"); //sets the parent li - otherwise hover color bleeds thru padding
-		aside.css("display","inline");
 	});
 	/*carousel controls*/
 	c1.on('click', function(e, num2Scroll, dir2Scroll) { //slow down num2Scroll
@@ -192,11 +191,16 @@
     //put html into content frame
     function appendDOM(html) {
 			//console.log(html);
-			content_frame.html(html);
-			landing.css("display","none");
-			aside.css("display","none");
-			reset.removeClass("current");
-			eval(show);
+			if(reset.hasClass("current")) {
+				land_aside.fadeOut("slow");
+				reset.removeClass("current");
+			} else {
+				content_frame.fadeOut("slow");
+			}
+			content_frame.fadeIn("slow", function() {
+				content_frame.html(html);
+				eval(show);
+			});
     }
     //make xhr request
 		function getFeed(http, obj, tmp, html) {

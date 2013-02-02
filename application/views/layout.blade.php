@@ -41,7 +41,7 @@
 		<div class="clear-fix"></div>
 		@yield('top')
 		<div role="main" id="content" class="main">		
-			<aside id="aside">
+			<aside id="aside" class="landAside">
 				<h3 class="to-center">Legend</h3>
 				<ul class="nolist">
 					<li><span class="href" title="Links to webpages on my site">Onsite link</span></li>

@@ -137,7 +137,7 @@
 	@section('aside')
 	something new
 	@endsection	
-	<div id="landing">
+	<div id="landing" class="landAside">
 		<article>
 			Welcome. This is my online 
 			<abbr title="Curriculum Vitae">CV</abbr>. 
