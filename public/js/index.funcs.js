@@ -84,7 +84,7 @@
 	menu_graphics.on('click', function(e, num2Scroll, dir2Scroll) {
 		e.preventDefault();
 		if(list_img.css("display") !== "inline") {
-			list_img.css("display","inline"); //displays hidden images embedded in links
+			list_img.css("display","inline-table"); //displays hidden images embedded in links
 			list.removeClass("list-text");
 			list.addClass("list-carousel");
 			carousel_li.unwrap();

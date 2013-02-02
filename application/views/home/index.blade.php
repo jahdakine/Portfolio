@@ -27,7 +27,7 @@
 		{{ HTML::link("#", "", array("title"=>"Restart the carousel", "id"=>"ctrls4")) }}
 		{{ HTML::link("#", "", array("title"=>"Scroll forward", "id"=>"ctrls5")) }}
 		{{ HTML::link("#", "", array("title"=>"Speed up carousel scroll rate", "id"=>"ctrls6")) }} 
-		<img src="/img/spacer.gif" width="5" height="1" alt=""/>
+		<img src="/img/spacer.gif" width="5" height="1" alt=""/><!-- without it last button drops down -->
 	</li>
 @endsection 
 @section('top')
@@ -36,82 +36,91 @@
 		<ul id="t1">
 			<li class="block1">
 				{{ HTML::link("http://www.linkedin.com/profile/view?id=14123195", "Linkedin", array("title"=>"Open my LinkedIn profile page in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
-				{{ HTML::a_img('#', '', 'Show ? from LinkedIn on this page', '/img/linkedin-icon.png', '', array('id' => 'linkedin', 'class' => 'feedBtn'), array('class' => 'listImg', "height" => "128", "width" => "128")) }}
+				{{ HTML::link('#', '', array('id' => 'linkedin', 'class' => 'feedBtn listImg', 'title' => 'Show ? from LinkedIn on this page')) }}
 			</li>
 			<li class="block1">
 				{{ HTML::link("https://github.com/jahdakine", "GitHub", array("title"=>"Open my Github page in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
-				{{ HTML::a_img('#', '', 'Show ? from GitHub repo on this page', '/img/github-icon.png', '', array('id' => 'github', 'class' => 'feedBtn'), array('class' => 'listImg', "height" => "128", "width" => "128")) }}
+				{{ HTML::link('#', '', array('id' => 'github', 'class' => 'feedBtn listImg', 'title' => 'Show ? from GitHub repo on this page')) }}
 			</li>
 			<li class="block1">
 				{{ HTML::link("https://plus.google.com/u/0/114704033710627861845/posts", "Google+", array("title"=>"Open my Google+ page in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
-				{{ HTML::a_img('#', '', 'Show 5 latest comments from my Google+ circle on this page', '/img/google-icon.png', '', array('id' => 'google+', 'class' => 'feedBtn'), array('class' => 'listImg', "height" => "128", "width" => "128")) }}
+				{{ HTML::link('#', '', array('id' => 'google', 'class' => 'feedBtn listImg', 'title' => 'Show 5 latest comments from my Google+ circle on this page')) }}
 			</li>			
 			<li class="block1">
 				{{ HTML::link("http://stackoverflow.com/users/1997909/jahdakine", "Stackoverflow", array("title"=>"Open my stackoverflow+ profile page in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
-				{{ HTML::a_img('#', '', 'Show 5 latest question/answers from my stackoverflow on this page', '/img/stackoverflow-icon.png', '', array('id' => 'stackoverflow', 'class' => 'feedBtn'), array('class' => 'listImg', "height" => "128", "width" => "128")) }}
+				{{ HTML::link('#', '', array('id' => 'stackoverflow', 'class' => 'feedBtn listImg', 'title' => 'Show 5 latest question/answers from my stackoverflow on this page')) }}
 			</li>
 			<li class="block1">
-				<a href="/users" title="You must be logged in to access" onclick="return false;">Yelp<span class="listImg"><br/><img src="/img/yelp-icon.png" height="128" width="128" alt="" /></span></a>
+				{{ HTML::link("www.yelp.com/", "Yelp", array("title"=>"Open Yelp site in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
+				{{ HTML::link('#', '', array('id' => 'yelp', 'class' => 'feedBtn listImg', 'title' => 'You must be logged in to access', "onclick" => "return false;")) }}				
 			</li>
 			<li class="block1">
-				<a href="/users" title="You must be logged in to access" onclick="return false;">iCloud<span class="listImg"><br/><img src="/img/mobileme-icon.png" height="128" width="128" alt="" /></span></a>
+				{{ HTML::link("https://www.icloud.com/", "iCloud", array("title"=>"Open iCloud site in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
+				{{ HTML::link('#', '', array('id' => 'icloud', 'class' => 'feedBtn listImg', 'title' => 'You must be logged in to access', "onclick" => "return false;")) }}				
 			</li>
 			<li class="block1">
-				<a href="/users" title="You must be logged in to access" onclick="return false;">Vimeo<span class="listImg"><br/><img src="/img/vimeo-icon.png" height="128" width="128" alt="" /></span></a>
+				{{ HTML::link("https://vimeo.com/", "Vimeo", array("title"=>"Open Vimeo site in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
+				{{ HTML::link('#', '', array('id' => 'vimeo', 'class' => 'feedBtn listImg', 'title' => 'You must be logged in to access', "onclick" => "return false;")) }}				
 			</li>		
 		</ul><!-- //t1 -->
 		<ul id="t2">
 			<li class="block2">
 				{{ HTML::link("http://www.youtube.com/user/jahdakine", "YouTube", array("title"=>"Open my YouTube page in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
-				{{ HTML::a_img('#', '', 'Show 5 latest movies from my channel on this page', '/img/youtube-icon.png', '', array('id' => 'youtube', 'class' => 'feedBtn'), array('class' => 'listImg', "height" => "128", "width" => "128")) }}
+				{{ HTML::link('#', '', array('id' => 'youtube', 'class' => 'feedBtn listImg', 'title' => 'Show 5 latest movies from my channel on this page')) }}
 			</li>
 			<li class="block2">
 				{{ HTML::link("https://twitter.com/jahdakine", "Twitter", array("title"=>"Open my Twitter page in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
-				{{ HTML::a_img('#', '', 'Show 10 latest tweets on this page', '/img/twitter-icon.png', '', array('id' => 'twitter', 'class' => 'feedBtn'), array('class' => 'listImg', "height" => "128", "width" => "128")) }}
+				{{ HTML::link('#', '', array('id' => 'twitter', 'class' => 'feedBtn listImg', 'title' => 'Show 10 latest tweets on this page')) }}
 			</li>
 			<li class="block2">
 				{{ HTML::link("http://www.flickr.com/photos/jahdakinebrah/", 'Flickr', array("title"=>"Open my Flickr page in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
-				{{ HTML::a_img('#', '', 'Show 20 latest images from my stream on this page', '/img/flickr-icon.png', '', array('id' => 'flickr', 'class' => 'feedBtn'), array('class' => 'listImg', "height" => "128", "width" => "128")) }}
+				{{ HTML::link('#', '', array('id' => 'flickr', 'class' => 'feedBtn listImg', 'title' => 'Show 20 latest images from my stream on this page')) }}
 			</li>
 			<li class="block2">
 				{{ HTML::link("http://jahdakine.blogspot.com/", "Blogger", array("title"=>"Open my Blogger page in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
-				{{ HTML::a_img('#', '', 'Show latest 5 articles from my blog on this page', '/img/blogger-icon.png', '', array('id' => 'blogger', 'class' => 'feedBtn'), array('class' => 'listImg', "height" => "128", "width" => "128")) }}
+				{{ HTML::link('#', '', array('id' => 'blogger', 'class' => 'feedBtn listImg', 'title' => 'Show latest 5 articles from my blog on this page')) }}
 			</li>
 			<li class="block2">
-				<a href="/users" title="You must be logged in to access" onclick="return false;">Evernote<span class="listImg"><br/><img src="/img/evernote-icon.png" height="128" width="128" alt="" /></span></a>
+				{{ HTML::link("http://evernote.com/", "Evernote", array("title"=>"Open Evernote site in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
+				{{ HTML::link('#', '', array('id' => 'evernote', 'class' => 'feedBtn listImg', 'title' => 'You must be logged in to access', "onclick" => "return false;")) }}								
 			</li>
 			<li class="block2">
-				<a href="/users" title="You must be logged in to access" onclick="return false;">Picassa<span class="listImg"><br/><img src="/img/picasa-icon.png" height="128" width="128" alt="" /></span></a>
+				{{ HTML::link("http://picasa.google.com/", "Picassa", array("title"=>"Open Picassa site in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
+				{{ HTML::link('#', '', array('id' => 'picassa', 'class' => 'feedBtn listImg', 'title' => 'You must be logged in to access', "onclick" => "return false;")) }}				
 			</li>		
 			<li class="block2">
-				<a href="/users" title="You must be logged in to access" onclick="return false;">Amazon<span class="listImg"><br/><img src="/img/amazon-icon.png" height="128" width="128" alt="" /></span></a>
+				{{ HTML::link("http://www.amazon.com/", "Amazon", array("title"=>"Open Amazon site in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
+				{{ HTML::link('#', '', array('id' => 'amazon', 'class' => 'feedBtn listImg', 'title' => 'You must be logged in to access', "onclick" => "return false;")) }}				
 			</li>						
 		</ul><!-- // t2 -->
 		<ul id="t3">	
 			<li class="block3">
 				{{ HTML::link("http://www.zazzle.com/jahdakine+gifts", "Zazzle", array("title"=>"Open my Zazzle gift catalog in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
-				{{ HTML::a_img('#', '', 'Show latest 3 creations from my gift catalog on this page', '/img/zazzle-icon.png', '', array('id' => 'zazzle', 'class' => 'feedBtn'), array('class' => 'listImg', "height" => "128", "width" => "128")) }}
+				{{ HTML::link('#', '', array('id' => 'zazzle', 'class' => 'feedBtn listImg', 'title' => 'Show latest 3 creations from my gift catalog on this page')) }}
 			</li>
 			<li class="block3">
 				{{ HTML::link("http://myworld.ebay.com/specrun/", "eBay", array("title"=>"Open my eBay profile page in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
-				{{ HTML::a_img('#', '', 'Show latest 5 feedback comments on this page', '/img/ebay-icon.png', '', array('id' => 'ebay', 'class' => 'feedBtn'), array('class' => 'listImg', "height" => "128", "width" => "128")) }}
+				{{ HTML::link('#', '', array('id' => 'ebay', 'class' => 'feedBtn listImg', 'title' => 'Show latest 5 feedback comments on this page')) }}
 			</li>
 			<li class="block3">
 				{{ HTML::link("http://grooveshark.com/#!/jahdakine", "Grooveshark", array("title"=>"Open my GrooveShark profile page in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
-				{{ HTML::a_img('#', '', 'Show latest 5 listens from playlist on this page', '/img/grooveshark-icon.png', '', array('id' => 'grooveshark', 'class' => 'feedBtn'), array('class' => 'listImg', "height" => "128", "width" => "128")) }}
+				{{ HTML::link('#', '', array('id' => 'grooveshark', 'class' => 'feedBtn listImg', 'title' => 'Show latest 5 listens from playlist on this page')) }}				
 			</li>	
 			<li class="block3">
 				{{ HTML::link("http://www.meetup.com/HTML5-Denver-Users-Group/members/65732862/", "Meetup", array("title"=>"Open my Meetup profile page in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
-				{{ HTML::a_img('#', '', 'Show 5 latest Meetup meetings attended on this page', '/img/meetup-icon.png', '', array('id' => 'meetup', 'class' => 'feedBtn'), array('class' => 'listImg', "height" => "128", "width" => "128")) }}
+				{{ HTML::link('#', '', array('id' => 'meetup', 'class' => 'feedBtn listImg', 'title' => 'Show 5 latest Meetup meetings attended on this page')) }}				
 			</li>		
 			<li class="block3">
-				<a href="/users" title="You must be logged in to access" onclick="return false;">PayPal<span class="listImg"><br/><img src="/img/paypal-icon.png" height="128" width="128" alt="" /></span></a>
+				{{ HTML::link("https://www.paypal.com/", "PayPal", array("title"=>"Open PayPal site in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
+				{{ HTML::link('#', '', array('id' => 'paypal', 'class' => 'feedBtn listImg', 'title' => 'You must be logged in to access', "onclick" => "return false;")) }}				
 			</li>
 			<li class="block3">
-				<a href="/users" title="You must be logged in to access" onclick="return false;">Skype<span class="listImg"><br/><img src="/img/skype-icon.png" height="128" width="128" alt="" /></span></a>
+				{{ HTML::link("http://beta.skype.com/en/", "Skype", array("title"=>"Open Skype site in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
+				{{ HTML::link('#', '', array('id' => 'skype', 'class' => 'feedBtn listImg', 'title' => 'You must be logged in to access', "onclick" => "return false;")) }}				
 			</li>	
 			<li class="block3">
-				<a href="/users" title="You must be logged in to access" onclick="return false;">Gmail<span class="listImg"><br/><img src="/img/gmail-icon.png" height="128" width="128" alt="" /></span></a>
+				{{ HTML::link("http://mail.google.com", "Gmail", array("title"=>"Open Skype site in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
+				{{ HTML::link('#', '', array('id' => 'gmail', 'class' => 'feedBtn listImg', 'title' => 'You must be logged in to access', "onclick" => "return false;")) }}				
 			</li>		
 		</ul><!-- // t3 -->
 	</div><!-- // carousel -->
