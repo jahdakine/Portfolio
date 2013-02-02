@@ -45,7 +45,7 @@ Route::get('/users', function() {
 		//return $creds->username . ' logged in.';
 		return Redirect::to('admin');
 	}
-	return "No access";
+	return "Unauthorized access";
 });
 
 Route::get('logout', function() {
@@ -96,9 +96,9 @@ Event::listen('500', function()
 });
 
 //!!! DEV only
-Event::listen('laravel.query', function($sql) {
-	echo "SQL: {$sql} <br/>";
-});
+// Event::listen('laravel.query', function($sql) {
+// 	echo "SQL: {$sql} <br/>";
+// });
 
 /*
 |--------------------------------------------------------------------------

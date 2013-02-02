@@ -153,20 +153,21 @@
 			{{ HTML::link("http://craigsworks.com/projects/qtip2/", "qTips2", array("title"=>"Offsite to qTips2 in a new window", "target"=>"_blank", "class" => "offsite")) }}.
 			Menu carousel is available at 
 			{{ HTML::link("http://caroufredsel.dev7studios.com/", "carouFred", array("title"=>"Offsite to carouFred in a new window", "target"=>"_blank", "class" => "offsite")) }}.
-			Flickr jSON request example description is available at 
+			jSON request examples are documented within the  
 			{{ HTML::link("http://api.jquery.com/jQuery.getJSON/", "jQuery API", array("title"=>"Offsite to jQuery API in a new window", "target"=>"_blank", "class" => "offsite")) }}.
 			Mail hide utility demonstrated on {{ HTML::link("contact", "Contact page", array("title"=>"Contact page")) }} courtesy of Google's 
 			{{ HTML::link("http://www.google.com/recaptcha/mailhide/", "reCAPTCHA", array("title"=>"Offsite to Mail Hide in a new window", "target"=>"_blank", "class" => "offsite")) }}. 
 			Slick icons from the folks at {{ HTML::link("http://www.iconarchive.com/", "IconArchive", array("title"=>"Offsite to IconArchive in a new window", "target"=>"_blank", "class" => "offsite")) }},
-			a useful {{ HTML::link("http://www.floweringmind.com/sprite-creator/index.php", "sprite generator", array("title"=>"Open sprite generator in a new window/tab", "target"=>"_blank", "class" => "offsite")) }} that actually works,  
-			and of some ultra nice styling from {{ HTML::link("http://twitter.github.com/bootstrap/customize", "Twitter's Bootstrap", array("title"=>"Offsite to Bootstrap Customization in a new window", "target"=>"_blank", "class" => "offsite")) }}.
+			a useful sprite generator that actually works can be found at {{ HTML::link("http://www.floweringmind.com/sprite-creator/index.php", "Flowering Mind", array("title"=>"Open sprite generator in a new window/tab", "target"=>"_blank", "class" => "offsite")) }},  
+			and of some ultra nice styling is courtesy of {{ HTML::link("http://twitter.github.com/bootstrap/customize", "Twitter's Bootstrap", array("title"=>"Offsite to Bootstrap Customization in a new window", "target"=>"_blank", "class" => "offsite")) }}.
 			<p>
 				This is as much a launching pad for me as it is a showcase of what I care about and can do. Please excuse the external linking to new windows, 
 				I keep this page open during my surfing day and would rather not right click links to get them into a separate tab. I will work on a switcher that 
 				allows an override of this functionality. 
 			</p>
 			 Included on selected items in the image list carousel are <abbr title="Javascript Object Notation">jSON</abbr> feeds, via image links. All external links available in 
-			 the default text list are accessible above the site images.
+			 the default text list are accessible above the site images. Note: I participate in some social networking sites more that others. Some hardly at all. The purpose of displaying 
+			 some of them may be more of an excersize in learning their APIs than in participation.
 		</article>	
 		<section class="notes">
 			<h3 class="to-center">To do:</h3> 
@@ -177,6 +178,7 @@
 				<li>Facility for adding icons/sites</li>
 				<li>Package (minify, optimize)</li>
 				<li>Research remaining API calls</li>
+				<li>Make the elephant talk when user clicks nothing</li>
 				<li>Cure world hunger</li>
 			</ul>																
 		</section><!-- // notes -->
