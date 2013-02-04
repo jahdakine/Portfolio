@@ -43,6 +43,7 @@
 		audio_wrap.attr("style", "padding: 0; margin: 0;");
 	});
 	/*tooltips */
+	//shared
 	var shared = {
 		position: {
 				target: 'mouse',
@@ -90,6 +91,36 @@
 				ready: true
 			}
 		}, event);
+	});
+	//what's this tooltip !!! fix to top of screen on first click bug - how to fire only on non-hrefs
+	$('#whats-this').qtip( {
+		content: {
+			text: 'What\'s&nbsp;this?&nbsp;'
+		},
+		position: {
+			target: $('header>h2:first'), //use the h2 since bg graphic is unobtainable
+			my: 'top right',
+			at: 'bottom right',
+			adjust: {
+				x: -278,
+				y: -7
+			}
+		},
+		style: {
+				classes: 'qtip-red' },
+		show: {
+			event: 'click',
+			effect: function() {
+				$(this).slideDown(500);
+			}
+		},
+		hide: {
+			when: 'inactive',
+			delay: 2000,
+			effect: function() {
+				$(this).slideUp(500);
+			}
+		}
 	});
 })();
 

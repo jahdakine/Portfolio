@@ -12,7 +12,7 @@
 <body>
 	<a href="#content" class="hidden">Skip navigation</a> 
 	<div class="wrapper">
-		<header>
+		<header id="whats-this">
 			<h1>@yield("title")</h1>
 			<h2 id="nickName">John Chase</h2>
 			<h4>Web Developer</h4>

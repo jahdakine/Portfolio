@@ -177,9 +177,22 @@ background-position: -82px 0;
 
 /*! Red tooltip style */
 .qtip-red{
-background-color: #F78B83;
-border-color: #D95252;
-color: #912323;
+padding: 8px 14px;
+margin: 0;
+font-size: 125%;
+font-weight: normal;
+line-height: 18px;
+color: #ff0000; 
+background: #fff;
+border-radius: 5px;
+position: absolute;
+z-index: 9999;
+max-width: 300px;
+border: 2px solid #ff0000;  
+-webkit-box-shadow: 6px 6px 10px #F78B83;
+-moz-box-shadow: 6px 6px 10px #F78B83; 
+box-shadow: 6px 6px 10px #F78B83;
+border-color: #ff0000;
 }
 
 .qtip-red .qtip-titlebar{
@@ -656,42 +669,3 @@ filter:alpha(opacity=70);
 .qtipmodal-ie6fix{
 position: absolute !important;
 }
-
-GitHub
-    About us
-    Blog
-    Contact & support
-    GitHub Enterprise
-    Site status
-
-Applications
-    GitHub for Mac
-    GitHub for Windows
-    GitHub for Eclipse
-    GitHub mobile apps
-
-Services
-    Gauges: Web analytics
-    Speaker Deck: Presentations
-    Gist: Code snippets
-    Job board
-
-Documentation
-    GitHub Help
-    Developer API
-    GitHub Flavored Markdown
-    GitHub Pages
-
-More
-    Training
-    Students & teachers
-    The Shop
-    Plans & pricing
-    The Octodex
-
-© 2013 GitHub Inc. All rights reserved.
-
-    Terms of Service
-    Privacy
-    Security
-
