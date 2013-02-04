@@ -134,15 +134,15 @@
 
 @section('main')
 	@section('aside')
-	something new
 	@endsection	
 	<div id="landing" class="landAside">
 		<article>
 			Welcome. This is my online 
 			<abbr title="Curriculum Vitae">CV</abbr>. 
 			Select from any of the menu items above to explore more of my interests 
-			and accomplishments, or contact me if you have a dream web programming job 
-			opening! This website is powered by jQuery, <abbr title="PHP: Hypertext Preprocessor">PHP</abbr>, and {{ HTML::link("http://laravel.com/docs", "Laravel", array("title"=>"Offsite to Laravel Documentation in a new window", "target"=>"_blank", "class" => "offsite")) }}, the 
+			and accomplishments, or contact me if you have a dream front-end web programming job 
+			opening! This website is powered by jQuery, <abbr title="PHP: Hypertext Preprocessor">PHP</abbr>, and 
+			{{ HTML::link("http://laravel.com/docs", "Laravel", array("title"=>"Offsite to Laravel Documentation in a new window", "target"=>"_blank", "class" => "offsite")) }}, the 
 			<abbr title="Model View Controller">MVC</abbr>
 			framework that I've gravitated to. 
 			It is responsive, accessible, and includes a scrolling style jQuery menu carousel (List menu | Image list). It is basically my playground to spend time 
@@ -178,8 +178,7 @@
 				<li>Facility for adding icons/sites</li>
 				<li>Package (minify, optimize)</li>
 				<li>Research remaining API calls</li>
-				<li>Make the elephant talk when user clicks nothing</li>
-				<li>Cure world hunger</li>
+				<li><strike>Make elephant say what's this on click in header</strike></li>
 			</ul>																
 		</section><!-- // notes -->
 	</div><!-- // landing -->
