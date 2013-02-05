@@ -48,7 +48,7 @@ a:visited, .visited {
 }
 a:hover, .hover {
 	color: #fff; 
-  text-shadow: 1px 1px 4px #000;
+  text-shadow: 1px 1px 3px #000;
 }
 /*internal linking
 a[href*="8888"]:after,
@@ -145,11 +145,6 @@ ul.drop li:hover > ul { visibility: visible }
 .hide { display:none; }
 .display{ position:relative; }
 .transparent { opacity: 0 }
-.nolist { 
-	list-style:none; 
-	margin: 0;
-	padding: 0;
-}
 .to-right { float:right !important; }
 .to-left { float:left !important; }
 .to-center { text-align: center; }
@@ -157,6 +152,15 @@ ul.drop li:hover > ul { visibility: visible }
 .to-middle { vertical-align: middle; }
 .to-bottom { vertical-align: bottom; }
 .no-overflow { overflow:hidden !important; }
+.shim { 
+  margin-bottom:1em; 
+  position:absolute;
+}
+.nolist { 
+  list-style:none; 
+  margin: 0;
+  padding: 0;
+}
 /*
 | Footer
 */

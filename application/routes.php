@@ -28,7 +28,7 @@
 Route::get('/', 'home@index');
 Route::get('about', 'home@about');
 Route::get('contact', 'home@contact');
-Route::get('test', 'home@about');
+Route::get('portfolio', 'home@portfolio');
 
 // !!! - quick and dirty manual auth 
 Route::get('/users', function() {

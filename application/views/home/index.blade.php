@@ -165,20 +165,21 @@
 				I keep this page open during my surfing day and would rather not right click links to get them into a separate tab. I will work on a switcher that 
 				allows an override of this functionality. 
 			</p>
-			 Included on selected items in the image list carousel are <abbr title="Javascript Object Notation">jSON</abbr> feeds, via image links. All external links available in 
-			 the default text list are accessible above the site images. Note: I participate in some social networking sites more that others. Some hardly at all. The purpose of displaying 
+			<p id="carouselHelp" class="hide">
+			 Included on selected items in the image list carousel are <abbr title="Javascript Object Notation">jSON</abbr> feeds, via logo links. All external links available in 
+			 the default text list (List menu | Text list) are accessible above the site logos. Note: I participate in some social networking sites more that others. Some hardly at all. The purpose of displaying 
 			 some of them may be more of an excersize in learning their APIs than in participation.
+			</p>
 		</article>	
 		<section class="notes">
 			<h3 class="to-center">To do:</h3> 
 			<ul>
 				<li>Create external link switcher</li>
-				<li><strike>Add smooth transitions</strike></li>
+				<li><strike>Add portfolio page</strike></li>
 				<li>Add login area</li>
 				<li>Facility for adding icons/sites</li>
 				<li>Package (minify, optimize)</li>
 				<li>Research remaining API calls</li>
-				<li><strike>Make elephant say what's this on click in header</strike></li>
 			</ul>																
 		</section><!-- // notes -->
 	</div><!-- // landing -->

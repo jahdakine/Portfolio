@@ -1,6 +1,6 @@
 /*
 | about.blade.php styles
-| for about only
+| for about and portfolio
 */
 
 /*TABS*/
@@ -17,7 +17,7 @@
 /* Tabs
 ----------------------------------*/
 .ui-tabs { position: relative; padding: .2em; zoom: 1; } /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
-.ui-tabs .ui-tabs-nav { margin: 0; padding: .2em .2em 0; }
+.ui-tabs .ui-tabs-nav { margin: 0; padding: .2em .2em 0; border: 1px solid #e78f08; }
 .ui-tabs .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 0; margin: 1px .2em 0 0; border-bottom: 0; padding: 0; white-space: nowrap; }
 .ui-tabs .ui-tabs-nav li a { float: left; padding: .5em 1em; text-decoration: none; }
 .ui-tabs .ui-tabs-nav li.ui-tabs-active { margin-bottom: -1px; padding-bottom: 1px; }
@@ -28,8 +28,7 @@
 /* Component containers
 ----------------------------------*/
 .ui-widget-content { border: 1px solid #888; background: #fff; }
-.ui-widget-content a { text-shadow: none }
-.ui-widget-header { border: 1px solid #e78f08; background: #f6a828 url(/css/vendor/images/ui-bg_gloss-wave_35_f6a828_500x100.png) 50% 50% repeat-x; }
+.ui-widget-header { border: 1px solid #fff; background: #f6a828 url(/css/vendor/images/ui-bg_gloss-wave_35_f6a828_500x100.png) 50% 50% repeat-x; }
 
 /* Interaction states
 ----------------------------------*/
@@ -37,8 +36,40 @@
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { background: #000; border: 1px solid #e78f08; }
 .ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited { color: #aaa; text-decoration: none; background-color: #555; }
 /* onhover */
-.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus { border: 1px solid #f6a828; background: #3dc1ff; }
-.ui-state-hover a, .ui-state-hover a:hover, .ui-state-hover a:link, .ui-state-hover a:visited { background: #0b75b2; text-decoration: none; }
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus { border: 1px solid #e78f08; background: #3dc1ff; }
+.ui-state-hover a, .ui-state-hover a:hover, .ui-state-hover a:link, .ui-state-hover a:visited { background: #0b75b2; text-decoration: none; text-shadow: none; }
 /* active tab*/
 .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active { border: 1px solid #e78f08; background: #fff; font-weight: bold; color: #c77405; }
 .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited { color: #f6a828; text-decoration: none; background: #fff; }
+
+
+/* page specific */
+#tabs {
+
+	right: 	auto;
+	left: auto;
+	overflow:hidden;
+}
+.box {
+	border-radius: 5px;
+	background-color: #eee;
+	border: 1px solid #888;
+	margin-top: 1em;
+	padding: 1em;
+	position:relative;
+	overflow: auto;
+}
+.project-img {
+	border:1px solid #bbb;
+	margin-right:1em;
+}
+.inside {
+	list-style-position:inside;
+}
+.close{
+    display:block;
+    float:right;
+    width:16px;
+    height:16px;
+    background:url(/img/delete-icon.png) no-repeat center center;
+}

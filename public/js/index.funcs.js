@@ -31,6 +31,7 @@
 			feed_btn = $(".feedBtn"),
 			content_frame = $("#contentFrame"),
 			land_aside = $(".landAside"),
+			carousel_help = $("p#carouselHelp"),
 			num2Scroll = 1,
 			dir2Scroll = "left";
 	/*setup carousel slider*/
@@ -77,6 +78,7 @@
 			ctrls.addClass("transparent");
 			menu_text.addClass("current").parent().addClass("current");
 			menu_graphics.removeClass("current").parent().removeClass("current");
+			carousel_help.fadeOut("fast");
 		}
 	});
 	//nav menu clicks - graphics
@@ -91,6 +93,7 @@
 			ctrls.removeClass("transparent").center({vertical: false});
 			menu_graphics.addClass("current").parent().addClass("current");
 			menu_text.removeClass("current").parent().removeClass("current");
+			carousel_help.fadeIn(2000);
 		}
 	});
 	/*reset button click*/

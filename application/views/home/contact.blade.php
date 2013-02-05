@@ -12,7 +12,7 @@
 @endsection
 
 @section('top')
-<hr style="padding-bottom:1em; position:absolute">
+<hr class="shim">
 @endsection
 
 @section('aside')

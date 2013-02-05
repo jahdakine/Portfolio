@@ -14,10 +14,8 @@ class Home_Controller extends Base_Controller {
 	{
 		return View::make('home.contact');
 	}
-
-	//for testing new ideas
-	public function action_test()
+	public function action_portfolio()
 	{
-		return View::make('home.test');
+		return View::make('home.portfolio');
 	}
 }

@@ -27,10 +27,18 @@
 						<li>{{ HTML::link('home/','Home') }}</li>
 					@endif 
 					@if(URI::is('home/about'))
-						<li class="current">About</li> 
+						<li class="current">About
 					@else 
-						<li>{{ HTML::link('home/about', 'About') }}</li>
+						<li>{{ HTML::link('home/about', 'About') }}
 					@endif 
+						<ul>
+							@if(URI::is('home/portfolio'))
+								<li class="current">Porfolio</li>
+							@else
+								<li>{{ HTML::link("home/portfolio", "Portfolio") }}</li>
+							@endif
+						</ul>
+					</li> 
 					@if(URI::is('home/contact'))
 						<li class="current">Contact</li> 
 					@else 
