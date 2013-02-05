@@ -69,7 +69,7 @@
 		style: {
 			classes: 'qtip-orange'
 		}
-	}));
+	})).bind('click', function(event){ event.preventDefault(); return false; });
 	//futuristic links created on the fly - !!! can't chain with shared?
 	$('.flickr-img').live('mouseover', function(event) {
 		$(this).qtip({
@@ -92,18 +92,18 @@
 			}
 		}, event);
 	});
-	//what's this tooltip !!! fix to top of screen on first click bug - how to fire only on non-hrefs
+	//what's this tooltip
 	$('#whats-this').qtip( {
 		content: {
 			text: 'What\'s&nbsp;this?&nbsp;'
 		},
 		position: {
-			target: $('header>h2:first'), //use the h2 since bg graphic is unobtainable
+			target: $('header>h2:first'), //use the h2 since graphic is unobtainable
 			my: 'top right',
 			at: 'bottom right',
 			adjust: {
 				x: -278,
-				y: -7
+				y:6
 			}
 		},
 		style: {
@@ -115,10 +115,9 @@
 			}
 		},
 		hide: {
-			when: 'inactive',
-			delay: 2000,
+			event: 'mousemove',
 			effect: function() {
-				$(this).slideUp(500);
+				$(this).slideUp(250);
 			}
 		}
 	});

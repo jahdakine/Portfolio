@@ -175,7 +175,8 @@
 			<h3 class="to-center">To do:</h3> 
 			<ul>
 				<li>Create external link switcher</li>
-				<li><strike>Add portfolio page</strike></li>
+				<li>Finish projects</li>
+				<li>Save state, allow back</li>
 				<li>Add login area</li>
 				<li>Facility for adding icons/sites</li>
 				<li>Package (minify, optimize)</li>

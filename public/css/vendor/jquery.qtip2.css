@@ -29,9 +29,8 @@ direction: ltr;
 
 .qtip-content{
 position: relative;
-padding: 0; /*modified - originally 6px 9px*/
+padding: 3px; /*modified - originally 6px 9px*/
 overflow: hidden;
-
 text-align: left;
 word-wrap: break-word;
 }
@@ -177,21 +176,18 @@ background-position: -82px 0;
 
 /*! Red tooltip style */
 .qtip-red{
-padding: 8px 14px;
-margin: 0;
-font-size: 125%;
-font-weight: normal;
-line-height: 18px;
 color: #ff0000; 
 background: #fff;
+padding: 5px 10px;
 border-radius: 5px;
+font: 80%;
 position: absolute;
 z-index: 9999;
 max-width: 300px;
 border: 2px solid #ff0000;  
--webkit-box-shadow: 6px 6px 10px #F78B83;
--moz-box-shadow: 6px 6px 10px #F78B83; 
-box-shadow: 6px 6px 10px #F78B83;
+-webkit-box-shadow: 6px 6px 10px #a72331;
+-moz-box-shadow: 6px 6px 10px #a72331; 
+box-shadow: 6px 6px 10px #a72331;
 border-color: #ff0000;
 }
 

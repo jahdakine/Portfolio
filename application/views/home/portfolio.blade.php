@@ -20,7 +20,7 @@
 @endsection
 
 @section('main')	
-	<section style="margin-top:1em;">
+	<section>
 		<h3>Past projects</h3>
 		<article>
 			<p>
@@ -33,7 +33,11 @@
 				{{ HTML::link("http://archive.org/web/web.php", "Internet Archive (Wayback Machine)", array("title"=>"Offsite to Wayback Machine in a new window", "target"=>"_blank", "class" => "offsite")) }} 
 				if the site is no longer available or has been radically changed from the time of my involvement.
 			</p>
-			<br/><img src="/img/spacer.gif" height="20" width="1" alt="" />
+			<p>
+				Select a client from tabs below revealing a sample of the projects delivered. Click on a specific project to view screenshot(s) and 
+				description/statement of work and tools listing. 
+			</p>
+			<br/>
 		</article>
 		<div id="tabs">
 			<div id="projects">
@@ -53,11 +57,14 @@
 					<li><a href="#" title="Show description and screenshots below" class="project">AIA</a>&nbsp;<abbr title="American Institute of Architects">(?)</abbr></li>
 					<li><a href="#" title="Show description and screenshots below" class="project">Denver Public Library</a></li>
 				</ul>
+				<section id="contractFrame" class="box hide"></section>
 				</div><!-- // contract -->
+
 				<div id="doe">
 				  <ul>
 						<li><a href="#" title="Show description and screenshots below" class="project">Hydrogen and Fuel Cells Program</a></li>
 					</ul>
+					<section id="doeFrame" class="box hide"></section>
 				</div><!-- // doe -->					
 				<div id="nrel">
 					<ul>
@@ -65,6 +72,7 @@
 						<li><a href="#" title="Show description and screenshots below" class="project">Basic Sciences</a></li>
 						<li><a href="#" title="Show description and screenshots below" class="project">PV Manufacturing</a></li>
 					</ul> 
+					<section id="nrelFrame" class="box hide"></section> 		
 				</div><!-- // nrel -->
 				<div id="eere">
 				  <ul>
@@ -72,18 +80,17 @@
 						<li><a href="#" title="Show description and screenshots below" class="project">Energy Plus</a></li>
 					</ul>
 				</div><!-- // eere -->
+				<section id="eereFrame" class="box hide"></section>
 				<div id="source">
 				  <ul>
 						<li><a href="#" title="Show description and screenshots below" class="project">Library</a></li>
 						<li><a href="#" title="Show description and screenshots below" class="project">NREL Now</a></li>
 					</ul>
-				</div><!-- // eere -->				
+					<section id="sourceFrame" class="box hide"></section>
+				</div><!-- // source -->		
 			</div><!-- // projects -->
-		</div><!-- // wrapper -->
-	</section>   
-	<section id="contentFrame" class="box hide">
-		<a href="#" title="Dismiss project" id="projectHide" class="close"></a>
-	<section>       
+		</div><!-- // tabs -->
+	</section>    
 @endsection
 
 @section('footer')

@@ -5,35 +5,30 @@
 
 (function() {
 	//cache DOM vars
-	content_frame = $("#contentFrame"),
-	project_hide = $("#projectHide"),
-	project = $(".project");
+	var project = $(".project");
 	/*setup tabs*/
 	$("#projects").tabs();
 	/* project clicks !!!use template for HTML */
 	project.on('click', function(e) {
+		var tmp = $(this).closest("div").attr("id"),
+				contentFrame = $(eval(tmp + "Frame"));
 		e.preventDefault();
-		if(content_frame.css("display") !== "none") {
-			content_frame.fadeOut("fast");
+		if(contentFrame.css("display") !== "none") {
+			contentFrame.empty();
 		}
 		var title = decodeURI(this.innerHTML),
 		data = "",
 		filename = title.replace(/\s+/g,'_').toLowerCase(),
-		frag = "'</h3><div><img src=\"/img/portfolio/'+ filename +'.jpg\" alt=\"Screenshot of '+ title +' project\"/ align=\"left\" class=\"project-img\">' + data + '</div></a>'";
+		frag = "'</h3><div><img src=\"/img/portfolio/'+ filename +'.jpg\" alt=\"Screenshot of '+ title +' project\"/ align=\"right\" class=\"project-img\"></div><div id=\"project-desc\">' + data + '</div></a>'";
 		$.ajax({
 			url: '/partials/' + filename + '.html',
 			cache: false
 			}).done(function(data) {
-				content_frame.html(eval(frag));
-				content_frame.slideDown("slow");
+				contentFrame.html(eval(frag));
+				contentFrame.slideDown("slow");
 			}).error(function(e) {
-				content_frame.html("There has been an error retrieving the project information.");
-				content_frame.slideDown("slow");
+				contentFrame.html("There has been an error retrieving the project information.");
+				contentFrame.slideDown("slow");
 		});
-	});
-	/* dismiss project click */
-	project_hide.on('click', function(e) {
-		e.preventDefault();
-		content_frame.slideUp("slow");
 	});
 })();

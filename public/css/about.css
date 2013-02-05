@@ -40,36 +40,27 @@
 .ui-state-hover a, .ui-state-hover a:hover, .ui-state-hover a:link, .ui-state-hover a:visited { background: #0b75b2; text-decoration: none; text-shadow: none; }
 /* active tab*/
 .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active { border: 1px solid #e78f08; background: #fff; font-weight: bold; color: #c77405; }
-.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited { color: #f6a828; text-decoration: none; background: #fff; }
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited { color: #f5ab31; text-decoration: none; background: #fff; }
 
 
 /* page specific */
 #tabs {
-
 	right: 	auto;
 	left: auto;
 	overflow:hidden;
 }
 .box {
-	border-radius: 5px;
-	background-color: #eee;
-	border: 1px solid #888;
 	margin-top: 1em;
 	padding: 1em;
 	position:relative;
 	overflow: auto;
+	width:100%;
 }
 .project-img {
 	border:1px solid #bbb;
-	margin-right:1em;
+	margin-left:1em;
+	width:60%;
 }
 .inside {
 	list-style-position:inside;
-}
-.close{
-    display:block;
-    float:right;
-    width:16px;
-    height:16px;
-    background:url(/img/delete-icon.png) no-repeat center center;
 }
