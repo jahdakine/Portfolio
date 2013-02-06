@@ -8,19 +8,19 @@
 	$("#projects").tabs();
 	//cache DOM vars
 	var project = $(".project"),
-			clients = $(".clients");
+			clients = $(".clients"),
+			box = $(".box");
 	//client tab clicks
 	clients.on('click', function() {
 		var tmp = this.innerHTML.replace(/\&.+/g, '').toLowerCase(),
 				contentFrame = $(eval(tmp + "Frame"));
-		console.log(contentFrame);
-		contentFrame.empty();
+		box.empty();
 	});
 	//project clicks !!!use template for HTML
 	project.on('click', function(e) {
 		var tmp = $(this).closest("div").attr("id"),
 				contentFrame = $(eval(tmp + "Frame"));
-		contentFrame.empty();
+		box.empty();
 		var title = decodeURI(this.innerHTML),
 		data = "",
 		filename = title.replace(/\s+/g,'_').toLowerCase(),

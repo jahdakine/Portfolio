@@ -162,7 +162,7 @@
         limit = 5;
         break;
       case ('twitter'):
-				http = 'http://search.twitter.com/search.json?q=jahdakine&callback=?';
+				http = 'http://search.twitter.com/search.json?q=jahdakine&since:2012-12-05&callback=?';
 				obj = 'data.results';
 				tmp = "'<li><img src=\"' +item.profile_image_url+ '\" height=\"24\" width=\"24\" alt=\"profile icon\"/>&nbsp;<time datetime=\"' +item.created_at.split(' ').slice(0, 4).join(' ')+ '\">' +item.created_at.split(' ').slice(0, 4).join(' ')+ '</time>:&nbsp;<a href=\"http://twitter.com/jahdakine/status/' +item.id_str+ '\" target=\"_blank\">' +item.text+ '</a></li>'";
         limit = 10;
@@ -207,6 +207,7 @@
     }
     //make xhr request
 		function getFeed(http, obj, tmp, html) {
+			console.log(http);
 			//!!!cache? Would need to use local storage or DB
 			return $.getJSON(http, function(data) {
 				success = true;

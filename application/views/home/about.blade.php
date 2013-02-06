@@ -90,7 +90,7 @@
 			</div><!-- // skills-3 -->
 		</div><!-- // skills -->
 	</div><!-- // wrapper1 -->
-	<h3>Training</h3>
+	<h3>Current Training</h3>
 	<div id="wrapper2">
 		<div id="courses">
 			<ul>

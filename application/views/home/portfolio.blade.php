@@ -26,7 +26,7 @@
 			<p>
 				Many of my projects are protected by authentication protocols and are inaccessible to the public. 
 				I have presented screenshots that will provide general concepts only, but have enhanced these with detailed 
-				descriptions where possible. This is a small sample of my applications, and I will continue to add to them
+				descriptions where possible. This is a small sample of my past applications, and I will continue to add to them
 				where possible.
 			</p>
 			<p>
@@ -54,8 +54,8 @@
 					<li><a href="#tabs" title="Show description and screenshots below" class="project">Treasury</a></li>
 					<li><a href="#tabs" title="Show description and screenshots below" class="project">Solar Decathlon</a></li>
 					<li><a href="#tabs" title="Show description and screenshots below" class="project">USDA</a></li>
-					<li><a href="#tabs" title="Show description and screenshots below" class="project">Denver Public Library</a></li>
 					<li><a href="#tabs" title="Show description and screenshots below" class="project">American Solar Challenge</a></li>
+					<li><a href="#tabs" title="Show description and screenshots below" class="project">Denver Public Library</a></li>
 					<li><a href="#tabs" title="Show description and screenshots below" class="project">AIA</a>&nbsp;<abbr title="American Institute of Architects">(?)</abbr></li>
 				</ul>
 				<section id="contractsFrame" class="box hide"></section>
@@ -63,7 +63,6 @@
 				<div id="nrel">
 					<ul>
 						<li><a href="#tabs" title="Show description and screenshots below" class="project">JEDI Model Downloads</a></li>
-						<li><a href="#tabs" title="Show description and screenshots below" class="project">Building America</a></li>
 						<li><a href="#tabs" title="Show description and screenshots below" class="project">Basic Sciences</a></li>
 						<li><a href="#tabs" title="Show description and screenshots below" class="project">Thin-Film Partnerships</a></li>
 						<li><a href="#tabs" title="Show description and screenshots below" class="project">News and Events</a></li>
@@ -74,8 +73,9 @@
 				<div id="eere">
 				  <ul><!-- !!! pervasive into other tabs? -->
 						<li><a href="#tabs" title="Show description and screenshots below" class="project">Energy Plus Example File Generator</a></li>
-						<li><a href="#tabs" title="Show description and screenshots below" class="project">Energy Plus Real Time Weather</a></li>						
-						<li><a href="#tabs" title="Show description and screenshots below" class="project">Energy Plus Waether Data</a></li>
+						<li><a href="#tabs" title="Show description and screenshots below" class="project">Energy Plus Weather Data</a></li>
+						<li><a href="#tabs" title="Show description and screenshots below" class="project">Energy Plus Real-Time Weather</a></li>						
+						<li><a href="#tabs" title="Show description and screenshots below" class="project">Building America</a></li>
 						<li><a href="#tabs" title="Show description and screenshots below" class="project">Software Tools</a></li>						
 					</ul>
 				</div><!-- // eere -->

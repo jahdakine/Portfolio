@@ -174,7 +174,7 @@
 		<section class="notes">
 			<h3 class="to-center">To do:</h3> 
 			<ul>
-				<li>Fix anchor links porfolio, EERE bug</li>
+				<li>Fix anchor links porfolio, <strike>EERE bug</strike></li>
 				<li>Create external link switcher</li>
 				<li><strike>Finish projects</strike></li>
 				<li>Save state, allow back</li>
