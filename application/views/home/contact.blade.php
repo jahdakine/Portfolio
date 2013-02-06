@@ -34,8 +34,8 @@
 			{{ HTML::a_img('http://www.google.com/recaptcha/mailhide/d?k=01QoO8IU9RiXd2fkEo9RIO9g==&amp;c=z11k5PSfeXXPl_TPeGhabRsf9FNzh2EmS1_Y2mJjoUc=', 'Mac Mail', 'Reveal this e-mail address for Mac mail', '/img/mail-icon.png', '', array('class' => 'popup','onclick' => "window.open('http://www.google.com/recaptcha/mailhide/d?k\07501QoO8IU9RiXd2fkEo9RIO9g\75\75\46c\75z11k5PSfeXXPl_TPeGhabRsf9FNzh2EmS1_Y2mJjoUc\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=860,height=600,left=100,top=100'); return false;", "class" => "to-middle offsite"), array('class' => 'to-bottom', "width" => "32", "height" => "32"), true) }}
 		</li>
 		<li>
-			<!-- !!! fix or remove -->
-			{{ HTML::a_img('callto:jahdakine?call', "Skype call (best to email first - I don't camp out there)", 'Open Skype', '/img/skype-sm-icon.png', '', array('target' => '_blank' ,"class" => "to-middle"), array('class' => 'to-bottom', "width" => "32", "height" => "32"), true) }}
+			<img src="/img/skype-sm-icon.png" class="to-bottom" width=32 height=32 alt=""/>&nbsp;<abbr title="callto:jahdakine?call">Skype</abbr> (best to email first - I don't camp out there)
+			<!-- HTML::a_img('callto:jahdakine?call', "Skype call (best to email first - I don't camp out there)", 'Open Skype', '/img/skype-sm-icon.png', '', array('target' => '_blank' ,"class" => "to-middle"), array('class' => 'to-bottom', "width" => "32", "height" => "32"), true) --> 
 		</li>
 	</ul>
 	<p>

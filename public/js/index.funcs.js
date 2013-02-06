@@ -168,23 +168,6 @@
 				tmp = "'<li><img src=\"' +item.profile_image_url+ '\" height=\"24\" width=\"24\" alt=\"profile icon\"/>&nbsp;<time datetime=\"' +item.created_at.split(' ').slice(0, 4).join(' ')+ '\">' +item.created_at.split(' ').slice(0, 4).join(' ')+ '</time>:&nbsp;<a href=\"http://twitter.com/jahdakine/status/' +item.id_str+ '\" target=\"_blank\">' +item.text+ '</a></li>'";
         limit = 10;
         break;
-      case ('meetup'): //venue=1139097 member=65732862 group=1769691 group_urlname=HTML5-Denver-Users-Group
-				http = 'https://api.meetup.com/2/checkins?group_id=1769691&key=4c20142a4141d657e707171794141c&_=1359581403601&event_id=93211712&order=time&desc=True&member_id=65732862&offset=0&callback=?&format=json&page=20&sign=true';
-				obj = 'results';
-				tmp = "<li><li>";
-				limit = 3;
-        break;
-      case ('linkedin'):
-        break;
-      case ('grooveshark'):
-        break;
-      case ('github'):
-				http = 'https://api.github.com/?/repos/jahdakine/portfolio&callback=?';//!!!nope
-				obj = 'data.data';
-				limit = 5;
-				break;
-			case ('youtube'):
-				break;
       case ('flickr'):
 				http = 'http://api.flickr.com/services/feeds/photos_public.gne?id=23019891@N00&lang=en-us&format=json&jsoncallback=?';
 				obj = 'data.items';
@@ -192,6 +175,23 @@
 				show = "content_frame.css('display','inline-block').addClass('image-matrix')";
 				limit = 20;
         break;
+//    case ('meetup'): //venue=1139097 member=65732862 group=1769691 group_urlname=HTML5-Denver-Users-Group
+//			http = 'https://api.meetup.com/2/checkins?group_id=1769691&key=4c20142a4141d657e707171794141c&_=1359581403601&event_id=93211712&order=time&desc=True&member_id=65732862&offset=0&callback=?&format=json&page=20&sign=true';
+//			obj = 'results';
+//			tmp = "<li><li>";
+//			limit = 3;
+//      break;
+//    case ('linkedin'):
+//      break;
+//    case ('grooveshark'):
+//      break;
+//    case ('github'):
+//			http = 'https://api.github.com/?/repos/jahdakine/portfolio&callback=?';//!!!nope
+//			obj = 'data.data';
+//			limit = 5;
+//			break;
+//		case ('youtube'):
+//			break;
     }
     //put html into content frame
     function appendDOM(html) {
@@ -208,7 +208,7 @@
 			});
     }
     //make xhr request
-		function getFeed(http, obj, tmp, html) {
+		function getFeed(http, obj, tmp, html, id) {
 			//console.log(http);
 			//!!!cache? Would need to use local storage or DB or jquery-json.2.4.0
 			return $.getJSON(http, function(data) {
@@ -220,11 +220,14 @@
 						//console.log(html);
 						if(i === limit) { return false; }
 					});
+				if(id !== 'flickr' && html.search("<li>") === -1) {
+					html+='<li><img src="/img/warning-icon.png" height="16" width="16" alt=""/>&nbsp;Sorry, nothing today!</li>';
+				}
 				html += '</ul>';
 				appendDOM(html);
 			});
 		}
-		getFeed(http, obj, tmp, html);
+		getFeed(http, obj, tmp, html, id);
 		//ERROR: Can be tested by commenting appendDOM(html) line in getFeed
 		setTimeout(function() {
 			if (!success) {
