@@ -152,6 +152,7 @@
 				obj = '',
 				date = '',
 				show = '',
+				tmp = '',
 				success = false;
 		show = "content_frame.css('display','inline').removeClass('image-matrix')";
 		switch (id) {
@@ -162,27 +163,28 @@
         limit = 5;
         break;
       case ('twitter'):
-				http = 'http://search.twitter.com/search.json?q=jahdakine&since:2012-12-05&callback=?';
+				http = 'http://search.twitter.com/search.json?q=jahdakine&callback=?';
 				obj = 'data.results';
 				tmp = "'<li><img src=\"' +item.profile_image_url+ '\" height=\"24\" width=\"24\" alt=\"profile icon\"/>&nbsp;<time datetime=\"' +item.created_at.split(' ').slice(0, 4).join(' ')+ '\">' +item.created_at.split(' ').slice(0, 4).join(' ')+ '</time>:&nbsp;<a href=\"http://twitter.com/jahdakine/status/' +item.id_str+ '\" target=\"_blank\">' +item.text+ '</a></li>'";
         limit = 10;
         break;
       case ('meetup'): //venue=1139097 member=65732862 group=1769691 group_urlname=HTML5-Denver-Users-Group
-				http = 'https://api.meetup.com/2/checkins?group_id=1769691&key=4c20142a4141d657e707171794141c&_=1359581403601&event_id=93211712&order=time&desc=True&member_id=65732862&offset=0&callback=jQuery1710643855888454944_1359581333830&format=json&page=20&sign=true';
+				http = 'https://api.meetup.com/2/checkins?group_id=1769691&key=4c20142a4141d657e707171794141c&_=1359581403601&event_id=93211712&order=time&desc=True&member_id=65732862&offset=0&callback=?&format=json&page=20&sign=true';
 				obj = 'results';
 				tmp = "<li><li>";
 				limit = 3;
         break;
       case ('linkedin'):
-				http = 'http://api.linkedin.com/v1/people/~:(14123195)?format=json';
-				obj = ''; //!!!needs oauth
-				limit = 10;
         break;
       case ('grooveshark'):
-        //http = "http://api.grooveshark.com/ws3.php?sig=cd3ccc949251e0ece014d620bbf306e7{'method': 'addUserFavoriteSong', 'parameters': {'songID': 0}, 'header': {'wsKey': 'key', 'sessionID': 'sessionID'}}";
-				obj = ''; //!!!just a placeholder
-				limit = 10;
         break;
+      case ('github'):
+				http = 'https://api.github.com/?/repos/jahdakine/portfolio&callback=?';//!!!nope
+				obj = 'data.data';
+				limit = 5;
+				break;
+			case ('youtube'):
+				break;
       case ('flickr'):
 				http = 'http://api.flickr.com/services/feeds/photos_public.gne?id=23019891@N00&lang=en-us&format=json&jsoncallback=?';
 				obj = 'data.items';
@@ -207,8 +209,8 @@
     }
     //make xhr request
 		function getFeed(http, obj, tmp, html) {
-			console.log(http);
-			//!!!cache? Would need to use local storage or DB
+			//console.log(http);
+			//!!!cache? Would need to use local storage or DB or jquery-json.2.4.0
 			return $.getJSON(http, function(data) {
 				success = true;
 				//console.log(data);
@@ -223,12 +225,12 @@
 			});
 		}
 		getFeed(http, obj, tmp, html);
-		// ERROR: Can be tested by commenting appendDOM(html) line in getFeed
+		//ERROR: Can be tested by commenting appendDOM(html) line in getFeed
 		setTimeout(function() {
 			if (!success) {
 				html = '<h2 align="center">Error!</h2><blockquote>There has been an error requesting ' +id.substr(0,1).toUpperCase()+id.substr(1)+ ' data</blockquote>';
 				appendDOM(html);
 			}
-		}, 4000);
+		}, 2000);
 	});
 })();

@@ -35,19 +35,19 @@
 		<ul id="t1">
 			<li class="block1">
 				{{ HTML::link("http://www.linkedin.com/profile/view?id=14123195", "Linkedin", array("title"=>"Open my LinkedIn profile page in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
-				{{ HTML::link('#', '', array('id' => 'linkedin', 'class' => 'feedBtn listImg', 'title' => 'Show ? from LinkedIn on this page')) }}
+				{{ HTML::link('#', '', array('id' => 'linkedin', 'class' => 'feedBtn listImg', 'title' => 'Coming soon')) }}<!-- Show ? from LinkedIn on this page -->
 			</li>
 			<li class="block1">
 				{{ HTML::link("https://github.com/jahdakine", "GitHub", array("title"=>"Open my Github page in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
-				{{ HTML::link('#', '', array('id' => 'github', 'class' => 'feedBtn listImg', 'title' => 'Show ? from GitHub repo on this page')) }}
+				{{ HTML::link('#', '', array('id' => 'github', 'class' => 'feedBtn listImg', 'title' => 'Coming soon')) }}<!-- Show ? from GitHub repo on this page -->
 			</li>
 			<li class="block1">
 				{{ HTML::link("https://plus.google.com/u/0/114704033710627861845/posts", "Google+", array("title"=>"Open my Google+ page in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
-				{{ HTML::link('#', '', array('id' => 'google', 'class' => 'feedBtn listImg', 'title' => 'Show 5 latest comments from my Google+ circle on this page')) }}
+				{{ HTML::link('#', '', array('id' => 'google', 'class' => 'feedBtn listImg', 'title' => 'Coming soon')) }}<!-- Show 5 latest comments from my Google+ circle on this page -->
 			</li>			
 			<li class="block1">
 				{{ HTML::link("http://stackoverflow.com/users/1997909/jahdakine", "Stackoverflow", array("title"=>"Open my stackoverflow+ profile page in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
-				{{ HTML::link('#', '', array('id' => 'stackoverflow', 'class' => 'feedBtn listImg', 'title' => 'Show 5 latest question/answers from my stackoverflow on this page')) }}
+				{{ HTML::link('#', '', array('id' => 'stackoverflow', 'class' => 'feedBtn listImg', 'title' => 'Coming soon')) }}<!-- Show 5 latest question/answers from my stackoverflow on this page -->
 			</li>
 			<li class="block1">
 				{{ HTML::link("www.yelp.com/", "Yelp", array("title"=>"Open Yelp site in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
@@ -65,7 +65,7 @@
 		<ul id="t2">
 			<li class="block2">
 				{{ HTML::link("http://www.youtube.com/user/jahdakine", "YouTube", array("title"=>"Open my YouTube page in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
-				{{ HTML::link('#', '', array('id' => 'youtube', 'class' => 'feedBtn listImg', 'title' => 'Show 5 latest movies from my channel on this page')) }}
+				{{ HTML::link('#', '', array('id' => 'youtube', 'class' => 'feedBtn listImg', 'title' => 'Coming soon')) }}<!-- Show 5 latest movies from my channel on this page -->
 			</li>
 			<li class="block2">
 				{{ HTML::link("https://twitter.com/jahdakine", "Twitter", array("title"=>"Open my Twitter page in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
@@ -95,19 +95,19 @@
 		<ul id="t3">	
 			<li class="block3">
 				{{ HTML::link("http://www.zazzle.com/jahdakine+gifts", "Zazzle", array("title"=>"Open my Zazzle gift catalog in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
-				{{ HTML::link('#', '', array('id' => 'zazzle', 'class' => 'feedBtn listImg', 'title' => 'Show latest 3 creations from my gift catalog on this page')) }}
+				{{ HTML::link('#', '', array('id' => 'zazzle', 'class' => 'feedBtn listImg', 'title' => 'Coming soon')) }} <!--Show latest 3 creations from my gift catalog on this page-->
 			</li>
 			<li class="block3">
 				{{ HTML::link("http://myworld.ebay.com/specrun/", "eBay", array("title"=>"Open my eBay profile page in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
-				{{ HTML::link('#', '', array('id' => 'ebay', 'class' => 'feedBtn listImg', 'title' => 'Show latest 5 feedback comments on this page')) }}
+				{{ HTML::link('#', '', array('id' => 'ebay', 'class' => 'feedBtn listImg', 'title' => 'Coming soon')) }}
 			</li>
 			<li class="block3">
 				{{ HTML::link("http://grooveshark.com/#!/jahdakine", "Grooveshark", array("title"=>"Open my GrooveShark profile page in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
-				{{ HTML::link('#', '', array('id' => 'grooveshark', 'class' => 'feedBtn listImg', 'title' => 'Show latest 5 listens from playlist on this page')) }}				
+				{{ HTML::link('#', '', array('id' => 'grooveshark', 'class' => 'feedBtn listImg', 'title' => 'Coming soon')) }}				
 			</li>	
 			<li class="block3">
 				{{ HTML::link("http://www.meetup.com/HTML5-Denver-Users-Group/members/65732862/", "Meetup", array("title"=>"Open my Meetup profile page in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
-				{{ HTML::link('#', '', array('id' => 'meetup', 'class' => 'feedBtn listImg', 'title' => 'Show 5 latest Meetup meetings attended on this page')) }}				
+				{{ HTML::link('#', '', array('id' => 'meetup', 'class' => 'feedBtn listImg', 'title' => 'Coming soon')) }}				
 			</li>		
 			<li class="block3">
 				{{ HTML::link("https://www.paypal.com/", "PayPal", array("title"=>"Open PayPal site in a new window/tab", "target"=>"_blank", "class" => "offsite")) }}
@@ -174,7 +174,7 @@
 		<section class="notes">
 			<h3 class="to-center">To do:</h3> 
 			<ul>
-				<li>Fix anchor links porfolio, <strike>EERE bug</strike></li>
+				<li><strike>Fix anchor links porfolio</strike></li>
 				<li>Create external link switcher</li>
 				<li><strike>Finish projects</strike></li>
 				<li>Save state, allow back</li>

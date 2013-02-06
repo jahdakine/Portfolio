@@ -9,7 +9,9 @@
 	//cache DOM vars
 	var project = $(".project"),
 			clients = $(".clients"),
-			box = $(".box");
+			tabs = $("#tabs"),
+			box = $(".box"),
+			body = $('html, body');
 	//client tab clicks
 	clients.on('click', function() {
 		var tmp = this.innerHTML.replace(/\&.+/g, '').toLowerCase(),
@@ -18,6 +20,7 @@
 	});
 	//project clicks !!!use template for HTML
 	project.on('click', function(e) {
+		e.preventDefault();
 		var tmp = $(this).closest("div").attr("id"),
 				contentFrame = $(eval(tmp + "Frame"));
 		box.empty();
@@ -30,7 +33,9 @@
 			cache: false
 			}).done(function(data) {
 				contentFrame.html(eval(frag));
-				contentFrame.slideDown("slow");
+				contentFrame.slideDown("slow", function() {
+					body.animate({ scrollTop: tabs.offset().top }, 'slow');
+				});
 			}).error(function(e) {
 				contentFrame.html("There has been an error retrieving the project information.");
 				contentFrame.slideDown("slow");

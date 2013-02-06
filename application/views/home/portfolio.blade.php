@@ -40,7 +40,7 @@
 			</p>
 			<br/>
 		</article>
-		<div id="tabs"><!-- !!!not anchoring -->
+		<div id="tabs">
 			<div id="projects">
 				<ul>
 					<li><a class="clients" href="#contracts">Contracts&nbsp;</a></li>
@@ -51,45 +51,45 @@
 				</ul>
 				<div id="contracts">
 				<ul>
-					<li><a href="#tabs" title="Show description and screenshots below" class="project">Treasury</a></li>
-					<li><a href="#tabs" title="Show description and screenshots below" class="project">Solar Decathlon</a></li>
-					<li><a href="#tabs" title="Show description and screenshots below" class="project">USDA</a></li>
-					<li><a href="#tabs" title="Show description and screenshots below" class="project">American Solar Challenge</a></li>
-					<li><a href="#tabs" title="Show description and screenshots below" class="project">Denver Public Library</a></li>
-					<li><a href="#tabs" title="Show description and screenshots below" class="project">AIA</a>&nbsp;<abbr title="American Institute of Architects">(?)</abbr></li>
+					<li><a href="#" title="Show description and screenshots" class="project">Treasury</a></li>
+					<li><a href="#" title="Show description and screenshots" class="project">Solar Decathlon</a></li>
+					<li><a href="#" title="Show description and screenshots" class="project">USDA</a></li>
+					<li><a href="#" title="Show description and screenshots" class="project">American Solar Challenge</a></li>
+					<li><a href="#" title="Show description and screenshots" class="project">Denver Public Library</a></li>
+					<li><a href="#" title="Show description and screenshots" class="project">AIA</a>&nbsp;<abbr title="American Institute of Architects">(?)</abbr></li>
 				</ul>
 				<section id="contractsFrame" class="box hide"></section>
 				</div><!-- // contracts -->			
 				<div id="nrel">
 					<ul>
-						<li><a href="#tabs" title="Show description and screenshots below" class="project">JEDI Model Downloads</a></li>
-						<li><a href="#tabs" title="Show description and screenshots below" class="project">Basic Sciences</a></li>
-						<li><a href="#tabs" title="Show description and screenshots below" class="project">Thin-Film Partnerships</a></li>
-						<li><a href="#tabs" title="Show description and screenshots below" class="project">News and Events</a></li>
-						<li><a href="#tabs" title="Show description and screenshots below" class="project">PV Partnerships</a></li>
+						<li><a href="#" title="Show description and screenshots" class="project">JEDI Model Downloads</a></li>
+						<li><a href="#" title="Show description and screenshots" class="project">Basic Sciences</a></li>
+						<li><a href="#" title="Show description and screenshots" class="project">Thin-Film Partnerships</a></li>
+						<li><a href="#" title="Show description and screenshots" class="project">News and Events</a></li>
+						<li><a href="#" title="Show description and screenshots" class="project">PV Partnerships</a></li>
 					</ul> 
 					<section id="nrelFrame" class="box hide"></section> 		
 				</div><!-- // nrel -->
 				<div id="eere">
 				  <ul><!-- !!! pervasive into other tabs? -->
-						<li><a href="#tabs" title="Show description and screenshots below" class="project">Energy Plus Example File Generator</a></li>
-						<li><a href="#tabs" title="Show description and screenshots below" class="project">Energy Plus Weather Data</a></li>
-						<li><a href="#tabs" title="Show description and screenshots below" class="project">Energy Plus Real-Time Weather</a></li>						
-						<li><a href="#tabs" title="Show description and screenshots below" class="project">Building America</a></li>
-						<li><a href="#tabs" title="Show description and screenshots below" class="project">Software Tools</a></li>						
+						<li><a href="#" title="Show description and screenshots" class="project">Energy Plus Example File Generator</a></li>
+						<li><a href="#" title="Show description and screenshots" class="project">Energy Plus Weather Data</a></li>
+						<li><a href="#" title="Show description and screenshots" class="project">Energy Plus Real-Time Weather</a></li>						
+						<li><a href="#" title="Show description and screenshots" class="project">Building America</a></li>
+						<li><a href="#" title="Show description and screenshots" class="project">Software Tools</a></li>						
 					</ul>
 				</div><!-- // eere -->
 				<section id="eereFrame" class="box hide"></section>
 				<div id="source">
 				  <ul>
-						<li><a href="#tabs" title="Show description and screenshots below" class="project">NREL Now</a></li>
-						<li><a href="#tabs" title="Show description and screenshots below" class="project">Library</a></li>
+						<li><a href="#" title="Show description and screenshots" class="project">NREL Now</a></li>
+						<li><a href="#" title="Show description and screenshots" class="project">Library</a></li>
 					</ul>
 					<section id="sourceFrame" class="box hide"></section>
 				</div><!-- // source -->		
 				<div id="doe">
 				  <ul>
-						<li><a href="#tabs" title="Show description and screenshots below" class="project">Hydrogen and Fuel Cells Program</a></li>
+						<li><a href="#" title="Show description and screenshots" class="project">Hydrogen and Fuel Cells Program</a></li>
 					</ul>
 					<section id="doeFrame" class="box hide"></section>
 				</div><!-- // doe -->						
