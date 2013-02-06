@@ -4,18 +4,23 @@
 */
 
 (function() {
-	//cache DOM vars
-	var project = $(".project");
 	/*setup tabs*/
 	$("#projects").tabs();
-	/* project clicks !!!use template for HTML */
+	//cache DOM vars
+	var project = $(".project"),
+			clients = $(".clients");
+	//client tab clicks
+	clients.on('click', function() {
+		var tmp = this.innerHTML.replace(/\&.+/g, '').toLowerCase(),
+				contentFrame = $(eval(tmp + "Frame"));
+		console.log(contentFrame);
+		contentFrame.empty();
+	});
+	//project clicks !!!use template for HTML
 	project.on('click', function(e) {
 		var tmp = $(this).closest("div").attr("id"),
 				contentFrame = $(eval(tmp + "Frame"));
-		e.preventDefault();
-		if(contentFrame.css("display") !== "none") {
-			contentFrame.empty();
-		}
+		contentFrame.empty();
 		var title = decodeURI(this.innerHTML),
 		data = "",
 		filename = title.replace(/\s+/g,'_').toLowerCase(),

@@ -73,6 +73,7 @@
 					<li>CSS/3</li>
 					<li>Sublime Text 2/VIM</li>
 					<li>Git/Subversion</li>
+					<li>RESTful applications</li>
 				</ul> 
 			</div><!-- // skills-2 -->
 			<div id="skills-3">
