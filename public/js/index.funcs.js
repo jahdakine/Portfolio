@@ -159,7 +159,7 @@
 			case ('blogger'):
 				http = 'https://www.googleapis.com/blogger/v3/blogs/2575251403540723939/posts?key=AIzaSyC4Zhv-nd_98_9Vn8Ad3U6TjY99Pd2YzOQ';
 				obj = 'data.items';
-				tmp = "'<li><time datetime=\"' + item.updated.split('T') + '\">' + item.updated.split('T') + '</time>: <a href=\"' + item.url + '\" target=\"_blank\">' + item.title + '</a></li>'";
+				tmp = "'<li><time datetime=\"' + item.updated + '\">' + item.updated.substr(0,10) + '</time>: <a href=\"' + item.url + '\" target=\"_blank\">' + item.title + '</a></li>'";
         limit = 5;
         break;
       case ('twitter'):
@@ -215,7 +215,7 @@
 				success = true;
 				//console.log(data);
 				$.each(eval(obj), function(i,item) {
-						//console.log(item);
+						console.log(item);
 						html += eval(tmp);
 						//console.log(html);
 						if(i === limit) { return false; }
