@@ -1,1 +1,1 @@
-ORiginal repo for online CV. Moved to jahdakine.
+Original repo for online CV. Moved to jahdakine.
