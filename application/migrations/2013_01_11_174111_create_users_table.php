@@ -12,11 +12,11 @@ class Create_Users_Table {
 		Schema::create('users', function($table) {
 			$table->increments('id');
 			$table->string('name',50);
-			$table->integer('age')->nullable();
 			$table->string('email',255);
-			$table->string('password',32);
-			$table->boolean('activated')->default(0);
+			$table->string('password',60);
+			$table->boolean('active')->default(0);
 			$table->timestamps();
+			$table->unique('email');
 		});
 	}
 

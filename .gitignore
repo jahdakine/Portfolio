@@ -9,6 +9,7 @@
 *.vi
 *~
 *.sass-cache
+*.xcf
 
 # OS or Editor folders
 .DS_Store
@@ -28,8 +29,8 @@ dwsync.xml
 *.komodoproject
 .komodotools
 
-config/database.php
-config/application.php
+application/config/database.php
+application/config/application.php
 
 # Folders to ignore
 .hg

@@ -21,13 +21,19 @@
 	//project clicks !!!use template for HTML
 	project.on('click', function(e) {
 		e.preventDefault();
-		var tmp = $(this).closest("div").attr("id"),
-				contentFrame = $(eval(tmp + "Frame"));
 		box.empty();
-		var title = decodeURI(this.innerHTML),
-		data = "",
-		filename = title.replace(/\s+/g,'_').toLowerCase(),
-		frag = "'</h3><div><img src=\"/img/portfolio/'+ filename +'.jpg\" alt=\"Screenshot of '+ title +' project\"/ align=\"right\" class=\"project-img\"></div><div id=\"project-desc\">' + data + '</div></a>'";
+		var $this = $(this),
+				tmp = $(this).closest("div").attr("id"),
+				contentFrame = $(eval(tmp + "Frame"));
+				title = decodeURI(this.innerHTML),
+				data = "",
+				filename = title.replace(/\s+/g,'_').toLowerCase(),
+				frag = '';
+		if ($this.hasClass('no-image')) {
+			frag = "'</h3><div id=\"project-desc\">' + data + '</div>'";
+		} else {
+			frag = "'</h3><div><img src=\"/img/portfolio/'+ filename +'.jpg\" alt=\"Screenshot of '+ title +' project\"/ align=\"right\" class=\"project-img\"></div><div id=\"project-desc\">' + data + '</div>'";
+		}
 		$.ajax({
 			url: '/partials/' + filename + '.html',
 			cache: false

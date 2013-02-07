@@ -36,7 +36,7 @@
 			</p>
 			<p>
 				Select a client from tabs below revealing a sample of the projects delivered. Click on a specific project to view screenshot(s) and 
-				description/statement of work and tools listing. Projects roughly in date order newest first.
+				description/statement of work and tools listing. Projects roughly in date order - newest first.
 			</p>
 			<br/>
 		</article>
@@ -53,10 +53,10 @@
 				<ul>
 					<li><a href="#" title="Show description and screenshots" class="project">Treasury</a></li>
 					<li><a href="#" title="Show description and screenshots" class="project">Solar Decathlon</a></li>
-					<li><a href="#" title="Show description and screenshots" class="project">USDA</a></li>
+					<li><a href="#" title="Show description and screenshots" class="project no-image">USDA</a></li>
 					<li><a href="#" title="Show description and screenshots" class="project">American Solar Challenge</a></li>
-					<li><a href="#" title="Show description and screenshots" class="project">Denver Public Library</a></li>
-					<li><a href="#" title="Show description and screenshots" class="project">AIA</a>&nbsp;<abbr title="American Institute of Architects">(?)</abbr></li>
+					<li><a href="#" title="Show description and screenshots" class="project no-image">Denver Public Library</a></li>
+					<li><a href="#" title="Show description and screenshots" class="project no-image">AIA</a>&nbsp;<abbr title="American Institute of Architects">(?)</abbr></li>
 				</ul>
 				<section id="contractsFrame" class="box hide"></section>
 				</div><!-- // contracts -->			
@@ -82,8 +82,8 @@
 				<section id="eereFrame" class="box hide"></section>
 				<div id="source">
 				  <ul>
-						<li><a href="#" title="Show description and screenshots" class="project">NREL Now</a></li>
-						<li><a href="#" title="Show description and screenshots" class="project">Library</a></li>
+						<li><a href="#" title="Show description and screenshots" class="project no-image">NREL Now</a></li>
+						<li><a href="#" title="Show description and screenshots" class="project no-image">Library</a></li>
 					</ul>
 					<section id="sourceFrame" class="box hide"></section>
 				</div><!-- // source -->		
