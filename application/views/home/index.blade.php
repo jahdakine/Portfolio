@@ -174,14 +174,12 @@
 		<section class="notes">
 			<h3 class="to-center">To do:</h3> 
 			<ul>
-				<li><strike>Fix anchor links porfolio</strike></li>
 				<li>Create external link switcher</li>
-				<li><strike>Finish projects</strike></li>
-				<li>Save state, allow back</li>
-				<li>Add login area</li>
+				<li>Research remaining API calls</li>
+				<li>Build out login area</li>
 				<li>Facility for adding icons/sites</li>
 				<li>Package (minify, optimize)</li>
-				<li>Research remaining API calls</li>
+				<li>Arrive at energy independence</li>
 			</ul>																
 		</section><!-- // notes -->
 	</div><!-- // landing -->

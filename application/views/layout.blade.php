@@ -16,7 +16,8 @@
 			<h1>@yield("title")</h1>
 			<h2 id="nickName">John Chase</h2>
 			<h4>Web Developer</h4>
-			{{ HTML::link("users/", "Sign-on") }}
+			<!-- HTML::link("users/", "Sign-on") }} -->
+			Sign-on
 		</header>
 		<div id="navigation">
 			<ul class="drop" id="nav">
