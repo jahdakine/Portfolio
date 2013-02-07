@@ -30,7 +30,7 @@ dwsync.xml
 .komodotools
 
 application/config/database.php
-application/config/application.php
+
 
 # Folders to ignore
 .hg
