@@ -67,13 +67,18 @@
 		<footer class="flex-footer">
 			@yield('footer')
 			<div id="audioWrap" class="hide">
-				{{ HTML::a_img('#', '', 'Dismiss player', '/img/delete-icon.png', '', array("id" => "nickHide"), array("height" => "16", "width" => "16", "class" => "to-top")) }}
+				<a id="nickHide" href="#" title="Dismiss player"><img class="to-top" width="16" height="16" alt="" src="http://laravel.dev:8888/img/delete-icon.png"></a>
+				<!-- HTML::a_img('#', '', 'Dismiss player', '/img/delete-icon.png', '', array("id" => "nickHide"), array("height" => "16", "width" => "16", "class" => "to-top")) }} -->
 			</div>
 			<p class="copy">copyright &copy;2013 John Chase (aka 
 				<u class="def">
 					<dfn title="IPA phonetics: dʒɑ dɑ <strong>ki</strong> neɪ <br/>(sounds like: jaw duh <strong>key</strong> nay)">jahdakine</dfn>
-				</u>)<span style="padding-top:2px;">{{ HTML::a_img('#', '', 'Play nickname pronunciation audio (wav)', '/img/audio-icon.png', '', array('id' => 'nickButton'), array("height" => "16", "width" => "21", "class" => "to-middle")) }}</span>
-			</p>	
+				</u>)
+				<span style="padding-top:2px;">
+					<a id="nickButton" href="#" title="Play nickname pronunciation audio (wav)"><img class="to-middle" width="21" height="16" alt="" src="http://laravel.dev:8888/img/audio-icon.png"></a>
+					<!-- HTML::a_img('#', '', 'Play nickname pronunciation audio (wav)', '/img/audio-icon.png', '', array('id' => 'nickButton'), array("height" => "16", "width" => "21", "class" => "to-middle")) }} -->
+				</span>
+				</p>	
 		</footer>
 	</div> <!-- // wrapper -->
 	{{ HTML::script('/js/vendor/jquery-1.8.2.min.js') }}	
