@@ -170,7 +170,7 @@ return array(
 		'Filter'     	=> 'Laravel\\Routing\\Filter',
 		'Form'       	=> 'Laravel\\Form',
 		'Hash'       	=> 'Laravel\\Hash',
-		'HTML'       	=> 'Laravel\\HTML', //Macro added
+		'HTML'       	=> 'Laravel\\HTML', 
 		'Input'      	=> 'Laravel\\Input',
 		'IoC'        	=> 'Laravel\\IoC',
 		'Lang'       	=> 'Laravel\\Lang',
