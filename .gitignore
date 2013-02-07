@@ -29,8 +29,9 @@ dwsync.xml
 *.komodoproject
 .komodotools
 
-
-
+#sensitive files
+application/config/application.php
+application/config/database.php
 
 # Folders to ignore
 .hg
