@@ -71,7 +71,7 @@ return array(
 			'driver'   => 'mysql',
 			'host'     => '127.0.0.1',
 			//if using localhost add: 'unix_socket' => '/Applications/MAMP/tmp/mysql/mysql.sock',
-			'database' => 'laravel1',
+			'database' => 'database',
 			'username' => 'root',
 			'password' => 'root',
 			'charset'  => 'utf8',
