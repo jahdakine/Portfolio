@@ -29,7 +29,7 @@ dwsync.xml
 *.komodoproject
 .komodotools
 
-application/config/database.php
+
 
 
 # Folders to ignore
