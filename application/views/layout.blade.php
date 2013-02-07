@@ -17,7 +17,7 @@
 			<h2 id="nickName">John Chase</h2>
 			<h4>Web Developer</h4>
 			<!-- HTML::link("users/", "Sign-on") }} -->
-			Sign-on
+			<abbr title="Coming soon">Sign-on</a>
 		</header>
 		<div id="navigation">
 			<ul class="drop" id="nav">
@@ -71,6 +71,7 @@
 				<a id="nickHide" href="#" title="Dismiss player"><img class="to-top" width="16" height="16" alt="" src="http://laravel.dev:8888/img/delete-icon.png"></a>
 				<!-- HTML::a_img('#', '', 'Dismiss player', '/img/delete-icon.png', '', array("id" => "nickHide"), array("height" => "16", "width" => "16", "class" => "to-top")) }} -->
 			</div>
+			<div class="to-center copy"><time datetime="2013-02-06,20:24:23-07:00">Last Updated: February 6th, 2013</time></div>
 			<p class="copy">copyright &copy;2013 John Chase (aka 
 				<u class="def">
 					<dfn title="IPA phonetics: dʒɑ dɑ <strong>ki</strong> neɪ <br/>(sounds like: jaw duh <strong>key</strong> nay)">jahdakine</dfn>

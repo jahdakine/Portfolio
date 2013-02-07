@@ -144,7 +144,7 @@
 			opening! This website is powered by jQuery, <abbr title="PHP: Hypertext Preprocessor">PHP</abbr>, and 
 			{{ HTML::link("http://laravel.com/docs", "Laravel", array("title"=>"Offsite to Laravel Documentation in a new window", "target"=>"_blank", "class" => "offsite")) }}, the 
 			<abbr title="Model View Controller">MVC</abbr>
-			framework that I've gravitated to. It is responsive, accessible, and includes an ever popular scrolling style jQuery menu carousel (List menu | Image list).
+			framework that I'm gravitating to at the moment. It is responsive, accessible, and includes an ever popular scrolling style jQuery menu carousel (List menu | Image list).
 			It is basically my playground to spend time trying out new technologies and learning about what works and what doesn't in the fine art and science of internet 
 			programming and design. Tabs and other user interface goodies can be found at
 			{{ HTML::link("http://jqueryui.com/", "jQuery UI", array("title"=>"Offsite to jQuery UI in a new window", "target"=>"_blank", "class" => "offsite")) }}.
