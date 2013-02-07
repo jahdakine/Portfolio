@@ -18,9 +18,9 @@ web1:
     - eaccelerator
     - memcached
   before_deploy:
+    - "php artisan key:generate"
     - "php artisan migrate:install"
     - "php artisan migrate"
-    - "php artisan key:generate"	  
 after_deploy:
     - "rm -f storage/cache/*"
     - "rm -f storage/views/*"
